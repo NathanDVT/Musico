@@ -15,7 +15,6 @@
 		417C627523E9A9B100CADC7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 417C627323E9A9B100CADC7E /* LaunchScreen.storyboard */; };
 		417C628023E9A9B100CADC7E /* realworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C627F23E9A9B100CADC7E /* realworkTests.swift */; };
 		417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C628A23EC10BF00CADC7E /* DesignableView.swift */; };
-		417C628D23F142A000CADC7E /* realwork in Resources */ = {isa = PBXBuildFile; fileRef = 417C628C23F142A000CADC7E /* realwork */; };
 		417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,7 @@
 		417C627F23E9A9B100CADC7E /* realworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realworkTests.swift; sourceTree = "<group>"; };
 		417C628123E9A9B100CADC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		417C628A23EC10BF00CADC7E /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
-		417C628C23F142A000CADC7E /* realwork */ = {isa = PBXFileReference; lastKnownFileType = folder; name = realwork; sourceTree = "<group>"; };
+		417C628C23F142A000CADC7E /* realwork */ = {isa = PBXFileReference; lastKnownFileType = folder; path = realwork; sourceTree = "<group>"; };
 		417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,7 +191,6 @@
 				417C627523E9A9B100CADC7E /* LaunchScreen.storyboard in Resources */,
 				417C627223E9A9B100CADC7E /* Assets.xcassets in Resources */,
 				417C627023E9A9B100CADC7E /* Main.storyboard in Resources */,
-				417C628D23F142A000CADC7E /* realwork in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
