@@ -8,8 +8,8 @@
 
 import XCTest
 @testable import realwork
-
-class realworkTests: XCTestCase {
+// the app was a lower case, changed it to an upper case
+class RealworkTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
