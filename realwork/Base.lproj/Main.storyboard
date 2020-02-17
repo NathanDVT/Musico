@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJp-xR-N2r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -292,6 +292,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="QJp-xR-N2r" kind="presentation" id="zK2-3u-BhK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -316,48 +319,55 @@
             <objects>
                 <viewController id="QJp-xR-N2r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0LM-7i-ETu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-4K-Rim">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="inf-Tg-qA4">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="795.66666666666663"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="757.66666666666663"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zhY-FX-T9I">
-                                        <rect key="frame" x="0.0" y="795.66666666666663" width="414" height="22.333333333333371"/>
+                                        <rect key="frame" x="8" y="765.66666666666663" width="398" height="22.333333333333371"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yc0-hr-dDI">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="22.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99.666666666666671" height="22.333333333333332"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <state key="normal" image="rectangle.stack.person.crop.fill" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5l-ed-aUE">
-                                                <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="22.333333333333332"/>
+                                                <rect key="frame" x="99.666666666666686" y="0.0" width="99.333333333333314" height="22.333333333333332"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <state key="normal" image="bubble.left.and.bubble.right.fill" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg9-8g-W5A">
-                                                <rect key="frame" x="206.99999999999997" y="0.0" width="103.66666666666666" height="22.333333333333332"/>
+                                                <rect key="frame" x="199" y="0.0" width="99.666666666666686" height="22.333333333333332"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <state key="normal" image="arrowshape.turn.up.left.2.fill" catalog="system"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qob-br-DhU">
-                                                <rect key="frame" x="310.66666666666669" y="0.0" width="103.33333333333331" height="22.333333333333332"/>
+                                                <rect key="frame" x="298.66666666666669" y="0.0" width="99.333333333333314" height="22.333333333333332"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <state key="normal" image="playpause" catalog="system"/>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
                                     </stackView>
                                 </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="0.0" right="20"/>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="20" right="8"/>
+                                </variation>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5gj-4K-Rim" firstAttribute="leading" secondItem="dmw-jE-gGY" secondAttribute="leading" id="Ga9-m2-vXM"/>
                             <constraint firstItem="5gj-4K-Rim" firstAttribute="top" secondItem="dmw-jE-gGY" secondAttribute="top" id="dLS-z7-iuz"/>
