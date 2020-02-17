@@ -20,3 +20,7 @@ Progress:
 - [ ] Integrate API to view songs
 
 Preview screenshots:
+
+<img src="register_screen_p.png" width="250" > </img>
+<img src="login_screen_l.png" width="100" > </img>
+
