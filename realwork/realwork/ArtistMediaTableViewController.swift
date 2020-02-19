@@ -17,13 +17,16 @@ class ArtistMediaTableViewController: UITableViewController {
         }
     }
 
+    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("We In")
+        searchBar.delegate = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        getInformation()
+//        getInformation()
     }
     // MARK: - Table view data source
 
@@ -86,9 +89,13 @@ class ArtistMediaTableViewController: UITableViewController {
      }
      */
 
-    func getInformation() {
-        let name = "beyonce"
-        let artistMediaRequest = ArtistMediaRequest(artistName: name)
+}
+
+extension ArtistMediaTableViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("We In")
+        guard let searchBarText = searchBar.text else {return}
+        let artistMediaRequest = ArtistMediaRequest(artistName: searchBarText)
         artistMediaRequest.getArtistMedia { [weak self] result in
             switch result {
             case .failure(let error):

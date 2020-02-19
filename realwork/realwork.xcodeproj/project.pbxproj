@@ -44,7 +44,6 @@
 		417C627F23E9A9B100CADC7E /* realworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realworkTests.swift; sourceTree = "<group>"; };
 		417C628123E9A9B100CADC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		417C628A23EC10BF00CADC7E /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
-		417C628C23F142A000CADC7E /* realwork */ = {isa = PBXFileReference; lastKnownFileType = folder; path = realwork; sourceTree = "<group>"; };
 		417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		41CC20D823FC110300FDC65A /* ArtistMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMedia.swift; sourceTree = "<group>"; };
 		41CC20DA23FC136500FDC65A /* ArtistMediaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaRequest.swift; sourceTree = "<group>"; };
@@ -95,7 +94,6 @@
 				417C626C23E9A9B100CADC7E /* ViewController.swift */,
 				417C626E23E9A9B100CADC7E /* Main.storyboard */,
 				417C627123E9A9B100CADC7E /* Assets.xcassets */,
-				417C628C23F142A000CADC7E /* realwork */,
 				417C627323E9A9B100CADC7E /* LaunchScreen.storyboard */,
 				417C627623E9A9B100CADC7E /* Info.plist */,
 				417C628A23EC10BF00CADC7E /* DesignableView.swift */,
