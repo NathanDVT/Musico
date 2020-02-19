@@ -9,11 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var listOfArtistCollections = [Collection]() {
-        didSet {
-            print(self.listOfArtistCollections)
-        }
-    }
+//    var listOfArtistCollections = [Collection]() {
+//        didSet {
+//            print(self.listOfArtistCollections)
+//        }
+//    }
 
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
@@ -22,8 +22,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("Hello")
         //getSearchResults(searchTerm: "Beyonce")
-        getInformation()
-        print(listOfArtistCollections)
+
     }
     func getSearchResults(searchTerm: String) {
         dataTask?.cancel()
@@ -52,18 +51,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func getInformation() {
-        let name = "beyonce"
-        let artistMediaRequest = ArtistMediaRequest(artistName: name)
-        artistMediaRequest.getArtistMedia { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let collections):
-                self?.listOfArtistCollections = collections
-            }
-        }
-    }
+
 }
 
 struct SwiftFourMusicResults: Decodable {

@@ -18,6 +18,7 @@
 		417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */; };
 		41CC20D923FC110300FDC65A /* ArtistMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20D823FC110300FDC65A /* ArtistMedia.swift */; };
 		41CC20DB23FC136500FDC65A /* ArtistMediaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20DA23FC136500FDC65A /* ArtistMediaRequest.swift */; };
+		41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		41CC20D823FC110300FDC65A /* ArtistMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMedia.swift; sourceTree = "<group>"; };
 		41CC20DA23FC136500FDC65A /* ArtistMediaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaRequest.swift; sourceTree = "<group>"; };
+		41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */,
 				41CC20D823FC110300FDC65A /* ArtistMedia.swift */,
 				41CC20DA23FC136500FDC65A /* ArtistMediaRequest.swift */,
+				41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */,
 			);
 			path = realwork;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */,
 				417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */,
 				41CC20DB23FC136500FDC65A /* ArtistMediaRequest.swift in Sources */,
+				41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */,
 				417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */,
 				417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */,
 			);
