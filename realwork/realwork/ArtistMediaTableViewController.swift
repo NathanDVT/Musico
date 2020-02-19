@@ -11,8 +11,6 @@ import UIKit
 class ArtistMediaTableViewController: UITableViewController {
     var listOfArtistCollections = [Collection]() {
         didSet {
-//            print(self.listOfArtistCollections)
-//            print("XXXXXXXXX")
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -26,10 +24,8 @@ class ArtistMediaTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         getInformation()
-//        print(listOfArtistCollections)
     }
     // MARK: - Table view data source
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -54,7 +50,8 @@ class ArtistMediaTableViewController: UITableViewController {
 
     /*
      // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+     override func tableView(_ tableView: UITableView, commit editingStyle:
+     UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
      if editingStyle == .delete {
      // Delete the row from the data source
      tableView.deleteRows(at: [indexPath], with: .fade)
@@ -63,14 +60,14 @@ class ArtistMediaTableViewController: UITableViewController {
      }
      }
      */
-    
+
     /*
      // Override to support rearranging the table view.
      override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
      
      }
      */
-    
+
     /*
      // Override to support conditional rearranging of the table view.
      override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -78,7 +75,7 @@ class ArtistMediaTableViewController: UITableViewController {
      return true
      }
      */
-    
+
     /*
      // MARK: - Navigation
      
@@ -88,7 +85,7 @@ class ArtistMediaTableViewController: UITableViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
+
     func getInformation() {
         let name = "beyonce"
         let artistMediaRequest = ArtistMediaRequest(artistName: name)
@@ -101,5 +98,4 @@ class ArtistMediaTableViewController: UITableViewController {
             }
         }
     }
-    
 }
