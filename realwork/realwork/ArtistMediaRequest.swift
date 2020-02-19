@@ -31,7 +31,7 @@ struct ArtistMediaRequest {
             do {
                 let decoder = JSONDecoder()
                 let artistMediaResponse = try decoder.decode(ArtistMediaResponse.self, from: jsonData)
-                let collections = artistMediaResponse.response.collections
+                let collections = artistMediaResponse.results
                 completion(.success(collections))
             } catch {
                 completion(.failure(.canNotProcessData))

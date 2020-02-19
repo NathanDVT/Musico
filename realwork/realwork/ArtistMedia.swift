@@ -8,18 +8,14 @@
 
 import Foundation
 
-struct ArtistMediaResponse: Decodable{
-    var response: ArtistMedia
-}
-
-struct ArtistMedia: Decodable{
-    var collections: [Collection]
+struct ArtistMediaResponse: Decodable {
+    var results: [Collection]
 }
 
 struct Collection: Decodable {
     var artistName: String
     var collectionName: String
     var releaseDate: String
-    var collectionPrice: String
+    var collectionPrice: Double
     var trackTimeMillis: Int
 }
