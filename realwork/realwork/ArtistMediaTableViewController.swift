@@ -22,11 +22,6 @@ class ArtistMediaTableViewController: UITableViewController {
         super.viewDidLoad()
         print("We In")
         searchBar.delegate = self
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-//        getInformation()
     }
     // MARK: - Table view data source
 
@@ -39,12 +34,11 @@ class ArtistMediaTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableCell else {
             return UITableViewCell()
         }
-
         // Configure the cell...
         cell.nameLbl.text = listOfArtistCollections[indexPath.row].artistName
         cell.titleLbl.text = listOfArtistCollections[indexPath.row].collectionName
         guard let imageURL = URL(string: listOfArtistCollections[indexPath.row].artworkUrl60) else {
-            return UITableViewCell()
+            return cell
         }
         // just not to cause a deadlock in UI!
         DispatchQueue.global().async {
@@ -56,7 +50,6 @@ class ArtistMediaTableViewController: UITableViewController {
         }
         return cell
     }
-
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -107,7 +100,6 @@ class ArtistMediaTableViewController: UITableViewController {
 
 extension ArtistMediaTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("We In")
         guard let searchBarText = searchBar.text else {return}
         let artistMediaRequest = ArtistMediaRequest(artistName: searchBarText)
         artistMediaRequest.getArtistMedia { [weak self] result in
