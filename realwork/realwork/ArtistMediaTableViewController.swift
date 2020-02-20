@@ -36,10 +36,24 @@ class ArtistMediaTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableCell else {
+            return UITableViewCell()
+        }
 
         // Configure the cell...
-        cell.textLabel?.text = listOfArtistCollections[indexPath.row].artistName
+        cell.nameLbl.text = listOfArtistCollections[indexPath.row].artistName
+        cell.titleLbl.text = listOfArtistCollections[indexPath.row].collectionName
+        guard let imageURL = URL(string: listOfArtistCollections[indexPath.row].artworkUrl60) else {
+            return UITableViewCell()
+        }
+        // just not to cause a deadlock in UI!
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                cell.imgView.image = image
+            }
+        }
         return cell
     }
 
