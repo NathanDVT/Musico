@@ -14,7 +14,7 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var durationLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var imgView: UIImageView!
-    // TODO: 
+
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code
