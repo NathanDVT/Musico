@@ -17,13 +17,11 @@ class ArtistMediaTableViewController: UITableViewController {
         }
     }
 
+    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        getInformation()
+        print("We In")
+        searchBar.delegate = self
     }
     // MARK: - Table view data source
 
@@ -33,13 +31,25 @@ class ArtistMediaTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableCell else {
+            return UITableViewCell()
+        }
         // Configure the cell...
-        cell.textLabel?.text = listOfArtistCollections[indexPath.row].artistName
+        cell.nameLbl.text = listOfArtistCollections[indexPath.row].artistName
+        cell.titleLbl.text = listOfArtistCollections[indexPath.row].collectionName
+        guard let imageURL = URL(string: listOfArtistCollections[indexPath.row].artworkUrl60) else {
+            return cell
+        }
+        // just not to cause a deadlock in UI!
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                cell.imgView.image = image
+            }
+        }
         return cell
     }
-
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -86,9 +96,12 @@ class ArtistMediaTableViewController: UITableViewController {
      }
      */
 
-    func getInformation() {
-        let name = "beyonce"
-        let artistMediaRequest = ArtistMediaRequest(artistName: name)
+}
+
+extension ArtistMediaTableViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchBarText = searchBar.text else {return}
+        let artistMediaRequest = ArtistMediaRequest(artistName: searchBarText)
         artistMediaRequest.getArtistMedia { [weak self] result in
             switch result {
             case .failure(let error):
