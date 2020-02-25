@@ -1,0 +1,6 @@
+framework module Pods_realwork {
+  umbrella header "Pods-realwork-umbrella.h"
+
+  export *
+  module * { export * }
+}

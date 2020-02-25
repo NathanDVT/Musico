@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import poddy
 
 enum ArtistMediaError: Error {
     case noDataAvailable
@@ -17,12 +18,11 @@ struct ArtistMediaRequest {
     let resourceURL: URL
 
     init(artistName: String) {
-        let resourceString = "https://itunes.apple.com/search?term=\(artistName)"
-        guard let resourceURL = URL(string: resourceString) else {fatalError()}
-        self.resourceURL = resourceURL
+        self.resourceURL = firstClassCitizen(artistName: artistName)
     }
 
     func getArtistMedia (completion: @escaping(Result<[Collection], ArtistMediaError>) -> Void) {
+        print(progress1)
         let dataTask = URLSession.shared.dataTask(with: resourceURL) { data, _, _ in
             guard let jsonData = data else {
                 completion(.failure(.noDataAvailable))

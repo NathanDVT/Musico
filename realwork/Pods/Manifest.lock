@@ -1,0 +1,16 @@
+PODS:
+  - poddy (0.1.0)
+
+DEPENDENCIES:
+  - poddy (from `/Users/nngobale/Documents/Training 2020/Musico/realwork/poddy`)
+
+EXTERNAL SOURCES:
+  poddy:
+    :path: "/Users/nngobale/Documents/Training 2020/Musico/realwork/poddy"
+
+SPEC CHECKSUMS:
+  poddy: 59535e956c5e77504c26f6daceb322fb6342c343
+
+PODFILE CHECKSUM: fceae2321fa14f1a238a536270c4b72ccf1e4db9
+
+COCOAPODS: 1.8.4

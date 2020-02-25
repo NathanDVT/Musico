@@ -1,0 +1,22 @@
+{
+  "name": "poddy",
+  "version": "0.1.0",
+  "summary": "A short description of poddy.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/NathanDVT/poddy",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "NathanDVT": "nngobale@jhb.dvt.co.za"
+  },
+  "source": {
+    "git": "https://github.com/NathanDVT/poddy.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "poddy/Classes/**/*"
+}
