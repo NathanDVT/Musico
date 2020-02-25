@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class ArtistMediaTableViewController: UITableViewController {
     var listOfArtistCollections = [Collection]() {
@@ -16,8 +17,10 @@ class ArtistMediaTableViewController: UITableViewController {
             }
         }
     }
-
+    var player: AVPlayer!
+    @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print("We In")
@@ -49,6 +52,46 @@ class ArtistMediaTableViewController: UITableViewController {
             }
         }
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt
+        indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let important = importantAction(at: indexPath)
+        let pause = pauseAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [important, pause])
+    }
+
+    func importantAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "PLAY") { ( _, _, completion) in
+            print("pressed play")
+            let url  = URL.init(string: self.listOfArtistCollections[indexPath.row].previewUrl)
+            let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
+            self.player = AVPlayer(playerItem: playerItem)
+            let playerLayer = AVPlayerLayer(player: self.player!)
+            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
+            self.view.layer.addSublayer(playerLayer)
+            self.player.play()
+            completion(true)
+        }
+        action.image = UIImage(named: "heart")
+        return action
+    }
+
+    func pauseAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "PAUSE") { ( _, _, completion) in
+            print("pressed play")
+            var player: AVPlayer!
+            let url  = URL.init(string: self.listOfArtistCollections[indexPath.row].previewUrl)
+            let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
+            player = AVPlayer(playerItem: playerItem)
+            let playerLayer = AVPlayerLayer(player: player!)
+            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
+            self.view.layer.addSublayer(playerLayer)
+            player.pause()
+            completion(true)
+        }
+        action.image = UIImage(named: "heart")
+        return action
     }
     /*
      // Override to support conditional editing of the table view.

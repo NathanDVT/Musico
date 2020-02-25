@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class TableCell: UITableViewCell {
 
@@ -14,4 +15,5 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var durationLbl: UILabel!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var playBtn: UIButton!
 }

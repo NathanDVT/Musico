@@ -20,4 +20,5 @@ struct Collection: Decodable {
     var collectionPrice: Double
     var trackTimeMillis: Int
     var artworkUrl60: String
+    var previewUrl: String
 }
