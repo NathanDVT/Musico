@@ -54,7 +54,8 @@ class ArtistMediaTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt
+        indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let important = importantAction(at: indexPath)
         let pause = pauseAction(at: indexPath)
         return UISwipeActionsConfiguration(actions: [important, pause])
@@ -63,7 +64,6 @@ class ArtistMediaTableViewController: UITableViewController {
     func importantAction(at indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "PLAY") { ( _, _, completion) in
             print("pressed play")
-            
             let url  = URL.init(string: self.listOfArtistCollections[indexPath.row].previewUrl)
             let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
             self.player = AVPlayer(playerItem: playerItem)
