@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2196CF36630BE5CAECFCAF45F844A7DE /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEBA5B500FEE3862147B42C12DBAC37 /* ReplaceMe.swift */; };
-		305CC3B1B55218207E52D48F9A4137F8 /* NLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0842E65B4974F98C10E0A5122121D5B7 /* NLibrary-dummy.m */; };
+		2196CF36630BE5CAECFCAF45F844A7DE /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEBBC0BF7DDA66C949CFCBDF9CEBB6E /* ReplaceMe.swift */; };
+		305CC3B1B55218207E52D48F9A4137F8 /* NLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3F22AF87FB7FACC86B8F5BAF4F0702 /* NLibrary-dummy.m */; };
 		30B0732DF6467929113A5081D41FBAD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		351F9E2A425933448E675CD3897D7ABD /* Pods-realworkTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 25E47689638908A320A50CD76FE313BF /* Pods-realworkTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37702390E2AA8E3F7A8A7E010C3CE369 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		3837D378396E04AB4B03D5A4FCCD9923 /* NLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74B81FF2935E33416DDC6074C5AFB2AC /* NLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3837D378396E04AB4B03D5A4FCCD9923 /* NLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F027C7FB0BC2889A805114319F54B2E /* NLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9F516ECAE146CD568B3DB1109E2B08A /* Pods-realwork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBF59F9922FFB6221FCAA0A84B7A8C9 /* Pods-realwork-dummy.m */; };
 		E805B0BF2A7E03CD540D7515D5C1A5B8 /* Pods-realwork-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CC88D779A51474F76F91329CF5AD5F /* Pods-realwork-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF63227D7F2927ACDC7EC52B22E5CE87 /* Pods-realworkTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 767DCE5360BB53B8DE01BD91108D8FAA /* Pods-realworkTests-dummy.m */; };
@@ -37,38 +37,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0842E65B4974F98C10E0A5122121D5B7 /* NLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NLibrary-dummy.m"; sourceTree = "<group>"; };
+		036BEB289FF903687BD8D72EF232D3DD /* NLibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NLibrary-Info.plist"; sourceTree = "<group>"; };
 		0D98D995C619D8D7031B93DC6611F73B /* Pods-realwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-realwork.debug.xcconfig"; sourceTree = "<group>"; };
 		0DBF59F9922FFB6221FCAA0A84B7A8C9 /* Pods-realwork-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-realwork-dummy.m"; sourceTree = "<group>"; };
 		25E47689638908A320A50CD76FE313BF /* Pods-realworkTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-realworkTests-umbrella.h"; sourceTree = "<group>"; };
-		2EEBA5B500FEE3862147B42C12DBAC37 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = NLibrary/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		284AD5AA164E48983F66BBD64D135D85 /* NLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NLibrary.xcconfig; sourceTree = "<group>"; };
+		2EEBBC0BF7DDA66C949CFCBDF9CEBB6E /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = NLibrary/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3758BA7B5877345BD8E377D80143088A /* NLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NLibrary.modulemap; sourceTree = "<group>"; };
-		44DC4CF88B807EB4BA98E3FD3F5D8E12 /* Pods_realwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4774D172DDDFE04902A8229B2EE44EF8 /* NLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NLibrary.xcconfig; sourceTree = "<group>"; };
+		44DC4CF88B807EB4BA98E3FD3F5D8E12 /* Pods_realwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_realwork.framework; path = "Pods-realwork.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		485E92B48B8C13D4EDBCE682153258A2 /* Pods-realworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-realworkTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6063AAA8D70F7FE168DF096D4512168E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		58766DCD72477454D5E3E8422B5308C5 /* NLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = NLibrary.modulemap; sourceTree = "<group>"; };
+		5F027C7FB0BC2889A805114319F54B2E /* NLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NLibrary-umbrella.h"; sourceTree = "<group>"; };
 		694F8D02ADE31BF63B278D0AFE0C24C9 /* Pods-realworkTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-realworkTests-Info.plist"; sourceTree = "<group>"; };
-		6F4566753512E7C634CD8139F0E86B46 /* NLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NLibrary-prefix.pch"; sourceTree = "<group>"; };
-		74B81FF2935E33416DDC6074C5AFB2AC /* NLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NLibrary-umbrella.h"; sourceTree = "<group>"; };
-		74C9E5667EFF6B6D37AE8B3CDFD97549 /* NLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = NLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		767DCE5360BB53B8DE01BD91108D8FAA /* Pods-realworkTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-realworkTests-dummy.m"; sourceTree = "<group>"; };
 		7F72FC3E3C83D3324CBB633EF797C95D /* Pods-realworkTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-realworkTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		878BCABC931DBE10E28000C7E86F3709 /* Pods-realwork-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-realwork-frameworks.sh"; sourceTree = "<group>"; };
 		9342A63B2F136FBB62353525C5B096E4 /* Pods-realwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-realwork.release.xcconfig"; sourceTree = "<group>"; };
 		9768772550F9949782E84D64852F17F8 /* Pods-realwork-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-realwork-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B75B160AD510E6D22A7609BA2F7445BB /* NLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BF17B7936A66E2218F10B2F10CA8BC9 /* NLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NLibrary-prefix.pch"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B75B160AD510E6D22A7609BA2F7445BB /* NLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NLibrary.framework; path = NLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB3F22AF87FB7FACC86B8F5BAF4F0702 /* NLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NLibrary-dummy.m"; sourceTree = "<group>"; };
 		BF3BBB56F135F16653AAF7C1858B4B70 /* Pods-realworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-realworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFE23423C975A0D1C597711812449BE4 /* Pods-realwork-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-realwork-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D06164B1FC584E915022788016ACA0E7 /* NLibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "NLibrary-Info.plist"; sourceTree = "<group>"; };
 		D0D29D93C87F9F486BF3014AC3F47143 /* Pods-realworkTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-realworkTests.modulemap"; sourceTree = "<group>"; };
 		DEAE4AE0D79BD25EC353881CF53918EC /* Pods-realworkTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-realworkTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DF5F6722CAF5C2525E30CEA3CFE33C1A /* Pods-realwork.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-realwork.modulemap"; sourceTree = "<group>"; };
 		E9CC88D779A51474F76F91329CF5AD5F /* Pods-realwork-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-realwork-umbrella.h"; sourceTree = "<group>"; };
 		F455F3AA34774D47F9389962AC462664 /* Pods-realwork-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-realwork-Info.plist"; sourceTree = "<group>"; };
-		F592C234A753DF42312331A0AC62BA23 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FCBA069EC9FCA473E521F4E45E29681B /* Pods_realworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCBA069EC9FCA473E521F4E45E29681B /* Pods_realworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_realworkTests.framework; path = "Pods-realworkTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +96,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A84DC2447C63C1D615DEC287AF89820 /* NLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				2EEBBC0BF7DDA66C949CFCBDF9CEBB6E /* ReplaceMe.swift */,
+				D01B84442964E065A88BD9B1370CF60E /* Support Files */,
+			);
+			name = NLibrary;
+			path = NLibrary;
+			sourceTree = "<group>";
+		};
 		34170E43114D137EC9FB8228DD9519D4 /* Pods-realworkTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,39 +122,6 @@
 			path = "Target Support Files/Pods-realworkTests";
 			sourceTree = "<group>";
 		};
-		706AC9E603E62E8019EA52C9CBFC97DC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3758BA7B5877345BD8E377D80143088A /* NLibrary.modulemap */,
-				4774D172DDDFE04902A8229B2EE44EF8 /* NLibrary.xcconfig */,
-				0842E65B4974F98C10E0A5122121D5B7 /* NLibrary-dummy.m */,
-				D06164B1FC584E915022788016ACA0E7 /* NLibrary-Info.plist */,
-				6F4566753512E7C634CD8139F0E86B46 /* NLibrary-prefix.pch */,
-				74B81FF2935E33416DDC6074C5AFB2AC /* NLibrary-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../../../Musico/realwork/Pods/Target Support Files/NLibrary";
-			sourceTree = "<group>";
-		};
-		AE7EBB492F06FA04200DB1736EF3D58F /* NLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				2EEBA5B500FEE3862147B42C12DBAC37 /* ReplaceMe.swift */,
-				F8E25E58B9430C931DD268DB6DBE0AEF /* Pod */,
-				706AC9E603E62E8019EA52C9CBFC97DC /* Support Files */,
-			);
-			name = NLibrary;
-			path = "/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary";
-			sourceTree = "<absolute>";
-		};
-		B03C0892AD690DA1D56EA9FE32AAFFFF /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AE7EBB492F06FA04200DB1736EF3D58F /* NLibrary */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		B37DD894D63EB8F904AB59ACD3D4DCEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +130,14 @@
 				FCBA069EC9FCA473E521F4E45E29681B /* Pods_realworkTests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BB8AA7E147465680D0D320831E2EBFCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A84DC2447C63C1D615DEC287AF89820 /* NLibrary */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -170,11 +152,25 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				B03C0892AD690DA1D56EA9FE32AAFFFF /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				BB8AA7E147465680D0D320831E2EBFCE /* Pods */,
 				B37DD894D63EB8F904AB59ACD3D4DCEE /* Products */,
 				EE419DD20A0E94F03C1E93E46156C3A8 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D01B84442964E065A88BD9B1370CF60E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58766DCD72477454D5E3E8422B5308C5 /* NLibrary.modulemap */,
+				284AD5AA164E48983F66BBD64D135D85 /* NLibrary.xcconfig */,
+				BB3F22AF87FB7FACC86B8F5BAF4F0702 /* NLibrary-dummy.m */,
+				036BEB289FF903687BD8D72EF232D3DD /* NLibrary-Info.plist */,
+				9BF17B7936A66E2218F10B2F10CA8BC9 /* NLibrary-prefix.pch */,
+				5F027C7FB0BC2889A805114319F54B2E /* NLibrary-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NLibrary";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -209,16 +205,6 @@
 				34170E43114D137EC9FB8228DD9519D4 /* Pods-realworkTests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F8E25E58B9430C931DD268DB6DBE0AEF /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				6063AAA8D70F7FE168DF096D4512168E /* LICENSE */,
-				74C9E5667EFF6B6D37AE8B3CDFD97549 /* NLibrary.podspec */,
-				F592C234A753DF42312331A0AC62BA23 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,7 +430,7 @@
 		};
 		22392256A16CCDB11F21268ECBA9C35D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4774D172DDDFE04902A8229B2EE44EF8 /* NLibrary.xcconfig */;
+			baseConfigurationReference = 284AD5AA164E48983F66BBD64D135D85 /* NLibrary.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -721,7 +707,7 @@
 		};
 		F91CA7DCACEC5CF9DBD5C84C8D23854A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4774D172DDDFE04902A8229B2EE44EF8 /* NLibrary.xcconfig */;
+			baseConfigurationReference = 284AD5AA164E48983F66BBD64D135D85 /* NLibrary.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";

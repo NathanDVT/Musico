@@ -2,15 +2,20 @@ PODS:
   - NLibrary (0.1.0)
 
 DEPENDENCIES:
-  - NLibrary (from `/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary`)
+  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`)
 
 EXTERNAL SOURCES:
   NLibrary:
-    :path: "/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary"
+    :git: https://github.com/NathanDVT/NLibrary.git
+
+CHECKOUT OPTIONS:
+  NLibrary:
+    :commit: ebaa59db1b1a4164e927f2a54336518f88590641
+    :git: https://github.com/NathanDVT/NLibrary.git
 
 SPEC CHECKSUMS:
   NLibrary: ec2ddce5738362f9b660f27b78723df7e5fe7766
 
-PODFILE CHECKSUM: 7a840ff2eede7d4040b24677a01bde4bf1caf19a
+PODFILE CHECKSUM: cb83ef1558e3cbd026883a1a8f5fa716c2c37e4c
 
 COCOAPODS: 1.8.4
