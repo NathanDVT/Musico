@@ -1,0 +1,16 @@
+PODS:
+  - NLibrary (0.1.0)
+
+DEPENDENCIES:
+  - NLibrary (from `/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary`)
+
+EXTERNAL SOURCES:
+  NLibrary:
+    :path: "/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary"
+
+SPEC CHECKSUMS:
+  NLibrary: ec2ddce5738362f9b660f27b78723df7e5fe7766
+
+PODFILE CHECKSUM: 7a840ff2eede7d4040b24677a01bde4bf1caf19a
+
+COCOAPODS: 1.8.4

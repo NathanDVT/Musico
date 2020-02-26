@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'realwork' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for realwork
+  pod 'NLibrary', :path => '/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary'
+
+  target 'realworkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
