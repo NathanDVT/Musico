@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import NLibrary
 
 class ArtistMediaTableViewController: UITableViewController {
     var listOfArtistCollections = [Collection]() {
@@ -23,7 +24,6 @@ class ArtistMediaTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("We In")
         searchBar.delegate = self
     }
     // MARK: - Table view data source
@@ -56,14 +56,12 @@ class ArtistMediaTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt
         indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let important = importantAction(at: indexPath)
-        let pause = pauseAction(at: indexPath)
-        return UISwipeActionsConfiguration(actions: [important, pause])
+        let important = importantAction(at: indexPath, then: tableView)
+        return UISwipeActionsConfiguration(actions: [important])
     }
 
-    func importantAction(at indexPath: IndexPath) -> UIContextualAction {
+    func importantAction(at indexPath: IndexPath, then tableView: UITableView) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "PLAY") { ( _, _, completion) in
-            print("pressed play")
             let url  = URL.init(string: self.listOfArtistCollections[indexPath.row].previewUrl)
             let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
             self.player = AVPlayer(playerItem: playerItem)
@@ -71,28 +69,17 @@ class ArtistMediaTableViewController: UITableViewController {
             playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             self.view.layer.addSublayer(playerLayer)
             self.player.play()
+            let cell = tableView.cellForRow(at: indexPath) as? TableCell
+            let action = UIImage(systemName: "livephoto.play")
+            cell?.playBtn.tintColor = UIColor.yellow
+            cell?.playBtn.setImage(action, for: .normal)
+            cell?.tblcellplayer = self.player
             completion(true)
         }
-        action.image = UIImage(named: "heart")
+        action.image = UIImage(systemName: "livephoto.play")
         return action
     }
 
-    func pauseAction(at indexPath: IndexPath) -> UIContextualAction {
-        let action = UIContextualAction(style: .normal, title: "PAUSE") { ( _, _, completion) in
-            print("pressed play")
-            var player: AVPlayer!
-            let url  = URL.init(string: self.listOfArtistCollections[indexPath.row].previewUrl)
-            let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
-            player = AVPlayer(playerItem: playerItem)
-            let playerLayer = AVPlayerLayer(player: player!)
-            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
-            self.view.layer.addSublayer(playerLayer)
-            player.pause()
-            completion(true)
-        }
-        action.image = UIImage(named: "heart")
-        return action
-    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

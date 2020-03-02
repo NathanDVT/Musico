@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,8 +17,6 @@
 		417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C628A23EC10BF00CADC7E /* DesignableView.swift */; };
 		417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */; };
 		41901A5323FE6CE200938CD4 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41901A5223FE6CE200938CD4 /* TableCell.swift */; };
-		41CC20D923FC110300FDC65A /* ArtistMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20D823FC110300FDC65A /* ArtistMedia.swift */; };
-		41CC20DB23FC136500FDC65A /* ArtistMediaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20DA23FC136500FDC65A /* ArtistMediaRequest.swift */; };
 		41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */; };
 		48A316DA3E50B34A56E13980 /* Pods_realwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F6501761EC1C00789BAEFB /* Pods_realwork.framework */; };
 		7894437C9ACFD65D116FFEEF /* Pods_realworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033D1587EA5C54417369F064 /* Pods_realworkTests.framework */; };
@@ -53,8 +51,6 @@
 		417C628A23EC10BF00CADC7E /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		41901A5223FE6CE200938CD4 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
-		41CC20D823FC110300FDC65A /* ArtistMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMedia.swift; sourceTree = "<group>"; };
-		41CC20DA23FC136500FDC65A /* ArtistMediaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaRequest.swift; sourceTree = "<group>"; };
 		41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaTableViewController.swift; sourceTree = "<group>"; };
 		BA7FC6C200CFC4AB8B315998 /* Pods-realwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realwork.release.xcconfig"; path = "Target Support Files/Pods-realwork/Pods-realwork.release.xcconfig"; sourceTree = "<group>"; };
 		F5F6501761EC1C00789BAEFB /* Pods_realwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +84,6 @@
 				251344B2652FDE6D496EE5B7 /* Pods-realworkTests.debug.xcconfig */,
 				1ED8F3DDABD60731B8454625 /* Pods-realworkTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,8 +119,6 @@
 				417C627623E9A9B100CADC7E /* Info.plist */,
 				417C628A23EC10BF00CADC7E /* DesignableView.swift */,
 				417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */,
-				41CC20D823FC110300FDC65A /* ArtistMedia.swift */,
-				41CC20DA23FC136500FDC65A /* ArtistMediaRequest.swift */,
 				41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */,
 				41901A5223FE6CE200938CD4 /* TableCell.swift */,
 			);
@@ -338,10 +331,8 @@
 			files = (
 				41901A5323FE6CE200938CD4 /* TableCell.swift in Sources */,
 				417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */,
-				41CC20D923FC110300FDC65A /* ArtistMedia.swift in Sources */,
 				417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */,
 				417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */,
-				41CC20DB23FC136500FDC65A /* ArtistMediaRequest.swift in Sources */,
 				41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */,
 				417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */,
 				417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */,
