@@ -6,8 +6,8 @@ target 'realwork' do
   use_frameworks!
 
   # Pods for realwork
-#  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git'
-  pod 'NLibrary', :path => '/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary'
+  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git'
+#  pod 'NLibrary', :path => '/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary'
 
   target 'realworkTests' do
     inherit! :search_paths
