@@ -54,8 +54,8 @@ class ArtistMediaTableViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView,
-                            trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt
+        indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let important = importantAction(at: indexPath, then: tableView)
         return UISwipeActionsConfiguration(actions: [important])
     }
