@@ -7,18 +7,18 @@
 //
 
 import Foundation
+import NLibrary
+//struct ArtistMediaResponse: Decodable {
+//    var results: [Collection]
+//}
 
-struct ArtistMediaResponse: Decodable {
-    var results: [Collection]
-}
-
-struct Collection: Decodable {
-    var artistName: String
-    var collectionName: String
-    var releaseDate: String
-    var artworkUrl30: String
-    var collectionPrice: Double
-    var trackTimeMillis: Int
-    var artworkUrl60: String
-    var previewUrl: String
-}
+//struct Collection: Decodable {
+//    var artistName: String
+//    var collectionName: String
+//    var releaseDate: String
+//    var artworkUrl30: String
+//    var collectionPrice: Double
+//    var trackTimeMillis: Int
+//    var artworkUrl60: String
+//    var previewUrl: String
+//}
