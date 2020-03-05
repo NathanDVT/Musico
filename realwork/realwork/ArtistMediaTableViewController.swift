@@ -133,7 +133,7 @@ extension ArtistMediaTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else {return}
         let artistMediaViewModel = ArtistMediaViewModel(artistName: searchBarText)
-        artistMediaViewModel.getCollections{ [weak self] result in
+        artistMediaViewModel.getCollections { [weak self] result in
             switch result {
             case .failure(let error):
                 print(error)
