@@ -2,20 +2,21 @@ PODS:
   - NLibrary (0.1.0)
 
 DEPENDENCIES:
-  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`)
+  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `development`)
 
 EXTERNAL SOURCES:
   NLibrary:
+    :branch: development
     :git: https://github.com/NathanDVT/NLibrary.git
 
 CHECKOUT OPTIONS:
   NLibrary:
-    :commit: 149836493a96bc7777d9b3c4873f942e25b8d921
+    :commit: ad9c655e3e25a71059964954a95b39a6b7b2c637
     :git: https://github.com/NathanDVT/NLibrary.git
 
 SPEC CHECKSUMS:
   NLibrary: ec2ddce5738362f9b660f27b78723df7e5fe7766
 
-PODFILE CHECKSUM: 4770deebebd51abf54033475bffbabadc656aa4f
+PODFILE CHECKSUM: bfd1505b191b4c4647c57bb730feba7f141ef82f
 
 COCOAPODS: 1.8.4
