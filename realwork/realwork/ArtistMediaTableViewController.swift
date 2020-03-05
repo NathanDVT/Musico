@@ -14,7 +14,6 @@ class ArtistMediaTableViewController: UITableViewController {
     var listOfArtistCollections = [Collection]() {
         didSet {
             DispatchQueue.main.async {
-                print ("reset values")
                 self.tableView.reloadData()
             }
         }
