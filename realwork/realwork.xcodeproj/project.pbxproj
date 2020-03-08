@@ -17,6 +17,7 @@
 		417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C628A23EC10BF00CADC7E /* DesignableView.swift */; };
 		417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */; };
 		41901A5323FE6CE200938CD4 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41901A5223FE6CE200938CD4 /* TableCell.swift */; };
+		41AFDBB324127E0A006393AE /* ArtistMediaModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AFDBB224127E0A006393AE /* ArtistMediaModelTest.swift */; };
 		41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */; };
 		48A316DA3E50B34A56E13980 /* Pods_realwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F6501761EC1C00789BAEFB /* Pods_realwork.framework */; };
 		7894437C9ACFD65D116FFEEF /* Pods_realworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033D1587EA5C54417369F064 /* Pods_realworkTests.framework */; };
@@ -51,6 +52,7 @@
 		417C628A23EC10BF00CADC7E /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		41901A5223FE6CE200938CD4 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		41AFDBB224127E0A006393AE /* ArtistMediaModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaModelTest.swift; sourceTree = "<group>"; };
 		41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaTableViewController.swift; sourceTree = "<group>"; };
 		BA7FC6C200CFC4AB8B315998 /* Pods-realwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realwork.release.xcconfig"; path = "Target Support Files/Pods-realwork/Pods-realwork.release.xcconfig"; sourceTree = "<group>"; };
 		F5F6501761EC1C00789BAEFB /* Pods_realwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,10 +130,35 @@
 		417C627E23E9A9B100CADC7E /* realworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				41AFDBB024127DC3006393AE /* ArtistMedia */,
 				417C627F23E9A9B100CADC7E /* realworkTests.swift */,
 				417C628123E9A9B100CADC7E /* Info.plist */,
 			);
 			path = realworkTests;
+			sourceTree = "<group>";
+		};
+		41AFDBB024127DC3006393AE /* ArtistMedia */ = {
+			isa = PBXGroup;
+			children = (
+				41AFDBB424127E70006393AE /* Mocks */,
+				41AFDBB124127DD2006393AE /* ArtistMediaModelTest */,
+			);
+			path = ArtistMedia;
+			sourceTree = "<group>";
+		};
+		41AFDBB124127DD2006393AE /* ArtistMediaModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				41AFDBB224127E0A006393AE /* ArtistMediaModelTest.swift */,
+			);
+			path = ArtistMediaModelTest;
+			sourceTree = "<group>";
+		};
+		41AFDBB424127E70006393AE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		A7CF5EA9258C7D2F754FC35A /* Frameworks */ = {
@@ -344,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417C628023E9A9B100CADC7E /* realworkTests.swift in Sources */,
+				41AFDBB324127E0A006393AE /* ArtistMediaModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
