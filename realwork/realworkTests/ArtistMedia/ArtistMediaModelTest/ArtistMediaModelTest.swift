@@ -36,12 +36,11 @@ class ArtistMediaModelTest: XCTestCase {
             artistMediaRepo = try ArtistMediaRepo(artistName: artistName)
             let expectedUrl: String = "https://itunes.apple.com/search?term=Drake"
             XCTAssertEqual(artistMediaRepo.resourceURL.absoluteString, expectedUrl)
-        }
-        catch {}
+        } catch {}
     }
 
     func testGivenInvalidNamedArtistThenReturnSuccessfullUrl() {
-        let artistName: String = "-102=1?]=-]-±&%@^&(@"
+        let artistName: String = "-102=1?]=-]-±&%&(@"
         XCTAssertThrowsError( try ArtistMediaRepo(artistName: artistName) ) { error in
             XCTAssertEqual(error as? ArtistMediaError, ArtistMediaError.invalidName)
         }
