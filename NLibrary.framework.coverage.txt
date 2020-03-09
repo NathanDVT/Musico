@@ -1,0 +1,117 @@
+/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/Model/ArtistMediaModel.swift:
+    1|       |//
+    2|       |//  ArtistMedia.swift
+    3|       |//  NLibrary
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/03/02.
+    6|       |//
+    7|       |
+    8|       |import Foundation
+    9|       |// Mocks
+   10|       |protocol ArtistMediaResponseProtocol: class {
+   11|       |    init( )
+   12|       |    var results: [Collection] {get set}
+   13|       |}
+   14|       |
+   15|       |protocol ArtistMediaRepoProtocol: class {
+   16|       |    func getArtistMedia (completion: @escaping(Result<[Collection], ArtistMediaError>) -> Void)
+   17|       |}
+   18|      0|
+   19|      0|// DTO: Data Transfer Objects
+   20|      0|
+   21|       |public class ArtistMediaResponse: Decodable, ArtistMediaResponseProtocol {
+   22|       |    public var results: [Collection]
+   23|       |    required public init( ) {
+   24|       |        results = []
+   25|       |    }
+   26|       |}
+   27|       |
+   28|       |public struct Collection: Decodable {
+   29|       |    public var artistName: String
+   30|       |    public var collectionName: String
+   31|       |    public var releaseDate: String
+   32|      0|    public var artworkUrl30: String
+   33|      0|    public var collectionPrice: Double
+   34|      0|    public var trackTimeMillis: Int
+   35|      0|    public var artworkUrl60: String
+   36|      0|    public var previewUrl: String
+   37|      0|    public init( ) {
+   38|      0|        artistName = ""
+   39|      0|        collectionName = ""
+   40|      0|        releaseDate = ""
+   41|      0|        artworkUrl30 = ""
+   42|       |        artworkUrl60 = ""
+   43|       |        previewUrl = ""
+   44|       |        trackTimeMillis = 0
+   45|       |        collectionPrice = 0
+   46|       |    }
+   47|       |}
+   48|       |
+   49|       |public enum ArtistMediaError: Error {
+   50|       |    case noDataAvailable
+   51|       |    case canNotProcessData
+   52|      0|    case invalidName
+   53|      0|}
+   54|      0|
+   55|      0|public class ArtistMediaRepo: ArtistMediaRepoProtocol {
+   56|      0|    let resourceURL: URL
+   57|       |
+   58|      0|    public init(artistName: String) throws {
+   59|      0|        let resourceString = "https://itunes.apple.com/search?term=\(artistName)"
+   60|      0|        guard let resourceURL = URL(string: resourceString)
+   61|      0|            else { throw ArtistMediaError.invalidName}
+   62|      0|        self.resourceURL = resourceURL
+   63|      0|    }
+   64|      0|
+   65|      0|    public func getArtistMedia (completion: @escaping(Result<[Collection], ArtistMediaError>) -> Void) {
+   66|      0|        let dataTask = URLSession.shared.dataTask(with: self.resourceURL) { data, _, _ in
+   67|      0|            guard let jsonData = data else {
+   68|      0|                completion(.failure(.noDataAvailable))
+   69|      0|                return
+   70|      0|            }
+   71|      0|            do {
+   72|      0|                let decoder = JSONDecoder()
+   73|      0|                let artistMediaResponse = try decoder.decode(ArtistMediaResponse.self, from: jsonData)
+   74|      0|                let collections = artistMediaResponse.results
+   75|       |                completion(.success(collections))
+   76|       |            } catch {
+   77|       |                completion(.failure(.canNotProcessData))
+   78|       |            }
+   79|       |        }
+   80|       |        dataTask.resume()
+   81|       |    }
+   82|       |}
+
+/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/ViewModel/ArtistMediaViewModel.swift:
+    1|       |//
+    2|       |//  ArtistMediaViewModel.swift
+    3|       |//  NLibrary
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/03/04.
+    6|       |//
+    7|       |
+    8|       |import Foundation
+    9|       |
+   10|       |public class ArtistMediaViewModel {
+   11|       |    public var listOfArtistCollections = [Collection]()
+   12|       |    public var artistName: String
+   13|      0|    public init (artistName: String) {
+   14|      0|        self.artistName = artistName
+   15|      0|    }
+   16|       |
+   17|      0|    public func getCollections(completion: @escaping(Result<[Collection], ArtistMediaError>) -> Void) {
+   18|      0|        do {
+   19|      0|            let artistMediaRequest = try ArtistMediaRepo(artistName: self.artistName)
+   20|      0|            artistMediaRequest.getArtistMedia { [weak self] result in
+   21|      0|                switch result {
+   22|      0|                case .failure(let error):
+   23|      0|                    completion(.failure(error))
+   24|      0|                case .success(let collections):
+   25|      0|                    completion(.success(collections))
+   26|      0|                }
+   27|      0|            }
+   28|       |        } catch {}
+   29|       |        
+   30|       |    }
+   31|       |}
+

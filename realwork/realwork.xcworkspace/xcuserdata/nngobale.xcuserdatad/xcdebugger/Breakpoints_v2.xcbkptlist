@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A6091D83-52B5-4D8E-91E2-3565D09564F8"
+            uuid = "6721E5E7-31AE-4753-B4FA-0AA21F46A767"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/Model/ArtistMediaModel.swift"
+            filePath = "realworkTests/ArtistMedia/ArtistMediaModelTest/ArtistMediaModelTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "init(artistName:)"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "testGivenImpossibleArtistNameThenReturnSuccessfullEmptyCollection()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "80E78528-4A6E-4E93-ACE7-E2A996CCDFAB"
+            uuid = "9FBE77AC-E75C-43D9-876B-829028835D68"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/Model/ArtistMediaModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "init(artistName:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A565034D-39CB-43D5-9829-C8B078885151"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/Model/ArtistMediaModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "init(artistName:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "getArtistMedia(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
