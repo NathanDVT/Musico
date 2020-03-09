@@ -45,4 +45,50 @@ class ArtistMediaModelTest: XCTestCase {
             XCTAssertEqual(error as? ArtistMediaError, ArtistMediaError.invalidName)
         }
     }
+
+    func testGivenCorrectArtistNameThenReturnSuccessfullCollection() {
+        let artistName: String = "Drake"
+        var artistMediaRepo: ArtistMediaRepo
+        let expectation1 = expectation(description: "First Expectation")
+        do {
+            artistMediaRepo = try ArtistMediaRepo(artistName: artistName)
+            artistMediaRepo.getArtistMedia { [weak self] result in
+                XCTAssertNotNil(result)
+                switch result {
+                case .success(let cols):
+                    XCTAssertGreaterThan(cols.count, 0)
+                case .failure(let error):
+                    XCTAssertFalse(true)
+                }
+                expectation1.fulfill()
+            }
+            waitForExpectations(timeout: 5)
+        } catch {XCTAssertTrue(false)}
+    }
+    
+    func testGivenImpossibleArtistNameThenReturnSuccessfullEmptyCollection() {
+        let artistName: String = "DVTHASKH"
+        var artistMediaRepo: ArtistMediaRepo
+        let expectation1 = expectation(description: "First Expectation")
+        do {
+            artistMediaRepo = try ArtistMediaRepo(artistName: artistName)
+            artistMediaRepo.getArtistMedia { [weak self] result in
+                XCTAssertNotNil(result)
+                switch result {
+                case .success(let cols):
+                    XCTAssertEqual(cols.count, 0)
+                case .failure(let error):
+                    XCTAssertFalse(true)
+                }
+                expectation1.fulfill()
+            }
+            waitForExpectations(timeout: 5)
+        } catch {XCTAssertTrue(false)}
+    }
+    
+    
+//    case .failure(let error):
+//        completion(.failure(error))
+//    case .success(let collections):
+//        completion(.success(collections))
 }
