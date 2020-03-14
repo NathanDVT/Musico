@@ -2,93 +2,40 @@
 //  ArtistMediaModelTest.swift
 //  realworkTests
 //
-//  Created by Nathan Ngobale on 2020/03/06.
+//  Created by Nathan Ngobale on 2020/03/09.
 //  Copyright © 2020 Nathan Ngobale. All rights reserved.
 //
 
 import XCTest
-@testable import realwork
 @testable import NLibrary
 
-//
-
 class ArtistMediaModelTest: XCTestCase {
-
+    var repo: ArtistMediaRepoProtocol!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        do {
+            repo = try ArtistMediaRepoMock(artistName: "drake")
+        } catch {}
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() {
-        let artistMediaResponse = ArtistMediaResponse()
-        XCTAssertNotNil(artistMediaResponse)
-        let collection = Collection()
-        XCTAssertNotNil(collection)
-    }
-    //testGivenCorrectCredsWhenLoginIsCalledThenReturnSuccessfullReponse
-    func testGivenOneWordNamedArtistThenReturnSuccessfullUrl() {
-        let artistName: String = "Drake"
-        var artistMediaRepo: ArtistMediaRepo
-        do {
-            artistMediaRepo = try ArtistMediaRepo(artistName: artistName)
-            let expectedUrl: String = "https://itunes.apple.com/search?term=Drake"
-            XCTAssertEqual(artistMediaRepo.resourceURL.absoluteString, expectedUrl)
-        } catch {}
+    
+    func testGivenCreationOfCollectionThenCorrectInitialization() {
+        let collection: Collection = Collection()
+        XCTAssertEqual(collection.artistName, "")
+        XCTAssertEqual(collection.collectionName, "")
+        XCTAssertEqual(collection.releaseDate, "")
+        XCTAssertEqual(collection.artworkUrl30, "")
+        XCTAssertEqual(collection.artworkUrl60, "")
+        XCTAssertEqual(collection.previewUrl, "")
+        XCTAssertEqual(collection.trackTimeMillis, 0)
+        XCTAssertEqual(collection.collectionPrice, 0)
     }
 
-    func testGivenInvalidNamedArtistThenReturnSuccessfullUrl() {
-        let artistName: String = "-102=1?]=-]-±&%&(@"
-        XCTAssertThrowsError( try ArtistMediaRepo(artistName: artistName) ) { error in
-            XCTAssertEqual(error as? ArtistMediaError, ArtistMediaError.invalidName)
-        }
+    func testGivenCreationOfCollectionArrayThenSuccessfulEmptyArray() {
+        let model: ArtistMediaResponse = ArtistMediaResponse()
+        XCTAssertEqual(model.results.count, 0)
     }
-
-    func testGivenCorrectArtistNameThenReturnSuccessfullCollection() {
-        let artistName: String = "Drake"
-        var artistMediaRepo: ArtistMediaRepo
-        let expectation1 = expectation(description: "First Expectation")
-        do {
-            artistMediaRepo = try ArtistMediaRepo(artistName: artistName)
-            artistMediaRepo.getArtistMedia { [weak self] result in
-                XCTAssertNotNil(result)
-                switch result {
-                case .success(let cols):
-                    XCTAssertGreaterThan(cols.count, 0)
-                case .failure(let error):
-                    XCTAssertFalse(true)
-                }
-                expectation1.fulfill()
-            }
-            waitForExpectations(timeout: 5)
-        } catch {XCTAssertTrue(false)}
-    }
-    
-    func testGivenImpossibleArtistNameThenReturnSuccessfullEmptyCollection() {
-        let artistName: String = "DVTHASKH"
-        var artistMediaRepo: ArtistMediaRepo
-        let expectation1 = expectation(description: "First Expectation")
-        do {
-            artistMediaRepo = try ArtistMediaRepo(artistName: artistName)
-            artistMediaRepo.getArtistMedia { [weak self] result in
-                XCTAssertNotNil(result)
-                switch result {
-                case .success(let cols):
-                    XCTAssertEqual(cols.count, 0)
-                case .failure(let error):
-                    XCTAssertFalse(true)
-                }
-                expectation1.fulfill()
-            }
-            waitForExpectations(timeout: 5)
-        } catch {XCTAssertTrue(false)}
-    }
-    
-    
-//    case .failure(let error):
-//        completion(.failure(error))
-//    case .success(let collections):
-//        completion(.success(collections))
 }
