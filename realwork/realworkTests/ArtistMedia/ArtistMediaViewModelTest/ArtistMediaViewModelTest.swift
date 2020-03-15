@@ -28,7 +28,7 @@ class ArtistMediaViewModelTest: XCTestCase {
     }
 
     func testGivenCorrectArtistNameThenReturnSuccessfullCollection() {
-        let expectation1 = expectation(description: "First Expectation")
+//        let expectation1 = expectation(description: "First Expectation")
         do {
             repo.getArtistMedia { [weak self] result in
                 XCTAssertNotNil(result)
@@ -39,9 +39,9 @@ class ArtistMediaViewModelTest: XCTestCase {
                     print(error)
                     XCTAssertFalse(true)
                 }
-                expectation1.fulfill()
+//                expectation1.fulfill()
             }
-            waitForExpectations(timeout: 3)
+//            waitForExpectations(timeout: 3)
         } catch {XCTAssertTrue(false)}
     }
 
