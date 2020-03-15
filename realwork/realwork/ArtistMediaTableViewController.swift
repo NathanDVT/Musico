@@ -131,7 +131,7 @@ class ArtistMediaTableViewController: UITableViewController {
 extension ArtistMediaTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else {return}
-        let artistMediaViewModel = ArtistMediaViewModel(artistName: searchBarText, repo: ArtistMediaRepo(artistName: searchBarText))
+        let artistMediaViewModel = ArtistMediaViewModel(artistName: searchBarText)//, repo: ArtistMediaRepo(artistName: searchBarText))
         artistMediaViewModel.getCollections { [weak self] result in
             switch result {
             case .failure(let error):
