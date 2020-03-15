@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import realwork
+@testable import NLibrary
 // the app was a lower case, changed it to an upper case
 class RealworkTests: XCTestCase {
 
