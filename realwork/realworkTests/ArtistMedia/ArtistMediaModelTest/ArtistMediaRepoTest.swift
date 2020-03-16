@@ -52,12 +52,12 @@ class ArtistMediaRepoTest: XCTestCase {
         let expectation1 = expectation(description: "First Expectation")
         do {
             artistMediaRepo = try ArtistMediaRepo(artistName: artistName)
-            artistMediaRepo.getArtistMedia { [weak self] result in
+            artistMediaRepo.getArtistMedia { /*[weak self]*/ result in
                 XCTAssertNotNil(result)
                 switch result {
                 case .success(let cols):
                     XCTAssertGreaterThan(cols.count, 0)
-                case .failure(let error):
+                default:
                     XCTAssertFalse(true)
                 }
                 expectation1.fulfill()
@@ -65,7 +65,7 @@ class ArtistMediaRepoTest: XCTestCase {
             waitForExpectations(timeout: 5)
         } catch {XCTAssertTrue(false)}
     }
-    
+
     func testGivenImpossibleArtistNameThenReturnSuccessfullEmptyCollection() {
         let artistName: String = "DVTHASKH"
         var artistMediaRepo: ArtistMediaRepo
@@ -77,8 +77,7 @@ class ArtistMediaRepoTest: XCTestCase {
                 switch result {
                 case .success(let cols):
                     XCTAssertEqual(cols.count, 0)
-                case .failure(let error):
-//                    print(error)
+                default:
                     XCTAssertFalse(true)
                 }
                 expectation1.fulfill()
