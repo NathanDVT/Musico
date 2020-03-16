@@ -1,0 +1,355 @@
+/Users/nngobale/Documents/Training 2020/Musico/realwork/realwork/AppDelegate.swift:
+    1|       |//
+    2|       |//  AppDelegate.swift
+    3|       |//  realwork
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/02/04.
+    6|       |//  Copyright © 2020 Nathan Ngobale. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |
+   11|       |@UIApplicationMain
+   12|       |class AppDelegate: UIResponder, UIApplicationDelegate {
+   13|       |    func application(_ application: UIApplication, didFinishLaunchingWithOptions
+   14|      1|        launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+   15|      1|        // Override point for customization after application launch.
+   16|      1|        return true
+   17|      1|    }
+   18|       |
+   19|       |    // MARK: UISceneSession Lifecycle
+   20|       |    func application(_ application: UIApplication,
+   21|       |                     configurationForConnecting connectingSceneSession: UISceneSession,
+   22|      0|                     options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+   23|      0|        // Called when a new scene session is being created.
+   24|      0|        // Use this method to select a configuration to create the new scene with.
+   25|      0|        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+   26|      0|    }
+   27|       |
+   28|      0|    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+   29|      0|        // Called when the user discards a scene session.
+   30|      0|        // If any sessions were discarded while the application was not running,
+   31|      0|        //this will be called shortly after application:didFinishLaunchingWithOptions.
+   32|      0|        // Use this method to release any resources that were specific to the discarded
+   33|      0|        //scenes, as they will not return.
+   34|      0|    }
+   35|       |}
+
+/Users/nngobale/Documents/Training 2020/Musico/realwork/realwork/ArtistMediaTableViewController.swift:
+    1|       |//
+    2|       |//  ArtistMediaTableViewController.swift
+    3|       |//  realwork
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/02/19.
+    6|       |//  Copyright © 2020 Nathan Ngobale. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |import AVKit
+   11|       |import NLibrary
+   12|       |
+   13|       |class ArtistMediaTableViewController: UITableViewController {
+   14|       |    var listOfArtistCollections = [Collection]() {
+   15|      0|        didSet {
+   16|      0|            DispatchQueue.main.async {
+   17|      0|                self.tableView.reloadData()
+   18|      0|            }
+   19|      0|        }
+   20|       |    }
+   21|       |    var player: AVPlayer!
+   22|       |    @IBOutlet weak var playBtn: UIButton!
+   23|       |    @IBOutlet weak var searchBar: UISearchBar!
+   24|       |
+   25|      1|    override func viewDidLoad() {
+   26|      1|        super.viewDidLoad()
+   27|      1|        searchBar.delegate = self
+   28|      1|    }
+   29|       |    // MARK: - Table view data source
+   30|       |
+   31|      3|    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   32|      3|        // #warning Incomplete implementation, return the number of rows
+   33|      3|        return listOfArtistCollections.count
+   34|      3|    }
+   35|       |
+   36|      0|    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   37|      0|        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableCell else {
+   38|      0|            return UITableViewCell()
+   39|      0|        }
+   40|      0|        // Configure the cell...
+   41|      0|        cell.nameLbl.text = listOfArtistCollections[indexPath.row].artistName
+   42|      0|        cell.titleLbl.text = listOfArtistCollections[indexPath.row].collectionName
+   43|      0|        guard let imageURL = URL(string: listOfArtistCollections[indexPath.row].artworkUrl60) else {
+   44|      0|            return cell
+   45|      0|        }
+   46|      0|        // just not to cause a deadlock in UI!
+   47|      0|        DispatchQueue.global().async {
+   48|      0|            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+   49|      0|            let image = UIImage(data: imageData)
+   50|      0|            DispatchQueue.main.async {
+   51|      0|                cell.imgView.image = image
+   52|      0|            }
+   53|      0|        }
+   54|      0|        return cell
+   55|      0|    }
+   56|       |
+   57|       |    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt
+   58|      0|        indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+   59|      0|        let important = importantAction(at: indexPath, then: tableView)
+   60|      0|        return UISwipeActionsConfiguration(actions: [important])
+   61|      0|    }
+   62|       |
+   63|      0|    func importantAction(at indexPath: IndexPath, then tableView: UITableView) -> UIContextualAction {
+   64|      0|        let action = UIContextualAction(style: .normal, title: "PLAY") { ( _, _, completion) in
+   65|      0|            let url  = URL.init(string: self.listOfArtistCollections[indexPath.row].previewUrl)
+   66|      0|            let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
+   67|      0|            self.player = AVPlayer(playerItem: playerItem)
+   68|      0|            let playerLayer = AVPlayerLayer(player: self.player!)
+   69|      0|            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
+   70|      0|            self.view.layer.addSublayer(playerLayer)
+   71|      0|            self.player.play()
+   72|      0|            let cell = tableView.cellForRow(at: indexPath) as? TableCell
+   73|      0|            let action = UIImage(systemName: "livephoto.play")
+   74|      0|            cell?.playBtn.tintColor = UIColor.yellow
+   75|      0|            cell?.playBtn.setImage(action, for: .normal)
+   76|      0|            cell?.tblcellplayer = self.player
+   77|      0|            completion(true)
+   78|      0|        }
+   79|      0|        action.image = UIImage(systemName: "livephoto.play")
+   80|      0|        return action
+   81|      0|    }
+   82|       |
+   83|       |    /*
+   84|       |     // Override to support conditional editing of the table view.
+   85|       |     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+   86|       |     // Return false if you do not want the specified item to be editable.
+   87|       |     return true
+   88|       |     }
+   89|       |     */
+   90|       |
+   91|       |    /*
+   92|       |     // Override to support editing the table view.
+   93|       |     override func tableView(_ tableView: UITableView, commit editingStyle:
+   94|       |     UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+   95|       |     if editingStyle == .delete {
+   96|       |     // Delete the row from the data source
+   97|       |     tableView.deleteRows(at: [indexPath], with: .fade)
+   98|       |     } else if editingStyle == .insert {
+   99|       |     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+  100|       |     }
+  101|       |     }
+  102|       |     */
+  103|       |
+  104|       |    /*
+  105|       |     // Override to support rearranging the table view.
+  106|       |     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+  107|       |     
+  108|       |     }
+  109|       |     */
+  110|       |
+  111|       |    /*
+  112|       |     // Override to support conditional rearranging of the table view.
+  113|       |     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+  114|       |     // Return false if you do not want the item to be re-orderable.
+  115|       |     return true
+  116|       |     }
+  117|       |     */
+  118|       |
+  119|       |    /*
+  120|       |     // MARK: - Navigation
+  121|       |     
+  122|       |     // In a storyboard-based application, you will often want to do a little preparation before navigation
+  123|       |     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  124|       |     // Get the new view controller using segue.destination.
+  125|       |     // Pass the selected object to the new view controller.
+  126|       |     }
+  127|       |     */
+  128|       |
+  129|       |}
+  130|       |
+  131|       |extension ArtistMediaTableViewController: UISearchBarDelegate {
+  132|      0|    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+  133|      0|        guard let searchBarText = searchBar.text else {return}
+  134|      0|        let artistMediaViewModel = ArtistMediaViewModel(artistName: searchBarText)
+  135|      0|        artistMediaViewModel.getCollections { [weak self] result in
+  136|      0|            switch result {
+  137|      0|            case .failure(let error):
+  138|      0|                print(error)
+  139|      0|            case .success(let collections):
+  140|      0|                self?.listOfArtistCollections = collections
+  141|      0|            }
+  142|      0|        }
+  143|      0|    }
+  144|       |}
+
+/Users/nngobale/Documents/Training 2020/Musico/realwork/realwork/DesignableView.swift:
+    1|       |//
+    2|       |//  DesignableView.swift
+    3|       |//  realwork
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/02/06.
+    6|       |//  Copyright © 2020 Nathan Ngobale. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |
+   11|       |@IBDesignable
+   12|       |class DesignableView: UIView {
+   13|       |    @IBInspectable var shadowColor: UIColor = UIColor.clear {
+   14|      0|        didSet {
+   15|      0|            layer.shadowColor = shadowColor.cgColor
+   16|      0|        }
+   17|       |    }
+   18|       |
+   19|       |    @IBInspectable var shadowRadius: CGFloat = 0 {
+   20|      0|        didSet {
+   21|      0|            layer.shadowRadius = shadowRadius
+   22|      0|        }
+   23|       |    }
+   24|       |
+   25|       |    @IBInspectable var shadowOpacity: CGFloat = 0 {
+   26|      0|        didSet {
+   27|      0|            layer.shadowOpacity = Float(shadowOpacity)
+   28|      0|        }
+   29|       |    }
+   30|       |
+   31|       |    @IBInspectable var shadowOffsetY: CGFloat = 0 {
+   32|      0|        didSet {
+   33|      0|            layer.shadowOffset.height = shadowOffsetY
+   34|      0|        }
+   35|       |    }
+   36|       |}
+
+/Users/nngobale/Documents/Training 2020/Musico/realwork/realwork/SceneDelegate.swift:
+    1|       |//
+    2|       |//  SceneDelegate.swift
+    3|       |//  realwork
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/02/04.
+    6|       |//  Copyright © 2020 Nathan Ngobale. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |
+   11|       |class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+   12|       |
+   13|       |    var window: UIWindow?
+   14|       |    func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
+   15|      1|               options connectionOptions: UIScene.ConnectionOptions) {
+   16|      1|        // Use this method to optionally configure and attach the
+   17|      1|        // UIWindow `window` to the provided UIWindowScene `scene`.
+   18|      1|        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+   19|      1|        // This delegate does not imply the connecting scene or session are
+   20|      1|        //new (see `application:configurationForConnectingSceneSession` instead).
+   21|      1|        guard let _ = (scene as? UIWindowScene) else { return }
+   22|      1|    }
+   23|       |
+   24|      0|    func sceneDidDisconnect(_ scene: UIScene) {
+   25|      0|        // Called as the scene is being released by the system.
+   26|      0|        // This occurs shortly after the scene enters the background, or when its session is discarded.
+   27|      0|        // Release any resources associated with this scene that can be re-created the next time the scene connects.
+   28|      0|        // The scene may re-connect later, as its session was not neccessarily
+   29|      0|        //discarded (see `application:didDiscardSceneSessions` instead).
+   30|      0|    }
+   31|       |
+   32|      1|    func sceneDidBecomeActive(_ scene: UIScene) {
+   33|      1|        // Called when the scene has moved from an inactive state to an active state.
+   34|      1|        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+   35|      1|    }
+   36|       |
+   37|      0|    func sceneWillResignActive(_ scene: UIScene) {
+   38|      0|        // Called when the scene will move from an active state to an inactive state.
+   39|      0|        // This may occur due to temporary interruptions (ex. an incoming phone call).
+   40|      0|    }
+   41|       |
+   42|      1|    func sceneWillEnterForeground(_ scene: UIScene) {
+   43|      1|        // Called as the scene transitions from the background to the foreground.
+   44|      1|        // Use this method to undo the changes made on entering the background.
+   45|      1|    }
+   46|       |
+   47|      0|    func sceneDidEnterBackground(_ scene: UIScene) {
+   48|      0|        // Called as the scene transitions from the foreground to the background.
+   49|      0|        // Use this method to save data, release shared resources, and store enough scene-specific state information
+   50|      0|        // to restore the scene back to its current state.
+   51|      0|    }
+   52|       |}
+
+/Users/nngobale/Documents/Training 2020/Musico/realwork/realwork/TableCell.swift:
+    1|       |//
+    2|       |//  TableCell.swift
+    3|       |//  realwork
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/02/20.
+    6|       |//  Copyright © 2020 Nathan Ngobale. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |import AVKit
+   11|       |
+   12|       |class TableCell: UITableViewCell {
+   13|       |
+   14|       |    @IBOutlet weak var nameLbl: UILabel!
+   15|       |    @IBOutlet weak var durationLbl: UILabel!
+   16|       |    @IBOutlet weak var titleLbl: UILabel!
+   17|       |    @IBOutlet weak var imgView: UIImageView!
+   18|       |    @IBOutlet weak var playBtn: UIButton!
+   19|       |    var audioPlayer = AVAudioPlayer()
+   20|       |    var tblcellplayer: AVPlayer!
+   21|      0|    @IBAction func musicActionPressed(_ sender: Any) {
+   22|      0|        guard let tblcellplayer = tblcellplayer else {
+   23|      0|            return
+   24|      0|        }
+   25|      0|        if isPlaying() {
+   26|      0|            tblcellplayer.pause()
+   27|      0|            playBtn.setImage(UIImage(systemName: "livephoto.slash"), for: .normal)
+   28|      0|        } else {
+   29|      0|            tblcellplayer.play()
+   30|      0|            playBtn.setImage(UIImage(systemName: "livephoto.play"), for: .normal)
+   31|      0|        }
+   32|      0|    }
+   33|       |
+   34|      0|    func isPlaying() -> Bool {
+   35|      0|        return (self.tblcellplayer.rate != 0 && self.tblcellplayer.error == nil)
+   36|      0|    }
+   37|       |}
+
+/Users/nngobale/Documents/Training 2020/Musico/realwork/realwork/UIViewController+Extensions.swift:
+    1|       |//
+    2|       |//  UIViewController+Extensions.swift
+    3|       |//  realwork
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/02/10.
+    6|       |//  Copyright © 2020 Nathan Ngobale. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |
+   11|       |extension UIViewController {
+   12|      0|    @IBAction func unwind(_  segue: UIStoryboardSegue) {}
+   13|       |}
+
+/Users/nngobale/Documents/Training 2020/Musico/realwork/realwork/ViewController.swift:
+    1|       |//
+    2|       |//  ViewController.swift
+    3|       |//  realwork
+    4|       |//
+    5|       |//  Created by Nathan Ngobale on 2020/02/04.
+    6|       |//  Copyright © 2020 Nathan Ngobale. All rights reserved.
+    7|       |//
+    8|       |
+    9|       |import UIKit
+   10|       |import AVKit
+   11|       |
+   12|       |class ViewController: UIViewController {
+   13|       |    let defaultSession = URLSession(configuration: .default)
+   14|       |    var dataTask: URLSessionDataTask?
+   15|      0|    override func viewDidLoad() {
+   16|      0|        super.viewDidLoad()
+   17|      0|        // Do any additional setup after loading the view.
+   18|      0|
+   19|      0|    }
+   20|       |}
+   21|       |
+   22|       |struct SwiftFourMusicResults: Decodable {
+   23|       |    let resultCount: Int
+   24|       |}
+
