@@ -48,6 +48,16 @@
                ReferencedContainer = "container:realwork.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "414E197E241F5316007C774F"
+               BuildableName = "realworkUITests.xctest"
+               BlueprintName = "realworkUITests"
+               ReferencedContainer = "container:realwork.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414E1982241F5316007C774F /* realworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1981241F5316007C774F /* realworkUITests.swift */; };
+		414E198C241F547C007C774F /* FirstScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198B241F547C007C774F /* FirstScenario.swift */; };
+		414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
 		417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626C23E9A9B100CADC7E /* ViewController.swift */; };
@@ -27,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		414E1984241F5316007C774F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 417C625D23E9A9B100CADC7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 417C626423E9A9B100CADC7E;
+			remoteInfo = realwork;
+		};
 		417C627C23E9A9B100CADC7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 417C625D23E9A9B100CADC7E /* Project object */;
@@ -41,6 +51,11 @@
 		1ED8F3DDABD60731B8454625 /* Pods-realworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realworkTests.release.xcconfig"; path = "Target Support Files/Pods-realworkTests/Pods-realworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		251344B2652FDE6D496EE5B7 /* Pods-realworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realworkTests.debug.xcconfig"; path = "Target Support Files/Pods-realworkTests/Pods-realworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B4F0F6214A032F89DF09A67 /* Pods-realwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realwork.debug.xcconfig"; path = "Target Support Files/Pods-realwork/Pods-realwork.debug.xcconfig"; sourceTree = "<group>"; };
+		414E197F241F5316007C774F /* realworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = realworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		414E1981241F5316007C774F /* realworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realworkUITests.swift; sourceTree = "<group>"; };
+		414E1983241F5316007C774F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		414E198B241F547C007C774F /* FirstScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScenario.swift; sourceTree = "<group>"; };
+		414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplicationExtension.swift; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C626823E9A9B100CADC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417C626A23E9A9B100CADC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +80,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		414E197C241F5316007C774F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		417C626223E9A9B100CADC7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,12 +117,40 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		414E1980241F5316007C774F /* realworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				414E198A241F545B007C774F /* Helpers */,
+				414E1989241F544A007C774F /* FirstScenario */,
+				414E1981241F5316007C774F /* realworkUITests.swift */,
+				414E1983241F5316007C774F /* Info.plist */,
+			);
+			path = realworkUITests;
+			sourceTree = "<group>";
+		};
+		414E1989241F544A007C774F /* FirstScenario */ = {
+			isa = PBXGroup;
+			children = (
+				414E198B241F547C007C774F /* FirstScenario.swift */,
+			);
+			path = FirstScenario;
+			sourceTree = "<group>";
+		};
+		414E198A241F545B007C774F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		417C625C23E9A9B100CADC7E = {
 			isa = PBXGroup;
 			children = (
 				41B49C95241D52D300A3E1F3 /* repoResponse1.json */,
 				417C626723E9A9B100CADC7E /* realwork */,
 				417C627E23E9A9B100CADC7E /* realworkTests */,
+				414E1980241F5316007C774F /* realworkUITests */,
 				417C626623E9A9B100CADC7E /* Products */,
 				1BFCC561EFEFC7D0B129DD16 /* Pods */,
 				A7CF5EA9258C7D2F754FC35A /* Frameworks */,
@@ -112,6 +162,7 @@
 			children = (
 				417C626523E9A9B100CADC7E /* realwork.app */,
 				417C627B23E9A9B100CADC7E /* realworkTests.xctest */,
+				414E197F241F5316007C774F /* realworkUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +233,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		414E197E241F5316007C774F /* realworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 414E1988241F5316007C774F /* Build configuration list for PBXNativeTarget "realworkUITests" */;
+			buildPhases = (
+				414E197B241F5316007C774F /* Sources */,
+				414E197C241F5316007C774F /* Frameworks */,
+				414E197D241F5316007C774F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				414E1985241F5316007C774F /* PBXTargetDependency */,
+			);
+			name = realworkUITests;
+			productName = realworkUITests;
+			productReference = 414E197F241F5316007C774F /* realworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		417C626423E9A9B100CADC7E /* realwork */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 417C628423E9A9B100CADC7E /* Build configuration list for PBXNativeTarget "realwork" */;
@@ -231,6 +300,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Nathan Ngobale";
 				TargetAttributes = {
+					414E197E241F5316007C774F = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 417C626423E9A9B100CADC7E;
+					};
 					417C626423E9A9B100CADC7E = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -255,11 +328,19 @@
 			targets = (
 				417C626423E9A9B100CADC7E /* realwork */,
 				417C627A23E9A9B100CADC7E /* realworkTests */,
+				414E197E241F5316007C774F /* realworkUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		414E197D241F5316007C774F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		417C626323E9A9B100CADC7E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +443,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		414E197B241F5316007C774F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				414E198C241F547C007C774F /* FirstScenario.swift in Sources */,
+				414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */,
+				414E1982241F5316007C774F /* realworkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		417C626123E9A9B100CADC7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +481,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		414E1985241F5316007C774F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 417C626423E9A9B100CADC7E /* realwork */;
+			targetProxy = 414E1984241F5316007C774F /* PBXContainerItemProxy */;
+		};
 		417C627D23E9A9B100CADC7E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 417C626423E9A9B100CADC7E /* realwork */;
@@ -417,6 +513,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		414E1986241F5316007C774F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = realworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.jhb.realworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = realwork;
+			};
+			name = Debug;
+		};
+		414E1987241F5316007C774F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = realworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.jhb.realworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = realwork;
+			};
+			name = Release;
+		};
 		417C628223E9A9B100CADC7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -614,6 +746,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		414E1988241F5316007C774F /* Build configuration list for PBXNativeTarget "realworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				414E1986241F5316007C774F /* Debug */,
+				414E1987241F5316007C774F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		417C626023E9A9B100CADC7E /* Build configuration list for PBXProject "realwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
