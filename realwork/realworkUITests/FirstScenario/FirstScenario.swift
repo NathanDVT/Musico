@@ -37,7 +37,7 @@ class FirstScenario: XCTestCase {
         XCTAssert(application.textFields["user"].exists)
     }
 
-    func testUserCanRotateDeviceAndNavigate(){
+    func testUserCanRotateDeviceAndNavigate() {
         XCUIDevice.shared.orientation = .landscapeLeft
         application.buttons["Sign Up"].tap()
         usleep(useconds_t(5000))
@@ -45,7 +45,7 @@ class FirstScenario: XCTestCase {
         sleep(1)
         XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
     }
-    
+
     func testUserCanSearchArtistScrollUpScrollLeftPlayMusic() {
         XCUIDevice.shared.orientation = .portrait
         application.buttons["Sign Up"].tap()
@@ -67,7 +67,7 @@ class FirstScenario: XCTestCase {
         application.buttons["PLAY"].tap()
         sleep(3)
     }
-    
+
     func testUserCanSearchPlayAndPauseMusic() {
         XCUIDevice.shared.orientation = .portrait
         application.buttons["Sign Up"].tap()

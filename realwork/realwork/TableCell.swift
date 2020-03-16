@@ -18,7 +18,7 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var playBtn: UIButton!
     var audioPlayer = AVAudioPlayer()
     var tblcellplayer: AVPlayer?
-    
+
     func musicPlayed() {
         guard let tblcellplayer = tblcellplayer else {
             return

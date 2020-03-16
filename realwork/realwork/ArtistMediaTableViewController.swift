@@ -18,7 +18,7 @@ class ArtistMediaTableViewController: UITableViewController {
             }
         }
     }
-    var player: AVPlayer? = nil
+    var player: AVPlayer?
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
 
@@ -79,7 +79,7 @@ class ArtistMediaTableViewController: UITableViewController {
             cell?.musicPlayed()
             completion(true)
         }
-        if (cell?.isPlaying() ?? true) {
+        if cell?.isPlaying() ?? true {
             action.backgroundColor = .red
         } else {
             action.backgroundColor = .systemYellow
