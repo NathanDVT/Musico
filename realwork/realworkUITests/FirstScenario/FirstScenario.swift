@@ -45,4 +45,47 @@ class FirstScenario: XCTestCase {
         sleep(1)
         XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
     }
+    
+    func testUserCanSearchArtistScrollUpScrollLeftPlayMusic() {
+        XCUIDevice.shared.orientation = .portrait
+        application.buttons["Sign Up"].tap()
+        application.buttons["Register"].tap()
+        application.tables.searchFields["Enter Artist To Search"].tap()
+        application.keys["D"].tap()
+        application.keys["r"].tap()
+        application.keys["a"].tap()
+        application.keys["k"].tap()
+        application.keys["e"].tap()
+        application.buttons["search"].tap()
+        sleep(1)
+        XCTAssert(application.staticTexts["Scorpion"].exists)
+        application.swipeUp()
+        sleep(1)
+        XCTAssert(application.staticTexts["Views"].exists)
+        application.swipeLeft()
+        XCTAssert(application.buttons["PLAY"].exists)
+        application.buttons["PLAY"].tap()
+        sleep(3)
+    }
+    
+    func testUserCanSearchPlayAndPauseMusic() {
+        XCUIDevice.shared.orientation = .portrait
+        application.buttons["Sign Up"].tap()
+        application.buttons["Register"].tap()
+        application.tables.searchFields["Enter Artist To Search"].tap()
+        application.keys["D"].tap()
+        application.keys["r"].tap()
+        application.keys["a"].tap()
+        application.keys["k"].tap()
+        application.keys["e"].tap()
+        application.buttons["search"].tap()
+        sleep(1)
+        application.swipeLeft()
+        application.buttons["PLAY"].tap()
+        sleep(1)
+        application.swipeLeft()
+        XCTAssert(application.buttons["PAUSE"].exists)
+        application.buttons["PAUSE"].tap()
+        sleep(1)
+    }
 }
