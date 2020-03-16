@@ -17,8 +17,9 @@ class TableCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var playBtn: UIButton!
     var audioPlayer = AVAudioPlayer()
-    var tblcellplayer: AVPlayer!
-    @IBAction func musicActionPressed(_ sender: Any) {
+    var tblcellplayer: AVPlayer?
+
+    func musicPlayed() {
         guard let tblcellplayer = tblcellplayer else {
             return
         }
@@ -32,6 +33,10 @@ class TableCell: UITableViewCell {
     }
 
     func isPlaying() -> Bool {
-        return (self.tblcellplayer.rate != 0 && self.tblcellplayer.error == nil)
+        guard let avlPlayer: AVPlayer = self.tblcellplayer else {
+            return false
+        }
+        return (avlPlayer.rate != 0 && avlPlayer.error == nil)
+//        return (self.tblcellplayer?.rate != 0 && self.tblcellplayer?.error == nil)
     }
 }

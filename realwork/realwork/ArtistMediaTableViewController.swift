@@ -18,7 +18,7 @@ class ArtistMediaTableViewController: UITableViewController {
             }
         }
     }
-    var player: AVPlayer!
+    var player: AVPlayer?
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
 
@@ -61,20 +61,28 @@ class ArtistMediaTableViewController: UITableViewController {
     }
 
     func importantAction(at indexPath: IndexPath, then tableView: UITableView) -> UIContextualAction {
-        let action = UIContextualAction(style: .normal, title: "PLAY") { ( _, _, completion) in
+        let cell = tableView.cellForRow(at: indexPath) as? TableCell
+        let description: String = cell?.tblcellplayer != nil && cell!.isPlaying() ? "PAUSE" : "PLAY"
+        let action = UIContextualAction(style: .normal, title: description) { ( _, _, completion) in
             let url  = URL.init(string: self.listOfArtistCollections[indexPath.row].previewUrl)
             let playerItem: AVPlayerItem = AVPlayerItem(url: url!)
-            self.player = AVPlayer(playerItem: playerItem)
+            if self.player == nil {
+                self.player = AVPlayer(playerItem: playerItem)
+            }
             let playerLayer = AVPlayerLayer(player: self.player!)
             playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
-            self.view.layer.addSublayer(playerLayer)
-            self.player.play()
             let cell = tableView.cellForRow(at: indexPath) as? TableCell
-            let action = UIImage(systemName: "livephoto.play")
+            let img = UIImage(systemName: "livephoto.play")
             cell?.playBtn.tintColor = UIColor.yellow
-            cell?.playBtn.setImage(action, for: .normal)
+            cell?.playBtn.setImage(img, for: .normal)
             cell?.tblcellplayer = self.player
+            cell?.musicPlayed()
             completion(true)
+        }
+        if cell?.isPlaying() ?? true {
+            action.backgroundColor = .red
+        } else {
+            action.backgroundColor = .systemYellow
         }
         action.image = UIImage(systemName: "livephoto.play")
         return action

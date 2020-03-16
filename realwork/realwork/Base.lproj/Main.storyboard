@@ -384,9 +384,6 @@
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                         </preferredSymbolConfiguration>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="musicActionPressed:" destination="gwG-cE-Aqf" eventType="touchUpInside" id="blE-e6-tVY"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.078529792746113936" green="0.070293810939354981" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
