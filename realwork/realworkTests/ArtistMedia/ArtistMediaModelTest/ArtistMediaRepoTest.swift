@@ -57,7 +57,7 @@ class ArtistMediaRepoTest: XCTestCase {
                 switch result {
                 case .success(let cols):
                     XCTAssertGreaterThan(cols.count, 0)
-                case .failure( _):
+                default:
                     XCTAssertFalse(true)
                 }
                 expectation1.fulfill()
@@ -77,7 +77,7 @@ class ArtistMediaRepoTest: XCTestCase {
                 switch result {
                 case .success(let cols):
                     XCTAssertEqual(cols.count, 0)
-                case .failure(let _):
+                default:
                     XCTAssertFalse(true)
                 }
                 expectation1.fulfill()
