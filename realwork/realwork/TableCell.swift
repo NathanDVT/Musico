@@ -9,6 +9,10 @@
 import UIKit
 import AVKit
 
+//protocol ArtistTableCell: class, UITableView {
+//    <#requirements#>
+//}
+
 class TableCell: UITableViewCell {
 
     @IBOutlet weak var nameLbl: UILabel!
@@ -37,6 +41,5 @@ class TableCell: UITableViewCell {
             return false
         }
         return (avlPlayer.rate != 0 && avlPlayer.error == nil)
-//        return (self.tblcellplayer?.rate != 0 && self.tblcellplayer?.error == nil)
     }
 }

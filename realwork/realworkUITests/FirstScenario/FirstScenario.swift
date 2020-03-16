@@ -28,7 +28,7 @@ class FirstScenario: XCTestCase {
         XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
     }
 
-    func testUserCanEnterEmailAndPassword() {
+    func testUserCanEnterEmail() {
         application.textFields["E-mail"].tap()
         application.keys["u"].tap()
         application.keys["s"].tap()
@@ -86,6 +86,25 @@ class FirstScenario: XCTestCase {
         application.swipeLeft()
         XCTAssert(application.buttons["PAUSE"].exists)
         application.buttons["PAUSE"].tap()
+        sleep(1)
+    }
+
+    func testUserCanGetToVideosScreen() {
+        XCUIDevice.shared.orientation = .portrait
+        application.buttons["Sign Up"].tap()
+        application.buttons["Register"].tap()
+        application.tables.searchFields["Enter Artist To Search"].tap()
+        application.keys["D"].tap()
+        application.keys["r"].tap()
+        application.keys["a"].tap()
+        application.keys["k"].tap()
+        application.keys["e"].tap()
+        application.buttons["search"].tap()
+        sleep(1)
+        application.buttons["Videos"].tap()
+        application.swipeUp()
+        sleep(1)
+        XCTAssert(application.buttons["Add"].exists)
         sleep(1)
     }
 }
