@@ -10,6 +10,9 @@
 		414E1982241F5316007C774F /* realworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1981241F5316007C774F /* realworkUITests.swift */; };
 		414E198C241F547C007C774F /* FirstScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198B241F547C007C774F /* FirstScenario.swift */; };
 		414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */; };
+		414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */; };
+		414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */; };
+		415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8B902420AC7A00038133 /* UITestScreenNavigators.swift */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
 		417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626C23E9A9B100CADC7E /* ViewController.swift */; };
@@ -56,6 +59,9 @@
 		414E1983241F5316007C774F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		414E198B241F547C007C774F /* FirstScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScenario.swift; sourceTree = "<group>"; };
 		414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplicationExtension.swift; sourceTree = "<group>"; };
+		414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistVideoTableViewCell.swift; sourceTree = "<group>"; };
+		414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistVideoTableViewCell.xib; sourceTree = "<group>"; };
+		415A8B902420AC7A00038133 /* UITestScreenNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestScreenNavigators.swift; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C626823E9A9B100CADC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417C626A23E9A9B100CADC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,8 +146,18 @@
 			isa = PBXGroup;
 			children = (
 				414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */,
+				415A8B902420AC7A00038133 /* UITestScreenNavigators.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		414E198F241F83B7007C774F /* ArtistMediaTableCells */ = {
+			isa = PBXGroup;
+			children = (
+				414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */,
+				414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */,
+			);
+			path = ArtistMediaTableCells;
 			sourceTree = "<group>";
 		};
 		417C625C23E9A9B100CADC7E = {
@@ -170,6 +186,7 @@
 		417C626723E9A9B100CADC7E /* realwork */ = {
 			isa = PBXGroup;
 			children = (
+				414E198F241F83B7007C774F /* ArtistMediaTableCells */,
 				417C626823E9A9B100CADC7E /* AppDelegate.swift */,
 				417C626A23E9A9B100CADC7E /* SceneDelegate.swift */,
 				417C626C23E9A9B100CADC7E /* ViewController.swift */,
@@ -349,6 +366,7 @@
 				417C627523E9A9B100CADC7E /* LaunchScreen.storyboard in Resources */,
 				417C627223E9A9B100CADC7E /* Assets.xcassets in Resources */,
 				417C627023E9A9B100CADC7E /* Main.storyboard in Resources */,
+				414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +468,7 @@
 				414E198C241F547C007C774F /* FirstScenario.swift in Sources */,
 				414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */,
 				414E1982241F5316007C774F /* realworkUITests.swift in Sources */,
+				415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +478,7 @@
 			files = (
 				41901A5323FE6CE200938CD4 /* TableCell.swift in Sources */,
 				417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */,
+				414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */,
 				417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */,
 				417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */,
 				41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */,

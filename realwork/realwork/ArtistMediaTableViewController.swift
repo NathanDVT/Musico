@@ -11,6 +11,10 @@ import AVKit
 import NLibrary
 
 class ArtistMediaTableViewController: UITableViewController {
+    var player: AVPlayer?
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searchTitleIndex = 0
     var listOfArtistCollections = [Collection]() {
         didSet {
             DispatchQueue.main.async {
@@ -18,13 +22,11 @@ class ArtistMediaTableViewController: UITableViewController {
             }
         }
     }
-    var player: AVPlayer?
-    @IBOutlet weak var playBtn: UIButton!
-    @IBOutlet weak var searchBar: UISearchBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        self.registerTableViewCells()
     }
     // MARK: - Table view data source
 
@@ -34,6 +36,36 @@ class ArtistMediaTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if self.searchTitleIndex == 0 {
+            return instantiateArtistMusicCell( tableView, cellForRowAt: indexPath)
+        } else {
+            return instantiateVideoCell(tableView, cellForRowAt: indexPath)
+        }
+    }
+
+    func instantiateVideoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier:
+            "ArtistVideoTableViewCell", for: indexPath) as? ArtistVideoTableViewCell else {
+            return UITableViewCell()
+        }
+        // Configure the cell...
+        cell.nameLbl.text = listOfArtistCollections[indexPath.row].artistName
+        cell.titleLbl.text = listOfArtistCollections[indexPath.row].collectionName
+        guard let imageURL = URL(string: listOfArtistCollections[indexPath.row].artworkUrl60) else {
+            return cell
+        }
+        // just not to cause a deadlock in UI!
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                cell.imgView.image = image
+            }
+        }
+        return cell
+    }
+
+    func instantiateArtistMusicCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableCell else {
             return UITableViewCell()
         }
@@ -88,6 +120,11 @@ class ArtistMediaTableViewController: UITableViewController {
         return action
     }
 
+    func registerTableViewCells() {
+        let textFieldCell = UINib(nibName: "ArtistVideoTableViewCell", bundle: nil)
+        self.tableView.register(textFieldCell, forCellReuseIdentifier: "ArtistVideoTableViewCell")
+    }
+
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -139,7 +176,7 @@ class ArtistMediaTableViewController: UITableViewController {
 extension ArtistMediaTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else {return}
-        let artistMediaViewModel = ArtistMediaViewModel(artistName: searchBarText)//, repo: ArtistMediaRepo(artistName: searchBarText))
+        let artistMediaViewModel = ArtistMediaViewModel(artistName: searchBarText)
         artistMediaViewModel.getCollections { [weak self] result in
             switch result {
             case .failure(let error):
@@ -148,5 +185,17 @@ extension ArtistMediaTableViewController: UISearchBarDelegate {
                 self?.listOfArtistCollections = collections
             }
         }
+    }
+
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        switch selectedScope {
+        case 0:
+            self.searchTitleIndex = selectedScope
+        case 1:
+            self.searchTitleIndex = selectedScope
+        default:
+            print("Error")
+        }
+        self.tableView.reloadData()
     }
 }
