@@ -12,6 +12,7 @@
 		414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */; };
 		414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */; };
 		414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */; };
+		415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8B902420AC7A00038133 /* UITestScreenNavigators.swift */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
 		417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626C23E9A9B100CADC7E /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplicationExtension.swift; sourceTree = "<group>"; };
 		414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistVideoTableViewCell.swift; sourceTree = "<group>"; };
 		414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistVideoTableViewCell.xib; sourceTree = "<group>"; };
+		415A8B902420AC7A00038133 /* UITestScreenNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestScreenNavigators.swift; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C626823E9A9B100CADC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417C626A23E9A9B100CADC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */,
+				415A8B902420AC7A00038133 /* UITestScreenNavigators.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				414E198C241F547C007C774F /* FirstScenario.swift in Sources */,
 				414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */,
 				414E1982241F5316007C774F /* realworkUITests.swift in Sources */,
+				415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

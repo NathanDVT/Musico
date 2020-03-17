@@ -22,7 +22,6 @@ class ArtistMediaTableViewController: UITableViewController {
             }
         }
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +44,8 @@ class ArtistMediaTableViewController: UITableViewController {
     }
 
     func instantiateVideoCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistVideoTableViewCell", for: indexPath) as? ArtistVideoTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier:
+            "ArtistVideoTableViewCell", for: indexPath) as? ArtistVideoTableViewCell else {
             return UITableViewCell()
         }
         // Configure the cell...
@@ -119,7 +119,7 @@ class ArtistMediaTableViewController: UITableViewController {
         action.image = UIImage(systemName: "livephoto.play")
         return action
     }
-    
+
     func registerTableViewCells() {
         let textFieldCell = UINib(nibName: "ArtistVideoTableViewCell", bundle: nil)
         self.tableView.register(textFieldCell, forCellReuseIdentifier: "ArtistVideoTableViewCell")
@@ -191,10 +191,8 @@ extension ArtistMediaTableViewController: UISearchBarDelegate {
         switch selectedScope {
         case 0:
             self.searchTitleIndex = selectedScope
-            break
         case 1:
             self.searchTitleIndex = selectedScope
-            break
         default:
             print("Error")
         }
