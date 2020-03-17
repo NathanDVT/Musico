@@ -11,6 +11,7 @@ import XCTest
 class FirstScenario: XCTestCase {
     var application: XCUIApplication!
     override func setUp() {
+        super.setUp()
         continueAfterFailure = false
         application = XCUIApplication()
         application.launch()
