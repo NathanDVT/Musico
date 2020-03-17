@@ -32,9 +32,9 @@ class FirstScenario: XCTestCase {
         application.textFields["E-mail"].tap()
         application.keys["u"].tap()
         application.keys["s"].tap()
-        application.keys["e"].tap()
+//        application.keys["e"].tap()
         application.keys["r"].tap()
-        XCTAssert(application.textFields["user"].exists)
+        XCTAssert(application.textFields["usr"].exists)
     }
 
     func testUserCanRotateDeviceAndNavigate() {
