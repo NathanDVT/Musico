@@ -33,8 +33,8 @@ class FirstScenario: XCTestCase {
         application.keys["u"].tap()
         application.keys["s"].tap()
 //        application.keys["e"].tap()
-        application.keys["r"].tap()
-        XCTAssert(application.textFields["usr"].exists)
+//        application.keys["r"].tap()
+        XCTAssert(application.textFields["us"].exists)
     }
 
     func testUserCanRotateDeviceAndNavigate() {
