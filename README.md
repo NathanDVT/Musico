@@ -5,6 +5,7 @@ Continuous integretion method used [![Build Status](https://app.bitrise.io/app/1
 Automated review agent Codecy [![Codacy Badge](https://api.codacy.com/project/badge/Grade/351c465aadc446439d011077807fcdd7)](https://app.codacy.com/manual/NathanDVT/Musico?utm_source=github.com&utm_medium=referral&utm_content=NathanDVT/Musico&utm_campaign=Badge_Grade_Dashboard)
 
 Automated Code coverage [![codecov](https://codecov.io/gh/NathanDVT/Musico/branch/master/graph/badge.svg)](https://codecov.io/gh/NathanDVT/Musico)
+Automated Code coverage [![codecov](https://codecov.io/gh/NathanDVT/Musico/branch/development/graph/badge.svg)](https://codecov.io/gh/NathanDVT/Musico)
 
 :sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses::sunglasses:
 
