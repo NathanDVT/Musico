@@ -13,12 +13,11 @@ extension XCUIApplication {
         self.buttons["Onboarding"].tap()
         sleep(1)
     }
-    
+
     func navigateStartToLogin() {
         navigateStartToOnBoarding()
         swipeLeft()
         swipeLeft()
         buttons["Proceed"].tap()
-//        XCTAssert(application.staticTexts["Welcome to Musico"].exists)
     }
 }

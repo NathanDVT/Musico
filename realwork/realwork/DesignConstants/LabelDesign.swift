@@ -20,7 +20,7 @@ class LabelPrimaryDesign: UILabel {
         super.init(frame: frame)
        setUp()
     }
-    
+
     private func setUp() {
         self.font = GlobalFont.primary
     }
