@@ -13,6 +13,16 @@
 		414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */; };
 		414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */; };
 		415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8B902420AC7A00038133 /* UITestScreenNavigators.swift */; };
+		415A8B942420DB6100038133 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8B932420DB6100038133 /* Onboarding.storyboard */; };
+		415A8B962420DCBD00038133 /* Onboard1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8B952420DCBD00038133 /* Onboard1ViewController.swift */; };
+		415A8B982420DCCB00038133 /* Onboard2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8B972420DCCB00038133 /* Onboard2ViewController.swift */; };
+		415A8B9A2420DCEB00038133 /* Onboard3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8B992420DCEB00038133 /* Onboard3ViewController.swift */; };
+		415A8B9C2420DFC500038133 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8B9B2420DFC500038133 /* PageControlViewController.swift */; };
+		415A8B9F2422A76F00038133 /* ButtonConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8B9E2422A76F00038133 /* ButtonConstant.swift */; };
+		415A8BA12422A7BF00038133 /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA02422A7BF00038133 /* ButtonDesign.swift */; };
+		415A8BA32422A99800038133 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA22422A99800038133 /* GlobalConstants.swift */; };
+		415A8BA52422AC4500038133 /* LabelDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA42422AC4500038133 /* LabelDesign.swift */; };
+		415A8BA72422AFB800038133 /* OnBoardScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA62422AFB800038133 /* OnBoardScreenTest.swift */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
 		417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626C23E9A9B100CADC7E /* ViewController.swift */; };
@@ -62,6 +72,16 @@
 		414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistVideoTableViewCell.swift; sourceTree = "<group>"; };
 		414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistVideoTableViewCell.xib; sourceTree = "<group>"; };
 		415A8B902420AC7A00038133 /* UITestScreenNavigators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestScreenNavigators.swift; sourceTree = "<group>"; };
+		415A8B932420DB6100038133 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		415A8B952420DCBD00038133 /* Onboard1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard1ViewController.swift; sourceTree = "<group>"; };
+		415A8B972420DCCB00038133 /* Onboard2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard2ViewController.swift; sourceTree = "<group>"; };
+		415A8B992420DCEB00038133 /* Onboard3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard3ViewController.swift; sourceTree = "<group>"; };
+		415A8B9B2420DFC500038133 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
+		415A8B9E2422A76F00038133 /* ButtonConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonConstant.swift; sourceTree = "<group>"; };
+		415A8BA02422A7BF00038133 /* ButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDesign.swift; sourceTree = "<group>"; };
+		415A8BA22422A99800038133 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		415A8BA42422AC4500038133 /* LabelDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDesign.swift; sourceTree = "<group>"; };
+		415A8BA62422AFB800038133 /* OnBoardScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardScreenTest.swift; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C626823E9A9B100CADC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417C626A23E9A9B100CADC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,19 +147,20 @@
 			isa = PBXGroup;
 			children = (
 				414E198A241F545B007C774F /* Helpers */,
-				414E1989241F544A007C774F /* FirstScenario */,
+				414E1989241F544A007C774F /* Screens */,
 				414E1981241F5316007C774F /* realworkUITests.swift */,
 				414E1983241F5316007C774F /* Info.plist */,
 			);
 			path = realworkUITests;
 			sourceTree = "<group>";
 		};
-		414E1989241F544A007C774F /* FirstScenario */ = {
+		414E1989241F544A007C774F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				414E198B241F547C007C774F /* FirstScenario.swift */,
+				415A8BA62422AFB800038133 /* OnBoardScreenTest.swift */,
 			);
-			path = FirstScenario;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		414E198A241F545B007C774F /* Helpers */ = {
@@ -158,6 +179,29 @@
 				414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */,
 			);
 			path = ArtistMediaTableCells;
+			sourceTree = "<group>";
+		};
+		415A8B922420DB3400038133 /* OnBoaring */ = {
+			isa = PBXGroup;
+			children = (
+				415A8B932420DB6100038133 /* Onboarding.storyboard */,
+				415A8B9B2420DFC500038133 /* PageControlViewController.swift */,
+				415A8B952420DCBD00038133 /* Onboard1ViewController.swift */,
+				415A8B972420DCCB00038133 /* Onboard2ViewController.swift */,
+				415A8B992420DCEB00038133 /* Onboard3ViewController.swift */,
+			);
+			path = OnBoaring;
+			sourceTree = "<group>";
+		};
+		415A8B9D2422A6DA00038133 /* DesignConstants */ = {
+			isa = PBXGroup;
+			children = (
+				415A8B9E2422A76F00038133 /* ButtonConstant.swift */,
+				415A8BA02422A7BF00038133 /* ButtonDesign.swift */,
+				415A8BA22422A99800038133 /* GlobalConstants.swift */,
+				415A8BA42422AC4500038133 /* LabelDesign.swift */,
+			);
+			path = DesignConstants;
 			sourceTree = "<group>";
 		};
 		417C625C23E9A9B100CADC7E = {
@@ -186,6 +230,8 @@
 		417C626723E9A9B100CADC7E /* realwork */ = {
 			isa = PBXGroup;
 			children = (
+				415A8B9D2422A6DA00038133 /* DesignConstants */,
+				415A8B922420DB3400038133 /* OnBoaring */,
 				414E198F241F83B7007C774F /* ArtistMediaTableCells */,
 				417C626823E9A9B100CADC7E /* AppDelegate.swift */,
 				417C626A23E9A9B100CADC7E /* SceneDelegate.swift */,
@@ -367,6 +413,7 @@
 				417C627223E9A9B100CADC7E /* Assets.xcassets in Resources */,
 				417C627023E9A9B100CADC7E /* Main.storyboard in Resources */,
 				414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */,
+				415A8B942420DB6100038133 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +516,7 @@
 				414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */,
 				414E1982241F5316007C774F /* realworkUITests.swift in Sources */,
 				415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */,
+				415A8BA72422AFB800038133 /* OnBoardScreenTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,14 +524,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415A8B9F2422A76F00038133 /* ButtonConstant.swift in Sources */,
+				415A8B9A2420DCEB00038133 /* Onboard3ViewController.swift in Sources */,
 				41901A5323FE6CE200938CD4 /* TableCell.swift in Sources */,
+				415A8BA12422A7BF00038133 /* ButtonDesign.swift in Sources */,
 				417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */,
+				415A8B9C2420DFC500038133 /* PageControlViewController.swift in Sources */,
+				415A8BA52422AC4500038133 /* LabelDesign.swift in Sources */,
+				415A8B962420DCBD00038133 /* Onboard1ViewController.swift in Sources */,
+				415A8BA32422A99800038133 /* GlobalConstants.swift in Sources */,
 				414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */,
 				417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */,
 				417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */,
 				41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */,
 				417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */,
 				417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */,
+				415A8B982420DCCB00038133 /* Onboard2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

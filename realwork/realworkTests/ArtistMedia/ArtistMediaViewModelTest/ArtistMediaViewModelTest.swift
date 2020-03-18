@@ -19,18 +19,16 @@ class ArtistMediaViewModelTest: XCTestCase {
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+
     func testGivenArtistNameThenConstructViewModelObject() {
         let artistMediaViewModel = ArtistMediaViewModel(artistName: "drake")
         XCTAssertNotNil(artistMediaViewModel)
     }
 
     func testGivenCorrectArtistNameThenReturnSuccessfullCollection() {
-//        let expectation1 = expectation(description: "First Expectation")
         do {
-            repo.getArtistMedia { [weak self] result in
+            repo.getArtistMedia { /*[weak self]*/ result in
                 XCTAssertNotNil(result)
                 switch result {
                 case .success(let cols):
@@ -39,17 +37,7 @@ class ArtistMediaViewModelTest: XCTestCase {
                     print(error)
                     XCTAssertFalse(true)
                 }
-//                expectation1.fulfill()
             }
-//            waitForExpectations(timeout: 3)
-        } catch {XCTAssertTrue(false)}
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
         }
     }
-
 }

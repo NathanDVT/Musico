@@ -6,4 +6,20 @@
 //  Copyright © 2020 Nathan Ngobale. All rights reserved.
 //
 
-import Foundation
+import XCTest
+
+extension XCUIApplication {
+    func navigateStartToOnBoarding() {
+        XCUIDevice.shared.orientation = .portrait
+        self.buttons["Onboarding"].tap()
+        sleep(1)
+    }
+
+    func navigateStartToLogin() {
+        navigateStartToOnBoarding()
+        swipeLeft()
+        swipeLeft()
+        sleep(1)
+        buttons["Proceed"].tap()
+    }
+}
