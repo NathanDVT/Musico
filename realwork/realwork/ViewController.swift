@@ -17,6 +17,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
 
     }
+
+    @IBAction func btnOnboard(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier:
+            "OnBoardingID") as? UIPageViewController
+        if let destinationVC = destinationVC {
+            present(destinationVC, animated: true, completion: nil)
+        }
+    }
 }
 
 struct SwiftFourMusicResults: Decodable {

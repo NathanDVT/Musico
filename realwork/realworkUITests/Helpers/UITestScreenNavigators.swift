@@ -6,4 +6,19 @@
 //  Copyright © 2020 Nathan Ngobale. All rights reserved.
 //
 
-import Foundation
+import XCTest
+
+extension XCUIApplication {
+    func navigateStartToOnBoarding() {
+        self.buttons["Onboarding"].tap()
+        sleep(1)
+    }
+    
+    func navigateStartToLogin() {
+        navigateStartToOnBoarding()
+        swipeLeft()
+        swipeLeft()
+        buttons["Proceed"].tap()
+//        XCTAssert(application.staticTexts["Welcome to Musico"].exists)
+    }
+}

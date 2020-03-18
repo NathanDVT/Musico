@@ -15,6 +15,7 @@ class FirstScenario: XCTestCase {
         continueAfterFailure = false
         application = XCUIApplication()
         application.launch()
+        application.navigateStartToLogin()
     }
 
     override func tearDown() {
@@ -30,12 +31,9 @@ class FirstScenario: XCTestCase {
     }
 
     func testUserCanEnterEmail() {
-//        application.textFields["E-mail"].tap()
-//        application.keys["u"].tap()
-//        application.keys["s"].tap()
-//        application.keys["e"].tap()
-//        application.keys["r"].tap()
-//        XCTAssert(application.textFields["us"].exists)
+        application.textFields["E-mail"].tap()
+        application.textFields["E-mail"].typeText("user")
+        XCTAssert(application.textFields["user"].exists)
     }
 
     func testUserCanRotateDeviceAndNavigate() {
