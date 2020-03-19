@@ -21,5 +21,12 @@ extension XCUIApplication {
         swipeLeft()
         sleep(1)
         buttons["Proceed"].tap()
+        sleep(1)
+    }
+
+    func navigateToDashboard() {
+        navigateStartToLogin()
+        sleep(1)
+        buttons["Login"].tap()
     }
 }
