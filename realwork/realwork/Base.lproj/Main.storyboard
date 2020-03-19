@@ -127,6 +127,9 @@
                                                         </constraints>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Login"/>
+                                                        <connections>
+                                                            <action selector="btnToDashboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0H-nx-IJ5"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or Login with:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-IM-TgC">
                                                         <rect key="frame" x="18" y="227" width="378" height="20.333333333333343"/>
@@ -371,12 +374,12 @@
             </objects>
             <point key="canvasLocation" x="1459" y="137"/>
         </scene>
-        <!--Artist Media Table View Controller-->
+        <!--Search-->
         <scene sceneID="N7u-Hg-J9E">
             <objects>
-                <tableViewController id="KON-2S-pqY" customClass="ArtistMediaTableViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchID" modalPresentationStyle="fullScreen" id="KON-2S-pqY" customClass="ArtistMediaTableViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="npc-af-nTD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -485,6 +488,8 @@
                             <outlet property="delegate" destination="KON-2S-pqY" id="hOQ-IM-o9n"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="EJc-tj-MZr"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="Nth-xv-Fa4" id="S5z-Vx-fa3"/>
                     </connections>
@@ -496,6 +501,7 @@
     </scenes>
     <resources>
         <image name="gold_gleff" width="800" height="800"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="play.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>
