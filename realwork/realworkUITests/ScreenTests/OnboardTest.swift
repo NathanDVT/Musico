@@ -43,4 +43,10 @@ class OnBoardScreenTest: XCTestCase {
         XCTAssert(application.staticTexts["Welcome to Musico"].exists)
     }
 
+    func testUserCanFindProceedButtonExists() {
+        application.swipeLeft()
+        application.swipeLeft()
+        XCTAssert(application.buttons["Proceed"].exists)
+    }
+
 }

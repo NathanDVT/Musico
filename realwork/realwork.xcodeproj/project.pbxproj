@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		414E1982241F5316007C774F /* realworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1981241F5316007C774F /* realworkUITests.swift */; };
-		414E198C241F547C007C774F /* FirstScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198B241F547C007C774F /* FirstScenario.swift */; };
+		414E198C241F547C007C774F /* SearchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198B241F547C007C774F /* SearchScreenTests.swift */; };
 		414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */; };
 		414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */; };
 		414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */; };
@@ -22,11 +22,12 @@
 		415A8BA12422A7BF00038133 /* ButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA02422A7BF00038133 /* ButtonDesign.swift */; };
 		415A8BA32422A99800038133 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA22422A99800038133 /* GlobalConstants.swift */; };
 		415A8BA52422AC4500038133 /* LabelDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA42422AC4500038133 /* LabelDesign.swift */; };
-		415A8BA72422AFB800038133 /* OnBoardScreenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA62422AFB800038133 /* OnBoardScreenTest.swift */; };
+		415A8BA72422AFB800038133 /* OnboardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BA62422AFB800038133 /* OnboardTest.swift */; };
 		415A8BAB2423734500038133 /* DashboardTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BAA2423734500038133 /* DashboardTab.storyboard */; };
 		415A8BB024237BC800038133 /* HomeDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BAF24237BC800038133 /* HomeDashboard.storyboard */; };
 		415A8BB5242380D600038133 /* MessageBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BB4242380D600038133 /* MessageBoard.storyboard */; };
 		415A8BB7242380E700038133 /* PlaylistBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BB6242380E700038133 /* PlaylistBoard.storyboard */; };
+		415A8BB9242387C100038133 /* EntryScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BB8242387C100038133 /* EntryScreenTests.swift */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
 		417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626C23E9A9B100CADC7E /* ViewController.swift */; };
@@ -71,7 +72,7 @@
 		414E197F241F5316007C774F /* realworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = realworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		414E1981241F5316007C774F /* realworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realworkUITests.swift; sourceTree = "<group>"; };
 		414E1983241F5316007C774F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		414E198B241F547C007C774F /* FirstScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScenario.swift; sourceTree = "<group>"; };
+		414E198B241F547C007C774F /* SearchScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTests.swift; sourceTree = "<group>"; };
 		414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplicationExtension.swift; sourceTree = "<group>"; };
 		414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistVideoTableViewCell.swift; sourceTree = "<group>"; };
 		414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistVideoTableViewCell.xib; sourceTree = "<group>"; };
@@ -85,11 +86,12 @@
 		415A8BA02422A7BF00038133 /* ButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDesign.swift; sourceTree = "<group>"; };
 		415A8BA22422A99800038133 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		415A8BA42422AC4500038133 /* LabelDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDesign.swift; sourceTree = "<group>"; };
-		415A8BA62422AFB800038133 /* OnBoardScreenTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardScreenTest.swift; sourceTree = "<group>"; };
+		415A8BA62422AFB800038133 /* OnboardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardTest.swift; sourceTree = "<group>"; };
 		415A8BAA2423734500038133 /* DashboardTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardTab.storyboard; sourceTree = "<group>"; };
 		415A8BAF24237BC800038133 /* HomeDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeDashboard.storyboard; sourceTree = "<group>"; };
 		415A8BB4242380D600038133 /* MessageBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessageBoard.storyboard; sourceTree = "<group>"; };
 		415A8BB6242380E700038133 /* PlaylistBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaylistBoard.storyboard; sourceTree = "<group>"; };
+		415A8BB8242387C100038133 /* EntryScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryScreenTests.swift; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C626823E9A9B100CADC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417C626A23E9A9B100CADC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,20 +157,21 @@
 			isa = PBXGroup;
 			children = (
 				414E198A241F545B007C774F /* Helpers */,
-				414E1989241F544A007C774F /* Screens */,
+				414E1989241F544A007C774F /* ScreenTests */,
 				414E1981241F5316007C774F /* realworkUITests.swift */,
 				414E1983241F5316007C774F /* Info.plist */,
 			);
 			path = realworkUITests;
 			sourceTree = "<group>";
 		};
-		414E1989241F544A007C774F /* Screens */ = {
+		414E1989241F544A007C774F /* ScreenTests */ = {
 			isa = PBXGroup;
 			children = (
-				414E198B241F547C007C774F /* FirstScenario.swift */,
-				415A8BA62422AFB800038133 /* OnBoardScreenTest.swift */,
+				414E198B241F547C007C774F /* SearchScreenTests.swift */,
+				415A8BA62422AFB800038133 /* OnboardTest.swift */,
+				415A8BB8242387C100038133 /* EntryScreenTests.swift */,
 			);
-			path = Screens;
+			path = ScreenTests;
 			sourceTree = "<group>";
 		};
 		414E198A241F545B007C774F /* Helpers */ = {
@@ -552,11 +555,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				414E198C241F547C007C774F /* FirstScenario.swift in Sources */,
+				414E198C241F547C007C774F /* SearchScreenTests.swift in Sources */,
 				414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */,
+				415A8BB9242387C100038133 /* EntryScreenTests.swift in Sources */,
 				414E1982241F5316007C774F /* realworkUITests.swift in Sources */,
 				415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */,
-				415A8BA72422AFB800038133 /* OnBoardScreenTest.swift in Sources */,
+				415A8BA72422AFB800038133 /* OnboardTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
