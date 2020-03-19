@@ -19,14 +19,18 @@ extension XCUIApplication {
         navigateStartToOnBoarding()
         swipeLeft()
         swipeLeft()
-        sleep(1)
         buttons["Proceed"].tap()
         sleep(1)
     }
 
     func navigateToDashboard() {
         navigateStartToLogin()
-        sleep(1)
         buttons["Login"].tap()
+        sleep(1)
+    }
+
+    func navigateToSearchScreen() {
+        navigateToDashboard()
+        buttons["Search"].tap()
     }
 }

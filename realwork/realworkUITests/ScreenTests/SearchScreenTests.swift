@@ -15,46 +15,17 @@ class FirstScenario: XCTestCase {
         continueAfterFailure = false
         application = XCUIApplication()
         application.launch()
-        application.navigateStartToLogin()
+        application.navigateToSearchScreen()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testUserCanNavigateToArtistSearchPage() {
-        application.buttons["Sign Up"].tap()
-        usleep(useconds_t(50))
-        application.buttons["Register"].tap()
-        sleep(1)
-        XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
-    }
-
-    func testUserCanEnterEmail() {
-        application.textFields["E-mail"].tap()
-        application.textFields["E-mail"].typeText("user")
-        XCTAssert(application.textFields["user"].exists)
-    }
-
-    func testUserCanRotateDeviceAndNavigate() {
-        XCUIDevice.shared.orientation = .landscapeLeft
-        application.buttons["Sign Up"].tap()
-        usleep(useconds_t(5000))
-        application.buttons["Register"].tap()
-        sleep(1)
-        XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
-    }
-
     func testUserCanSearchArtistScrollUpScrollLeftPlayMusic() {
         XCUIDevice.shared.orientation = .portrait
-        application.buttons["Sign Up"].tap()
-        application.buttons["Register"].tap()
         application.tables.searchFields["Enter Artist To Search"].tap()
-        application.keys["D"].tap()
-        application.keys["r"].tap()
-        application.keys["a"].tap()
-        application.keys["k"].tap()
-        application.keys["e"].tap()
+        application.tables.searchFields["Enter Artist To Search"].typeText("Drake")
         application.buttons["search"].tap()
         sleep(1)
         XCTAssert(application.staticTexts["Scorpion"].exists)
@@ -69,14 +40,8 @@ class FirstScenario: XCTestCase {
 
     func testUserCanSearchPlayAndPauseMusic() {
         XCUIDevice.shared.orientation = .portrait
-        application.buttons["Sign Up"].tap()
-        application.buttons["Register"].tap()
         application.tables.searchFields["Enter Artist To Search"].tap()
-        application.keys["D"].tap()
-        application.keys["r"].tap()
-        application.keys["a"].tap()
-        application.keys["k"].tap()
-        application.keys["e"].tap()
+        application.tables.searchFields["Enter Artist To Search"].typeText("Drake")
         application.buttons["search"].tap()
         sleep(1)
         application.swipeLeft()
@@ -90,14 +55,8 @@ class FirstScenario: XCTestCase {
 
     func testUserCanGetToVideosScreen() {
         XCUIDevice.shared.orientation = .portrait
-        application.buttons["Sign Up"].tap()
-        application.buttons["Register"].tap()
         application.tables.searchFields["Enter Artist To Search"].tap()
-        application.keys["D"].tap()
-        application.keys["r"].tap()
-        application.keys["a"].tap()
-        application.keys["k"].tap()
-        application.keys["e"].tap()
+        application.tables.searchFields["Enter Artist To Search"].typeText("Drake")
         application.buttons["search"].tap()
         sleep(1)
         application.buttons["Videos"].tap()
