@@ -28,6 +28,11 @@
 		415A8BB5242380D600038133 /* MessageBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BB4242380D600038133 /* MessageBoard.storyboard */; };
 		415A8BB7242380E700038133 /* PlaylistBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BB6242380E700038133 /* PlaylistBoard.storyboard */; };
 		415A8BB9242387C100038133 /* EntryScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BB8242387C100038133 /* EntryScreenTests.swift */; };
+		415A8BBB2423EEC900038133 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BBA2423EEC900038133 /* GoogleService-Info.plist */; };
+		415A8BBE2423F5BE00038133 /* EntryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BBD2423F5BE00038133 /* EntryBoard.storyboard */; };
+		415A8BC02423F70400038133 /* EntryPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BBF2423F70400038133 /* EntryPointVC.swift */; };
+		415A8BC42423FA9700038133 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BC32423FA9700038133 /* SignUpVC.swift */; };
+		415A8BC62423FAEB00038133 /* SignUpBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BC52423FAEB00038133 /* SignUpBoard.storyboard */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
 		417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626C23E9A9B100CADC7E /* ViewController.swift */; };
@@ -92,6 +97,11 @@
 		415A8BB4242380D600038133 /* MessageBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessageBoard.storyboard; sourceTree = "<group>"; };
 		415A8BB6242380E700038133 /* PlaylistBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaylistBoard.storyboard; sourceTree = "<group>"; };
 		415A8BB8242387C100038133 /* EntryScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryScreenTests.swift; sourceTree = "<group>"; };
+		415A8BBA2423EEC900038133 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		415A8BBD2423F5BE00038133 /* EntryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EntryBoard.storyboard; sourceTree = "<group>"; };
+		415A8BBF2423F70400038133 /* EntryPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointVC.swift; sourceTree = "<group>"; };
+		415A8BC32423FA9700038133 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		415A8BC52423FAEB00038133 /* SignUpBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpBoard.storyboard; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C626823E9A9B100CADC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417C626A23E9A9B100CADC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +250,24 @@
 			path = MessageBoard;
 			sourceTree = "<group>";
 		};
+		415A8BBC2423F55500038133 /* EntryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				415A8BBD2423F5BE00038133 /* EntryBoard.storyboard */,
+				415A8BBF2423F70400038133 /* EntryPointVC.swift */,
+			);
+			path = EntryBoards;
+			sourceTree = "<group>";
+		};
+		415A8BC22423F81700038133 /* SignUpBoard */ = {
+			isa = PBXGroup;
+			children = (
+				415A8BC32423FA9700038133 /* SignUpVC.swift */,
+				415A8BC52423FAEB00038133 /* SignUpBoard.storyboard */,
+			);
+			path = SignUpBoard;
+			sourceTree = "<group>";
+		};
 		417C625C23E9A9B100CADC7E = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +294,9 @@
 		417C626723E9A9B100CADC7E /* realwork */ = {
 			isa = PBXGroup;
 			children = (
+				415A8BC22423F81700038133 /* SignUpBoard */,
+				415A8BBC2423F55500038133 /* EntryBoards */,
+				415A8BBA2423EEC900038133 /* GoogleService-Info.plist */,
 				415A8BB32423809400038133 /* MessageBoard */,
 				415A8BB22423807900038133 /* PlaylistBoard */,
 				415A8BA82423730300038133 /* Dashboard */,
@@ -454,8 +485,11 @@
 				417C627523E9A9B100CADC7E /* LaunchScreen.storyboard in Resources */,
 				417C627223E9A9B100CADC7E /* Assets.xcassets in Resources */,
 				417C627023E9A9B100CADC7E /* Main.storyboard in Resources */,
+				415A8BC62423FAEB00038133 /* SignUpBoard.storyboard in Resources */,
 				414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */,
+				415A8BBB2423EEC900038133 /* GoogleService-Info.plist in Resources */,
 				415A8BB5242380D600038133 /* MessageBoard.storyboard in Resources */,
+				415A8BBE2423F5BE00038133 /* EntryBoard.storyboard in Resources */,
 				415A8B942420DB6100038133 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +604,7 @@
 			files = (
 				415A8B9F2422A76F00038133 /* ButtonConstant.swift in Sources */,
 				415A8B9A2420DCEB00038133 /* Onboard3ViewController.swift in Sources */,
+				415A8BC02423F70400038133 /* EntryPointVC.swift in Sources */,
 				41901A5323FE6CE200938CD4 /* TableCell.swift in Sources */,
 				415A8BA12422A7BF00038133 /* ButtonDesign.swift in Sources */,
 				417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */,
@@ -577,6 +612,7 @@
 				415A8BA52422AC4500038133 /* LabelDesign.swift in Sources */,
 				415A8B962420DCBD00038133 /* Onboard1ViewController.swift in Sources */,
 				415A8BA32422A99800038133 /* GlobalConstants.swift in Sources */,
+				415A8BC42423FA9700038133 /* SignUpVC.swift in Sources */,
 				414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */,
 				417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */,
 				417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */,

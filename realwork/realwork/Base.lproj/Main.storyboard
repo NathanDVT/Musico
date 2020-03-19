@@ -31,9 +31,6 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Sign In"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="his-CS-hgV"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-2e-U2y">
                                 <rect key="frame" x="164" y="583" width="46" height="30"/>
@@ -56,7 +53,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MuezLoginID" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,9 +171,6 @@
                                                                 <state key="normal" title="Sign Up">
                                                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
-                                                                <connections>
-                                                                    <segue destination="ymr-79-qTl" kind="showDetail" id="pL0-Rp-FZ5"/>
-                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -236,7 +230,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6dH-G1-vzu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,24 +250,24 @@
             <objects>
                 <viewController id="ymr-79-qTl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QcS-EF-Pff">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Met-ZT-HrF">
-                                <rect key="frame" x="10" y="50" width="374" height="231"/>
+                                <rect key="frame" x="10" y="94" width="394" height="231"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Vg-30-2Ob">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp8-DW-fhm">
-                                                <rect key="frame" x="153.66666666666666" y="0.0" width="67" height="33.666666666666664"/>
+                                                <rect key="frame" x="163.66666666666666" y="0.0" width="67" height="33.666666666666664"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join now to get the latest and greatest music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTP-aI-Dnx">
-                                                <rect key="frame" x="15.333333333333343" y="33.666666666666671" width="343.33333333333326" height="20.333333333333329"/>
+                                                <rect key="frame" x="25.333333333333343" y="33.666666666666671" width="343.33333333333326" height="20.333333333333329"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,7 +276,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="PhA-L0-G4G">
-                                        <rect key="frame" x="0.0" y="97" width="374" height="134"/>
+                                        <rect key="frame" x="0.0" y="97" width="394" height="134"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold_gleff" translatesAutoresizingMaskIntoConstraints="NO" id="1no-SH-RTv">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="134"/>
@@ -302,7 +295,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold_gleff" translatesAutoresizingMaskIntoConstraints="NO" id="szU-bE-Y4Y">
-                                                <rect key="frame" x="274" y="0.0" width="100" height="134"/>
+                                                <rect key="frame" x="274" y="0.0" width="120" height="134"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="134" id="GLd-9v-Ve2"/>
                                                     <constraint firstAttribute="width" secondItem="szU-bE-Y4Y" secondAttribute="height" multiplier="50:67" id="cw8-ET-ZNc"/>
@@ -314,7 +307,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="FTB-Hq-AXk">
-                                <rect key="frame" x="40.666666666666657" y="444" width="312.66666666666674" height="276"/>
+                                <rect key="frame" x="50.666666666666657" y="498" width="312.66666666666674" height="276"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="iho-Az-bXl">
                                         <rect key="frame" x="0.0" y="0.0" width="312.66666666666669" height="117"/>
