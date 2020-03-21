@@ -7,13 +7,17 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
+import NLibrary
 
 class SignUpVC: UIViewController {
 
     @IBOutlet weak var edtEmail: UITextField!
     @IBOutlet weak var edtPassword: UITextField!
     @IBOutlet weak var loaderIndicator: UIActivityIndicatorView!
+    lazy var userVM: UserVM = {
+        return UserVM(viewController: self, userRepo: UserRepo())
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +26,15 @@ class SignUpVC: UIViewController {
         let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         loaderIndicator.transform = transfrom
         loaderIndicator.hidesWhenStopped = true
+        let repo: UserRepoProtocol = UserRepo()
+        userVM = UserVM(viewController: self, userRepo: repo)
     }
 
     @IBAction func btnSignUp(_ sender: Any) {
         loaderIndicator.startAnimating()
-        Auth.auth().createUser(withEmail: edtEmail!.text!,
-                               password: edtPassword!.text!) { [weak self] authResult, error in
-            guard let user = authResult?.user, error == nil else {
-                self?.showMessagePrompt(title: "Opps!", message: error!.localizedDescription)
-              return
-            }
-            self?.showMessagePrompt(title: "Success", message: "User \(user.email) successfully created")
-        }
+        let email: String = edtEmail!.text!
+        let password: String = edtPassword!.text!
+        self.userVM.signUp(email: email, password: password)
     }
 
     func showMessagePrompt(title: String, message: String) {
@@ -45,12 +46,20 @@ class SignUpVC: UIViewController {
     }
 }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SignUpVC: SignUpVCprotocol {
+    func successfulSignIn() {
+        loaderIndicator.stopAnimating()
+        let storyboard = UIStoryboard(name: "DashboardTab", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier:
+            "DashboardTabID") as? UITabBarController
+        if let destinationVC = destinationVC {
+            destinationVC.modalPresentationStyle = .fullScreen
+            destinationVC.modalTransitionStyle = .flipHorizontal
+            present(destinationVC, animated: true, completion: nil)
+        }
     }
-    */
+    func unsuccessfulSignIn(message: String) {
+        loaderIndicator.stopAnimating()
+        showMessagePrompt(title: "Opps!", message: message)
+    }
+}

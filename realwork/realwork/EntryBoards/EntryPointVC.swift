@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 class EntryPointVC: UIViewController {
 //    var handle: AuthStateDidChangeListenerHandle?
@@ -27,27 +27,6 @@ class EntryPointVC: UIViewController {
             present(destinationVC, animated: true, completion: nil)
         }
     }
-    //    override func viewWillAppear(_ animated: Bool) {
-//      super.viewWillAppear(animated)
-//      // [START auth_listener]
-//      handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-//        // [START_EXCLUDE]
-//        //self.setTitleDisplay(user)
-//        //self.tableView.reloadData()
-//        // [END_EXCLUDE]
-//      }
-//      // [END auth_listener]
-//      // Authenticate Game Center Local Player
-//      // Uncomment to sign in with Game Center
-//      // self.authenticateGameCenterLocalPlayer()
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//      super.viewWillDisappear(animated)
-//      // [START remove_auth_listener]
-//      Auth.auth().removeStateDidChangeListener(handle!)
-//      // [END remove_auth_listener]
-//    }
 
     /*
     // MARK: - Navigation
