@@ -10,6 +10,7 @@ import UIKit
 //import Firebase
 import NLibrary
 
+
 class SignUpVC: UIViewController {
 
     @IBOutlet weak var edtEmail: UITextField!
@@ -61,5 +62,6 @@ extension SignUpVC: SignUpVCprotocol {
     func unsuccessfulSignIn(message: String) {
         loaderIndicator.stopAnimating()
         showMessagePrompt(title: "Opps!", message: message)
+//        let dance: UserClass
     }
 }
