@@ -6,11 +6,11 @@ target 'realwork' do
   use_frameworks!
 
   # Pods for realwork
-  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'development'
+#  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'development'
 #  pod 'Firebase/Auth'
 #  pod 'Firebase/Firestore'
 #  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'feature/unit_test'
-#  pod 'NLibrary', :path => '/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary'
+  pod 'NLibrary', :path => '/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary'
 #     Add the Firebase pod for Google Analytics
 #    pod 'Firebase/Analytics'
   

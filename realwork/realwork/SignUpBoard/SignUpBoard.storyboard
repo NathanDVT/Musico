@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="qxf-zF-LnN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="856"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N7V-fR-F2x">
-                                        <rect key="frame" x="16" y="8" width="382" height="381.5"/>
+                                        <rect key="frame" x="16" y="8" width="382" height="379.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeE-Yl-CQs">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="381.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="379.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhm-py-NDD">
                                                         <rect key="frame" x="20" y="20" width="342" height="48.5"/>
@@ -45,7 +45,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_g_cleff" translatesAutoresizingMaskIntoConstraints="NO" id="pQp-vF-f6g">
-                                                        <rect key="frame" x="20" y="168.5" width="342" height="193"/>
+                                                        <rect key="frame" x="20" y="168.5" width="342" height="191"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,10 +65,10 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="uAj-NK-4V5">
-                                        <rect key="frame" x="16" y="432.5" width="382" height="381.5"/>
+                                        <rect key="frame" x="16" y="430.5" width="382" height="379.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7D3-FK-Xd7">
-                                                <rect key="frame" x="20" y="70" width="362" height="251.5"/>
+                                                <rect key="frame" x="20" y="70" width="362" height="249.5"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHD-1L-BRx">
                                                         <rect key="frame" x="0.0" y="0.0" width="342" height="45"/>
@@ -87,7 +87,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldp-qW-h68">
-                                                        <rect key="frame" x="0.0" y="170" width="342" height="81.5"/>
+                                                        <rect key="frame" x="0.0" y="170" width="342" height="79.5"/>
                                                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="EKZ-4N-6w9"/>
@@ -140,9 +140,9 @@
                         <viewLayoutGuide key="safeArea" id="tJG-rP-oyr"/>
                     </view>
                     <connections>
-                        <outlet property="edtEmail" destination="eHD-1L-BRx" id="YMw-qk-GYp"/>
-                        <outlet property="edtPassword" destination="4vz-Ra-WOr" id="70b-OJ-1uC"/>
-                        <outlet property="loaderIndicator" destination="3Zy-Wc-zvK" id="TM9-gm-3UV"/>
+                        <outlet property="emailTextField" destination="eHD-1L-BRx" id="YMw-qk-GYp"/>
+                        <outlet property="loaderIndicatorView" destination="3Zy-Wc-zvK" id="TM9-gm-3UV"/>
+                        <outlet property="passwordTextField" destination="4vz-Ra-WOr" id="70b-OJ-1uC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RmQ-W9-t0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
