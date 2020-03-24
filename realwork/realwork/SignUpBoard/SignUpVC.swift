@@ -10,7 +10,6 @@ import UIKit
 //import Firebase
 import NLibrary
 
-
 class SignUpVC: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -25,7 +24,7 @@ class SignUpVC: UIViewController {
         let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         loaderIndicatorView.transform = transfrom
         loaderIndicatorView.hidesWhenStopped = true
-        let repo: UserRepoProtocol = UserRepo()
+//        let repo: UserRepoProtocol = UserRepo()
     }
 
     @IBAction func btnSignUp(_ sender: Any) {
@@ -59,6 +58,5 @@ extension SignUpVC: SignUpViewControllerProtocol {
     func unsuccessfulSignIn(message: String) {
         loaderIndicatorView.stopAnimating()
         showMessagePrompt(title: "Opps!", message: message)
-//        let dance: UserClass
     }
 }
