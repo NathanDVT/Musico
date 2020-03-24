@@ -14,7 +14,108 @@
                     <view key="view" contentMode="scaleToFill" id="5EA-Q2-uD2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-Uf-ZxF">
+                                <rect key="frame" x="0.0" y="64" width="414" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can view messages on your playlists, messgaes from members and invites from friends or fans." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQN-FE-e2E">
+                                <rect key="frame" x="20" y="137" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="e9e-fb-93V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-Yg-vuQ">
+                                <rect key="frame" x="20" y="499" width="374" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Message on your playlist Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6w-aB-DKt">
+                                        <rect key="frame" x="10" y="10" width="354" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="XDG-TZ-C0j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67625713832487311" green="0.58749857318742593" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="B6w-aB-DKt" firstAttribute="top" secondItem="HWa-Yg-vuQ" secondAttribute="top" constant="10" id="FLD-pQ-Gxl"/>
+                                    <constraint firstItem="B6w-aB-DKt" firstAttribute="leading" secondItem="HWa-Yg-vuQ" secondAttribute="leading" constant="10" id="Gqz-y7-ntL"/>
+                                    <constraint firstAttribute="trailing" secondItem="B6w-aB-DKt" secondAttribute="trailing" constant="10" id="W1j-hX-BBL"/>
+                                    <constraint firstAttribute="height" constant="130" id="ajJ-7I-AZF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDZ-F8-rvt">
+                                <rect key="frame" x="20" y="649" width="374" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 new songs added Playlist Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cW-i8-gwv">
+                                        <rect key="frame" x="10" y="20" width="354" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="1Uh-ZJ-wSA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67625713832487311" green="0.58749857318742593" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="6cW-i8-gwv" firstAttribute="top" secondItem="QDZ-F8-rvt" secondAttribute="top" constant="20" id="1Nv-Vl-5UB"/>
+                                    <constraint firstAttribute="trailing" secondItem="6cW-i8-gwv" secondAttribute="trailing" constant="10" id="AI4-wf-40G"/>
+                                    <constraint firstItem="6cW-i8-gwv" firstAttribute="leading" secondItem="QDZ-F8-rvt" secondAttribute="leading" constant="10" id="TFc-Tz-d5Z"/>
+                                    <constraint firstAttribute="height" constant="130" id="fcg-zJ-USm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-i4-c50">
+                                <rect key="frame" x="20" y="349" width="374" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invite from Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34z-oi-QKC">
+                                        <rect key="frame" x="21" y="22" width="208" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.67625713832487311" green="0.58749857318742593" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="5Ss-Sf-9gT"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_g_cleff" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-WS-Mif">
+                                <rect key="frame" x="123" y="217" width="168" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="WGd-MW-1UH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HWa-Yg-vuQ" firstAttribute="top" secondItem="v4q-i4-c50" secondAttribute="bottom" constant="20" id="4Fj-7v-5Rr"/>
+                            <constraint firstItem="jQN-FE-e2E" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="20" id="5hB-Th-Voe"/>
+                            <constraint firstAttribute="trailing" secondItem="jQN-FE-e2E" secondAttribute="trailing" constant="20" id="7ka-7w-7sP"/>
+                            <constraint firstItem="v4q-i4-c50" firstAttribute="top" secondItem="zdP-WS-Mif" secondAttribute="bottom" constant="20" id="81G-01-ggb"/>
+                            <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="QDZ-F8-rvt" secondAttribute="trailing" constant="20" id="9FA-ib-7SI"/>
+                            <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="gf8-Uf-ZxF" secondAttribute="trailing" id="E7L-o5-RjP"/>
+                            <constraint firstItem="QDZ-F8-rvt" firstAttribute="top" secondItem="HWa-Yg-vuQ" secondAttribute="bottom" constant="20" id="JRu-m0-0lZ"/>
+                            <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="v4q-i4-c50" secondAttribute="trailing" constant="20" id="NyE-bR-7pb"/>
+                            <constraint firstItem="jQN-FE-e2E" firstAttribute="top" secondItem="gf8-Uf-ZxF" secondAttribute="bottom" constant="20" id="QcW-14-eFJ"/>
+                            <constraint firstItem="HWa-Yg-vuQ" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="20" id="cEp-T9-zaI"/>
+                            <constraint firstItem="gf8-Uf-ZxF" firstAttribute="top" secondItem="Bvk-8a-Q0Q" secondAttribute="top" constant="20" id="gP4-R3-Ue1"/>
+                            <constraint firstItem="v4q-i4-c50" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="20" id="gdJ-Gq-38D"/>
+                            <constraint firstItem="zdP-WS-Mif" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="123" id="hMc-mP-jDb"/>
+                            <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="HWa-Yg-vuQ" secondAttribute="trailing" constant="20" id="hyg-M7-SiC"/>
+                            <constraint firstItem="zdP-WS-Mif" firstAttribute="top" secondItem="jQN-FE-e2E" secondAttribute="bottom" constant="10" id="jHW-3M-Lsa"/>
+                            <constraint firstItem="gf8-Uf-ZxF" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" id="oeZ-dK-Vn9"/>
+                            <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="zdP-WS-Mif" secondAttribute="trailing" constant="123" id="pOM-tw-yLZ"/>
+                            <constraint firstItem="QDZ-F8-rvt" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="20" id="zHd-5p-Xz9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bvk-8a-Q0Q"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" image="message.fill" catalog="system" id="4im-i7-zwS"/>
@@ -22,10 +123,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsz-u2-0BZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="-143"/>
+            <point key="canvasLocation" x="263.768115942029" y="-143.30357142857142"/>
         </scene>
     </scenes>
     <resources>
         <image name="message.fill" catalog="system" width="64" height="56"/>
+        <image name="music_g_cleff" width="940" height="2400"/>
     </resources>
 </document>

@@ -295,10 +295,10 @@
 		4165D2D12427D86B00132D0A /* Objective */ = {
 			isa = PBXGroup;
 			children = (
+				4165D2DC2428AECB00132D0A /* UserProtocol.h */,
 				4165D2D32427D89000132D0A /* UserClass.h */,
 				4165D2D22427D88F00132D0A /* realwork-Bridging-Header.h */,
 				4165D2DA2428957B00132D0A /* UserClass.m */,
-				4165D2DC2428AECB00132D0A /* UserProtocol.h */,
 			);
 			path = Objective;
 			sourceTree = "<group>";
