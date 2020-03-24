@@ -40,11 +40,3 @@ class EntryPointVC: UIViewController {
     */
 
 }
-
-extension SignUpVC: SignUpVCprotocol2 {
-    func unsuccessfulSignIn1(_ message: String!) {
-    }
-
-    func successfulSignIn1() {
-    }
-}
