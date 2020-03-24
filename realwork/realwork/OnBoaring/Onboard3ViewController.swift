@@ -30,10 +30,18 @@ class Onboard3ViewController: UIViewController {
     }
 
     @IBAction func btnNavToSignUp(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let storyboard = UIStoryboard(name: "LoginBoard", bundle: nil)
+//        let destinationVC = storyboard.instantiateViewController(withIdentifier: "LoginBoardID") as? ViewController
+//        if let destinationVC = destinationVC {
+//            destinationVC.modalTransitionStyle = .crossDissolve
+//            present(destinationVC, animated: true, completion: nil)
+//        }
+
+        let storyboard = UIStoryboard(name: "EntryBoard", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier:
-            "MuezLoginID") as? ViewController
+            "EntryBoardLoginID") as? UIViewController
         if let destinationVC = destinationVC {
+            destinationVC.modalPresentationStyle = .fullScreen
             destinationVC.modalTransitionStyle = .crossDissolve
             present(destinationVC, animated: true, completion: nil)
         }

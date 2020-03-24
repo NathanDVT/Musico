@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         if let destinationVC = destinationVC {
             present(destinationVC, animated: true, completion: nil)
         }
-    
     }
 
     @IBAction func btnToDashboard(_ sender: Any) {
