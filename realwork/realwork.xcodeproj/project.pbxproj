@@ -34,6 +34,9 @@
 		415A8BC42423FA9700038133 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BC32423FA9700038133 /* SignUpVC.swift */; };
 		415A8BC62423FAEB00038133 /* SignUpBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BC52423FAEB00038133 /* SignUpBoard.storyboard */; };
 		4165D2D024269DBF00132D0A /* HomeBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4165D2CF24269DBF00132D0A /* HomeBoardVC.swift */; };
+		4165D2D72428925400132D0A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165D2D62428925400132D0A /* WebKit.framework */; };
+		4165D2D9242893EF00132D0A /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165D2D8242893EF00132D0A /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4165D2DB2428957B00132D0A /* UserClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165D2DA2428957B00132D0A /* UserClass.m */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
 		417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626C23E9A9B100CADC7E /* ViewController.swift */; };
@@ -103,6 +106,12 @@
 		415A8BC32423FA9700038133 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		415A8BC52423FAEB00038133 /* SignUpBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpBoard.storyboard; sourceTree = "<group>"; };
 		4165D2CF24269DBF00132D0A /* HomeBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBoardVC.swift; sourceTree = "<group>"; };
+		4165D2D22427D88F00132D0A /* realwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "realwork-Bridging-Header.h"; sourceTree = "<group>"; };
+		4165D2D32427D89000132D0A /* UserClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserClass.h; sourceTree = "<group>"; };
+		4165D2D62428925400132D0A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4165D2D8242893EF00132D0A /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		4165D2DA2428957B00132D0A /* UserClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserClass.m; sourceTree = "<group>"; };
+		4165D2DC2428AECB00132D0A /* UserProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProtocol.h; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C626823E9A9B100CADC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417C626A23E9A9B100CADC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4165D2D9242893EF00132D0A /* ReplayKit.framework in Frameworks */,
+				4165D2D72428925400132D0A /* WebKit.framework in Frameworks */,
 				7660E06C77DC8B82950CB0AA /* Pods_realwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +292,17 @@
 			path = HomeBoard;
 			sourceTree = "<group>";
 		};
+		4165D2D12427D86B00132D0A /* Objective */ = {
+			isa = PBXGroup;
+			children = (
+				4165D2DC2428AECB00132D0A /* UserProtocol.h */,
+				4165D2D32427D89000132D0A /* UserClass.h */,
+				4165D2D22427D88F00132D0A /* realwork-Bridging-Header.h */,
+				4165D2DA2428957B00132D0A /* UserClass.m */,
+			);
+			path = Objective;
+			sourceTree = "<group>";
+		};
 		417C625C23E9A9B100CADC7E = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +329,7 @@
 		417C626723E9A9B100CADC7E /* realwork */ = {
 			isa = PBXGroup;
 			children = (
+				4165D2D12427D86B00132D0A /* Objective */,
 				415A8BC22423F81700038133 /* SignUpBoard */,
 				415A8BBC2423F55500038133 /* EntryBoards */,
 				415A8BBA2423EEC900038133 /* GoogleService-Info.plist */,
@@ -368,6 +391,8 @@
 		B5F818FFD5D971ED7DDF8088 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4165D2D8242893EF00132D0A /* ReplayKit.framework */,
+				4165D2D62428925400132D0A /* WebKit.framework */,
 				10DEAAED1761336FA99BEFDA /* Pods_realwork.framework */,
 				BAD70FFB4BABDA1C94981CC3 /* Pods_realworkTests.framework */,
 			);
@@ -403,7 +428,7 @@
 				417C626123E9A9B100CADC7E /* Sources */,
 				417C626223E9A9B100CADC7E /* Frameworks */,
 				417C626323E9A9B100CADC7E /* Resources */,
-				417C62E023F3D57300CADC7E /* ShellScript */,
+				417C62E023F3D57300CADC7E /* Run Script */,
 				D220BEE0B7CF366E52CA58C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -450,6 +475,7 @@
 					};
 					417C626423E9A9B100CADC7E = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					417C627A23E9A9B100CADC7E = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -559,7 +585,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		417C62E023F3D57300CADC7E /* ShellScript */ = {
+		417C62E023F3D57300CADC7E /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -568,6 +594,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -628,6 +655,7 @@
 				414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */,
 				417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */,
 				417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */,
+				4165D2DB2428957B00132D0A /* UserClass.m in Sources */,
 				41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */,
 				417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */,
 				417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */,
@@ -836,6 +864,7 @@
 			baseConfigurationReference = F91683D7B59AC30C1C0F421C /* Pods-realwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = realwork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -844,6 +873,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.jhb.realwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "realwork/Objective/realwork-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -854,6 +885,7 @@
 			baseConfigurationReference = 281FB59C4F793BB3C0CF08C3 /* Pods-realwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = realwork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -862,6 +894,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.dvt.jhb.realwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "realwork/Objective/realwork-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

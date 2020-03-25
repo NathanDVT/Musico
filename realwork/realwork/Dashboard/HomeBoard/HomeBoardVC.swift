@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+//import UserC
+import NLibrary
 class HomeBoardVC: UIViewController {
 
     @IBOutlet var homeView: UIView!
@@ -15,15 +16,16 @@ class HomeBoardVC: UIViewController {
         super.viewDidLoad()
         let layer = CAGradientLayer()
         layer.frame = homeView.bounds
+        let objcObj: HexToUIColor = HexToUIColor()
+        let hexGenCol: UIColor = objcObj.color
         layer.colors = [UIColor.systemYellow.cgColor, UIColor.black.cgColor,
-                         UIColor(hex: "#6C5A20ff")?.cgColor]
+                        hexGenCol.cgColor]
         layer.locations = [0.0, 0.095, 0.97]
         homeView.backgroundColor = .none
         homeView.layer.insertSublayer(layer, at: 0)
 
         // Do any additional setup after loading the view.
     }
-
     /*
     // MARK: - Navigation
 
