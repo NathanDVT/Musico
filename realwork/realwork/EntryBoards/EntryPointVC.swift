@@ -10,12 +10,13 @@ import UIKit
 //import Firebase
 import NLibrary
 
-class EntryPointVC: UIViewController {
-//    var handle: AuthStateDidChangeListenerHandle?
+class EntryPointVC: UIViewController/*,LoginViewControllerProtocol*/ {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("Old")
     }
 
     @IBAction func btnLogin(_ sender: Any) {
@@ -29,14 +30,12 @@ class EntryPointVC: UIViewController {
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    func signin( _ email: String!, _ password: String!) {
+//    }
+//
+//    func successfulSignIn() {
+//    }
+//
+//    func unsuccessfulSignIn() {
+//    }
 }
