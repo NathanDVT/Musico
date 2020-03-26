@@ -15,7 +15,7 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loaderIndicatorView: UIActivityIndicatorView!
-    lazy var userVM: UserVM = UserVM(viewController: self, userRepo: UserRepo())
+    lazy var userVM: SignUpViewModel = SignUpViewModel(viewController: self, userRepo: SignUpRepo())
 
     override func viewDidLoad() {
         super.viewDidLoad()

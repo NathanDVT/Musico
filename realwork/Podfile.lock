@@ -94,7 +94,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `feature/add_obj_c`)
+  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `development`)
 
 SPEC REPOS:
   trunk:
@@ -118,12 +118,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   NLibrary:
-    :branch: feature/add_obj_c
+    :branch: development
     :git: https://github.com/NathanDVT/NLibrary.git
 
 CHECKOUT OPTIONS:
   NLibrary:
-    :commit: bfd0e3c5798f01f6aa322a093c03e5cd6f74470c
+    :commit: 209ac29592d85b7d33d6d4da34358d82231e7f5c
     :git: https://github.com/NathanDVT/NLibrary.git
 
 SPEC CHECKSUMS:
@@ -146,6 +146,6 @@ SPEC CHECKSUMS:
   NLibrary: 54615be9d1d6d097b6fb82da2532e3d07585560f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 012ef76f0f3ae18061847719bca677382fd492c2
+PODFILE CHECKSUM: 890ae97b46564fd84c8d9bc0b942abbd6182015a
 
 COCOAPODS: 1.8.4
