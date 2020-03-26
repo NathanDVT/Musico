@@ -94,7 +94,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `feature/add_obj_c`)
+  - NLibrary (from `/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary`)
 
 SPEC REPOS:
   trunk:
@@ -118,13 +118,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   NLibrary:
-    :branch: feature/add_obj_c
-    :git: https://github.com/NathanDVT/NLibrary.git
-
-CHECKOUT OPTIONS:
-  NLibrary:
-    :commit: bfd0e3c5798f01f6aa322a093c03e5cd6f74470c
-    :git: https://github.com/NathanDVT/NLibrary.git
+    :path: "/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary"
 
 SPEC CHECKSUMS:
   Firebase: fe7f74012742ab403451dd283e6909b8f1fb348a
@@ -146,6 +140,6 @@ SPEC CHECKSUMS:
   NLibrary: 54615be9d1d6d097b6fb82da2532e3d07585560f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 012ef76f0f3ae18061847719bca677382fd492c2
+PODFILE CHECKSUM: 9a440e80bbe21c00ea47b3c36e5288da3428f27f
 
 COCOAPODS: 1.8.4
