@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <NLibrary-umbrella.h>
+#import <NLibrary/LoginViewControllerProtocol.h>
+#import <NLibrary/LoginViewModel.h>
+#import <NLibrary/LoginRepo.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EntryBoardViewController : UIViewController<LoginViewControllerProtocol>
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
+- (void)successfulSignIn;
+- (void)unsuccessfulSignIn: (NSString* ) message;
 @end
 
 NS_ASSUME_NONNULL_END
