@@ -10,34 +10,34 @@ import XCTest
 @testable import NLibrary
 
 class ArtistMediaViewModelTest: XCTestCase {
-    var repo: ArtistMediaRepoProtocol!
+    var repo: SearchSongRepoProtocol!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        do {
-            repo = try ArtistMediaRepoMock(artistName: "drake")
-        } catch {}
+//        do {
+//            repo = try ArtistMediaRepoMock(artistName: "drake")
+//        } catch {}
     }
 
     override func tearDown() {
     }
 
-    func testGivenArtistNameThenConstructViewModelObject() {
-        let artistMediaViewModel = ArtistMediaViewModel(artistName: "drake")
-        XCTAssertNotNil(artistMediaViewModel)
-    }
-
-    func testGivenCorrectArtistNameThenReturnSuccessfullCollection() {
-        do {
-            repo.getArtistMedia { /*[weak self]*/ result in
-                XCTAssertNotNil(result)
-                switch result {
-                case .success(let cols):
-                    XCTAssertGreaterThan(cols.count, 0)
-                case .failure(let error):
-                    print(error)
-                    XCTAssertFalse(true)
-                }
-            }
-        }
-    }
+//    func testGivenArtistNameThenConstructViewModelObject() {
+//        let artistMediaViewModel = ArtistMediaViewModel(artistName: "drake")
+//        XCTAssertNotNil(artistMediaViewModel)
+//    }
+//
+//    func testGivenCorrectArtistNameThenReturnSuccessfullCollection() {
+//        do {
+//            repo.getArtistMedia { /*[weak self]*/ result in
+//                XCTAssertNotNil(result)
+//                switch result {
+//                case .success(let cols):
+//                    XCTAssertGreaterThan(cols.count, 0)
+//                case .failure(let error):
+//                    print(error)
+//                    XCTAssertFalse(true)
+//                }
+//            }
+//        }
+//    }
 }

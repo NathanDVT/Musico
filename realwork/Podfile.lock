@@ -94,7 +94,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `development`)
+  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `feature/add_to_playlist`)
 
 SPEC REPOS:
   trunk:
@@ -118,12 +118,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   NLibrary:
-    :branch: development
+    :branch: feature/add_to_playlist
     :git: https://github.com/NathanDVT/NLibrary.git
 
 CHECKOUT OPTIONS:
   NLibrary:
-    :commit: a110812cd30b56565b2561ef467eca951ea641bb
+    :commit: 646cd3ebdfb412e96a24571d575a7241ce89352c
     :git: https://github.com/NathanDVT/NLibrary.git
 
 SPEC CHECKSUMS:
@@ -146,6 +146,6 @@ SPEC CHECKSUMS:
   NLibrary: 54615be9d1d6d097b6fb82da2532e3d07585560f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 890ae97b46564fd84c8d9bc0b942abbd6182015a
+PODFILE CHECKSUM: d92430407df2fbe5e772b62804a1115b9ca65c21
 
 COCOAPODS: 1.8.4

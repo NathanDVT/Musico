@@ -6,7 +6,7 @@ target 'realwork' do
   use_frameworks!
 
   # Pods for realwork
-  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'development'
+  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'feature/add_to_playlist'
 #  pod 'Firebase/Auth'
 #  pod 'Firebase/Firestore'
 #  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'feature/add_obj_c'
