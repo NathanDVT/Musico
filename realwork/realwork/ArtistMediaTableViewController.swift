@@ -12,7 +12,7 @@ import NLibrary
 
 class ArtistMediaTableViewController: UITableViewController, SeearchMusicTableViewControllerProtocol {
     func successfulRequest() {
-        self.listOfArtistCollections = (self.artistMediaViewModel?.getSongs())!
+        self.listOfArtistCollections = self.artistMediaViewModel.getSongs()
     }
 
     func unsuccessfulRequest(errorMessage: String) {
@@ -31,13 +31,12 @@ class ArtistMediaTableViewController: UITableViewController, SeearchMusicTableVi
         }
     }
     // TO DO: this should use a protocol
-    var artistMediaViewModel: SearchSongsViewModel?
-
+    lazy var artistMediaViewModel: SearchSongsViewModel = SearchSongsViewModel(view: self, repo: SearchSongRepo())
+//lazy var userVM: SignUpViewModel = SignUpViewModel(viewController: self, signUpRepo: SignUpRepo())
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         self.registerTableViewCells()
-        artistMediaViewModel = SearchSongsViewModel(view: self, repo: SearchSongRepo()) 
     }
     // MARK: - Table view data source
 
@@ -187,7 +186,7 @@ class ArtistMediaTableViewController: UITableViewController, SeearchMusicTableVi
 extension ArtistMediaTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else {return}
-        artistMediaViewModel!.getCollections(artistName: searchBarText)
+        self.artistMediaViewModel.getCollections(artistName: searchBarText)
     }
 
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
