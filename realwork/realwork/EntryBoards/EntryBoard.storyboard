@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Entry PointVC-->
+        <!--Entry Board View Controller-->
         <scene sceneID="aeH-w4-UHf">
             <objects>
-                <viewController storyboardIdentifier="EntryBoardLoginID" id="fXp-wc-phK" customClass="EntryPointVC" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntryBoardLoginID" id="fXp-wc-phK" customClass="EntryBoardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Iv-Zm-yGt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
                                                             </constraint>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAO-SZ-OBN">
                                                         <rect key="frame" x="18" y="150.5" width="378" height="45"/>
@@ -79,7 +79,7 @@
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Login"/>
                                                         <connections>
-                                                            <action selector="btnLogin:" destination="fXp-wc-phK" eventType="touchUpInside" id="aE7-mm-nM2"/>
+                                                            <action selector="loginButtonAction:" destination="fXp-wc-phK" eventType="touchUpInside" id="N8i-z4-tO2"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or Login with:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix0-Xn-zGa">
@@ -186,6 +186,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aGD-Br-o1k"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="UyS-Nv-gNy" id="Srb-fm-vdb"/>
+                        <outlet property="passwordTextField" destination="rn6-sF-P8C" id="ebh-9p-zhI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FpS-7A-rXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

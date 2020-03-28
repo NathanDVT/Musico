@@ -30,13 +30,13 @@
 		415A8BB9242387C100038133 /* EntryScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BB8242387C100038133 /* EntryScreenTests.swift */; };
 		415A8BBB2423EEC900038133 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BBA2423EEC900038133 /* GoogleService-Info.plist */; };
 		415A8BBE2423F5BE00038133 /* EntryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BBD2423F5BE00038133 /* EntryBoard.storyboard */; };
-		415A8BC02423F70400038133 /* EntryPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BBF2423F70400038133 /* EntryPointVC.swift */; };
 		415A8BC42423FA9700038133 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A8BC32423FA9700038133 /* SignUpVC.swift */; };
 		415A8BC62423FAEB00038133 /* SignUpBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415A8BC52423FAEB00038133 /* SignUpBoard.storyboard */; };
 		4165D2D024269DBF00132D0A /* HomeBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4165D2CF24269DBF00132D0A /* HomeBoardVC.swift */; };
 		4165D2D72428925400132D0A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165D2D62428925400132D0A /* WebKit.framework */; };
 		4165D2D9242893EF00132D0A /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165D2D8242893EF00132D0A /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4165D2DB2428957B00132D0A /* UserClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165D2DA2428957B00132D0A /* UserClass.m */; };
+		4165D33E242D490B00132D0A /* EntryBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165D33D242D490B00132D0A /* EntryBoardViewController.m */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
 		417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626C23E9A9B100CADC7E /* ViewController.swift */; };
@@ -102,7 +102,6 @@
 		415A8BB8242387C100038133 /* EntryScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryScreenTests.swift; sourceTree = "<group>"; };
 		415A8BBA2423EEC900038133 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		415A8BBD2423F5BE00038133 /* EntryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EntryBoard.storyboard; sourceTree = "<group>"; };
-		415A8BBF2423F70400038133 /* EntryPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointVC.swift; sourceTree = "<group>"; };
 		415A8BC32423FA9700038133 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		415A8BC52423FAEB00038133 /* SignUpBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpBoard.storyboard; sourceTree = "<group>"; };
 		4165D2CF24269DBF00132D0A /* HomeBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBoardVC.swift; sourceTree = "<group>"; };
@@ -112,6 +111,8 @@
 		4165D2D8242893EF00132D0A /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 		4165D2DA2428957B00132D0A /* UserClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserClass.m; sourceTree = "<group>"; };
 		4165D2DC2428AECB00132D0A /* UserProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProtocol.h; sourceTree = "<group>"; };
+		4165D33C242D490B00132D0A /* EntryBoardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryBoardViewController.h; sourceTree = "<group>"; };
+		4165D33D242D490B00132D0A /* EntryBoardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryBoardViewController.m; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		417C626823E9A9B100CADC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		417C626A23E9A9B100CADC7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -269,7 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				415A8BBD2423F5BE00038133 /* EntryBoard.storyboard */,
-				415A8BBF2423F70400038133 /* EntryPointVC.swift */,
+				4165D33C242D490B00132D0A /* EntryBoardViewController.h */,
+				4165D33D242D490B00132D0A /* EntryBoardViewController.m */,
 			);
 			path = EntryBoards;
 			sourceTree = "<group>";
@@ -640,9 +642,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4165D33E242D490B00132D0A /* EntryBoardViewController.m in Sources */,
 				415A8B9F2422A76F00038133 /* ButtonConstant.swift in Sources */,
 				415A8B9A2420DCEB00038133 /* Onboard3ViewController.swift in Sources */,
-				415A8BC02423F70400038133 /* EntryPointVC.swift in Sources */,
 				41901A5323FE6CE200938CD4 /* TableCell.swift in Sources */,
 				415A8BA12422A7BF00038133 /* ButtonDesign.swift in Sources */,
 				417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */,

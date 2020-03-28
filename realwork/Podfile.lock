@@ -123,7 +123,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   NLibrary:
-    :commit: 209ac29592d85b7d33d6d4da34358d82231e7f5c
+    :commit: a110812cd30b56565b2561ef467eca951ea641bb
     :git: https://github.com/NathanDVT/NLibrary.git
 
 SPEC CHECKSUMS:
