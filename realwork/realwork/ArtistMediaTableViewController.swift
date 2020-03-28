@@ -10,23 +10,34 @@ import UIKit
 import AVKit
 import NLibrary
 
-class ArtistMediaTableViewController: UITableViewController {
+class ArtistMediaTableViewController: UITableViewController, SeearchMusicTableViewControllerProtocol {
+    func successfulRequest() {
+        self.listOfArtistCollections = (self.artistMediaViewModel?.getSongs())!
+    }
+
+    func unsuccessfulRequest(errorMessage: String) {
+
+    }
+
     var player: AVPlayer?
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     var searchTitleIndex = 0
-    var listOfArtistCollections = [Collection]() {
+    var listOfArtistCollections = [SearchSongDetail]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
+    // TO DO: this should use a protocol
+    var artistMediaViewModel: SearchSongsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         self.registerTableViewCells()
+        artistMediaViewModel = SearchSongsViewModel(view: self, repo: SearchSongRepo()) 
     }
     // MARK: - Table view data source
 
@@ -176,15 +187,7 @@ class ArtistMediaTableViewController: UITableViewController {
 extension ArtistMediaTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else {return}
-        let artistMediaViewModel = ArtistMediaViewModel(artistName: searchBarText)
-        artistMediaViewModel.getCollections { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let collections):
-                self?.listOfArtistCollections = collections
-            }
-        }
+        artistMediaViewModel!.getCollections(artistName: searchBarText)
     }
 
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {

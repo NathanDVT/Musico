@@ -21,23 +21,23 @@ class ArtistMediaViewModelTest: XCTestCase {
     override func tearDown() {
     }
 
-    func testGivenArtistNameThenConstructViewModelObject() {
-        let artistMediaViewModel = ArtistMediaViewModel(artistName: "drake")
-        XCTAssertNotNil(artistMediaViewModel)
-    }
-
-    func testGivenCorrectArtistNameThenReturnSuccessfullCollection() {
-        do {
-            repo.getArtistMedia { /*[weak self]*/ result in
-                XCTAssertNotNil(result)
-                switch result {
-                case .success(let cols):
-                    XCTAssertGreaterThan(cols.count, 0)
-                case .failure(let error):
-                    print(error)
-                    XCTAssertFalse(true)
-                }
-            }
-        }
-    }
+//    func testGivenArtistNameThenConstructViewModelObject() {
+//        let artistMediaViewModel = ArtistMediaViewModel(artistName: "drake")
+//        XCTAssertNotNil(artistMediaViewModel)
+//    }
+//
+//    func testGivenCorrectArtistNameThenReturnSuccessfullCollection() {
+//        do {
+//            repo.getArtistMedia { /*[weak self]*/ result in
+//                XCTAssertNotNil(result)
+//                switch result {
+//                case .success(let cols):
+//                    XCTAssertGreaterThan(cols.count, 0)
+//                case .failure(let error):
+//                    print(error)
+//                    XCTAssertFalse(true)
+//                }
+//            }
+//        }
+//    }
 }
