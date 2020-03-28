@@ -10,12 +10,12 @@ import XCTest
 @testable import NLibrary
 
 class ArtistMediaViewModelTest: XCTestCase {
-    var repo: ArtistMediaRepoProtocol!
+    var repo: SearchSongRepoProtocol!
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        do {
-            repo = try ArtistMediaRepoMock(artistName: "drake")
-        } catch {}
+//        do {
+//            repo = try ArtistMediaRepoMock(artistName: "drake")
+//        } catch {}
     }
 
     override func tearDown() {
