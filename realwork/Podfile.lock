@@ -94,7 +94,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `feature/add_to_playlist`)
+  - NLibrary (from `/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary`)
 
 SPEC REPOS:
   trunk:
@@ -118,13 +118,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   NLibrary:
-    :branch: feature/add_to_playlist
-    :git: https://github.com/NathanDVT/NLibrary.git
-
-CHECKOUT OPTIONS:
-  NLibrary:
-    :commit: 646cd3ebdfb412e96a24571d575a7241ce89352c
-    :git: https://github.com/NathanDVT/NLibrary.git
+    :path: "/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary"
 
 SPEC CHECKSUMS:
   Firebase: fe7f74012742ab403451dd283e6909b8f1fb348a
@@ -146,6 +140,6 @@ SPEC CHECKSUMS:
   NLibrary: 54615be9d1d6d097b6fb82da2532e3d07585560f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: d92430407df2fbe5e772b62804a1115b9ca65c21
+PODFILE CHECKSUM: e36c19867bcc20f5fe6459941f1b04ec2ca76de0
 
 COCOAPODS: 1.8.4
