@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import NLibrary
 
 class ViewController: UIViewController {
     let defaultSession = URLSession(configuration: .default)
@@ -15,7 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+//        var fbf: FirebaseService = FirebaseService(repoSignIn: LoginRepo())
+//        fbf.checkIfSongContained()
     }
 
     @IBAction func btnOnboard(_ sender: Any) {
