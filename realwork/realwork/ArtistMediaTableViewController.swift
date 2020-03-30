@@ -10,7 +10,8 @@ import UIKit
 import AVKit
 import NLibrary
 
-class ArtistMediaTableViewController: UITableViewController, SeearchMusicTableViewControllerProtocol {
+class ArtistMediaTableViewController: UITableViewController,
+SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
     func successfulRequest() {
         self.listOfArtistCollections = self.artistMediaViewModel.getSongs()
     }
@@ -32,7 +33,9 @@ class ArtistMediaTableViewController: UITableViewController, SeearchMusicTableVi
     }
     // TO DO: this should use a protocol
     lazy var artistMediaViewModel: SearchSongsViewModel = SearchSongsViewModel(view: self, repo: SearchSongRepo())
-//lazy var userVM: SignUpViewModel = SignUpViewModel(viewController: self, signUpRepo: SignUpRepo())
+
+    lazy var recentViewModel: RecentViewModelProtocol = RecentViewModel(view: self, repo: RecentRepo())
+
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
@@ -82,6 +85,7 @@ class ArtistMediaTableViewController: UITableViewController, SeearchMusicTableVi
         // Configure the cell...
         cell.nameLbl.text = listOfArtistCollections[indexPath.row].artistName
         cell.titleLbl.text = listOfArtistCollections[indexPath.row].collectionName
+        cell.durationLbl.text = listOfArtistCollections[indexPath.row].titleName
         guard let imageURL = URL(string: listOfArtistCollections[indexPath.row].artworkUrl60) else {
             return cell
         }
@@ -111,14 +115,17 @@ class ArtistMediaTableViewController: UITableViewController, SeearchMusicTableVi
             if self.player == nil {
                 self.player = AVPlayer(playerItem: playerItem)
             }
-            let playerLayer = AVPlayerLayer(player: self.player!)
-            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
+//            let playerLayer = AVPlayerLayer(player: self.player!)
+//            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             let cell = tableView.cellForRow(at: indexPath) as? TableCell
             let img = UIImage(systemName: "livephoto.play")
             cell?.playBtn.tintColor = UIColor.yellow
             cell?.playBtn.setImage(img, for: .normal)
             cell?.tblcellplayer = self.player
             cell?.musicPlayed()
+            if cell?.isPlaying() ?? false {
+                self.artistMediaViewModel.addToRecentSongs(songIndex: indexPath.row)
+            }
             completion(true)
         }
         if cell?.isPlaying() ?? true {
