@@ -7,204 +7,145 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "447108A1-8873-40F4-893F-D8B82CDBA240"
-            shouldBeEnabled = "Yes"
+            uuid = "4739BCCC-6032-451B-B007-67AB74136A65"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/DashboardHomeMVVM/DashboardRepo.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "getDashboardContent()"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "successFulRecentPlaylistRequest(dictionary:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "24E5C948-5013-4B12-ACF2-97ACD31F8EB4"
-            shouldBeEnabled = "Yes"
+            uuid = "35994350-726A-4C75-986A-F8FF7FF97359"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/DashboardHomeMVVM/DashboardViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "loadContent()"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "playRecentSongAt(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A0E65938-02AA-4B83-9739-E55003B22EB0"
+            uuid = "D1DB5381-A067-49E6-9DA2-4A05478DAEF7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "realworkTests/ArtistMedia/ArtistMediaViewModelTest/ArtistMediaViewModelTest.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "A0E65938-02AA-4B83-9739-E55003B22EB0 - 88445e1ef01240b1"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "realworkTests.ArtistMediaViewModelTest.__allocating_init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; realworkTests.ArtistMediaViewModelTest"
-                  moduleName = "realworkTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realworkTests/ArtistMedia/ArtistMediaViewModelTest/ArtistMediaViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  uuid = "A0E65938-02AA-4B83-9739-E55003B22EB0 - 86bed3e9d3a1f27e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "realworkTests.ArtistMediaViewModelTest.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; realworkTests.ArtistMediaViewModelTest"
-                  moduleName = "realworkTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realworkTests/ArtistMedia/ArtistMediaViewModelTest/ArtistMediaViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  uuid = "A0E65938-02AA-4B83-9739-E55003B22EB0 - 916afffcef9eb65e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "realworkTests.ArtistMediaViewModelTest.__allocating_init(selector: ObjectiveC.Selector) -&gt; realworkTests.ArtistMediaViewModelTest"
-                  moduleName = "realworkTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realworkTests/ArtistMedia/ArtistMediaViewModelTest/ArtistMediaViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  uuid = "A0E65938-02AA-4B83-9739-E55003B22EB0 - f3b87059e03d08be"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "realworkTests.ArtistMediaViewModelTest.init(selector: ObjectiveC.Selector) -&gt; realworkTests.ArtistMediaViewModelTest"
-                  moduleName = "realworkTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realworkTests/ArtistMedia/ArtistMediaViewModelTest/ArtistMediaViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  uuid = "A0E65938-02AA-4B83-9739-E55003B22EB0 - d7c621d2ac86d5fe"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "realworkTests.ArtistMediaViewModelTest.__allocating_init() -&gt; realworkTests.ArtistMediaViewModelTest"
-                  moduleName = "realworkTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realworkTests/ArtistMedia/ArtistMediaViewModelTest/ArtistMediaViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "A0E65938-02AA-4B83-9739-E55003B22EB0 - 13f5e7544cbe1fa9"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "realworkTests.ArtistMediaViewModelTest.init() -&gt; realworkTests.ArtistMediaViewModelTest"
-                  moduleName = "realworkTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realworkTests/ArtistMedia/ArtistMediaViewModelTest/ArtistMediaViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "A0E65938-02AA-4B83-9739-E55003B22EB0 - 9092611a3dd2b334"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "realworkTests.ArtistMediaViewModelTest.__deallocating_deinit"
-                  moduleName = "realworkTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realworkTests/ArtistMedia/ArtistMediaViewModelTest/ArtistMediaViewModelTest.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "371E620D-8B53-4EF0-8250-1B4FBC13AD73"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/SignUpMVVM/SignUpRepo.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "signUpAndAddNewUser(email:password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4CDF1DB5-1785-4396-B23F-4214C63885D2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/SignUpMVVM/SignUpViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "init(viewController:signUpRepo:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "447D3642-1652-4A42-A04E-2EDA0CA738CC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "realworkTests/SignUpTest/SignUpViewModelTest.swift"
+            filePath = "realworkTests/DashboardHomeTest/DashboardHomeModelViewTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "testUnsuccessfulRequestMessageDelegation()"
+            landmarkName = "testGivenValidIndexSongShouldBePlayed()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86C299B5-D46B-4CCA-B1D8-7473A3719B72"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/DashboardHomeMVVM/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "playRecentSongAt(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1FD282F-7F7E-4828-855A-5F87546D1710"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/DashboardHomeMVVM/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "playRecentSongAt(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A22C4BE-37C4-44C5-9562-834D4A3AC219"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/DashboardHomeMVVM/DashboardViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "playRecentSongAt(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "108425E5-B646-4C70-9CB1-16FCCA4DC3DA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "realworkTests/DashboardHomeTest/DashboardHomeRepoTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "testGivenDictionaryWithPlaylistRequestSuccessfulExtractAndDelegate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37ADFF54-4CBB-4134-A234-10A0861F881E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "realworkUITests/ScreenTests/LoginScreenTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "testUserEnterInvalidLoginCredentials()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E61E31C0-A3B0-4A4C-BAFD-507A6A24D281"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "realworkUITests/ScreenTests/LoginScreenTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "LoginScreenTests"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

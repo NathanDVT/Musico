@@ -30,11 +30,7 @@ class EntryScreenTests: XCTestCase {
 //        XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
 //    }
 
-    func testUserCanEnterEmail() {
-        application.textFields["E-mail"].tap()
-        application.textFields["E-mail"].typeText("user")
-        XCTAssert(application.textFields["user"].exists)
-    }
+
 
 //    func testUserCanRotateDeviceAndNavigate() {
 //        XCUIDevice.shared.orientation = .landscapeLeft

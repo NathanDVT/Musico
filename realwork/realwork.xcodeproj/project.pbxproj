@@ -51,6 +51,9 @@
 		41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */; };
 		41D6052F243252A500214D84 /* SignUpRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6052E243252A500214D84 /* SignUpRepoTest.swift */; };
 		41D6053424325E3600214D84 /* SignUpViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6053324325E3600214D84 /* SignUpViewModelTest.swift */; };
+		41D6053E24326FB800214D84 /* DashboardHomeRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6053D24326FB800214D84 /* DashboardHomeRepoTest.swift */; };
+		41D6054424327DE500214D84 /* DashboardHomeModelViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6054324327DE500214D84 /* DashboardHomeModelViewTest.swift */; };
+		41D60549243287A800214D84 /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D60548243287A800214D84 /* LoginScreenTests.swift */; };
 		7660E06C77DC8B82950CB0AA /* Pods_realwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DEAAED1761336FA99BEFDA /* Pods_realwork.framework */; };
 		BF90E2C4AEB5FB63A68B5013 /* Pods_realworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD70FFB4BABDA1C94981CC3 /* Pods_realworkTests.framework */; };
 /* End PBXBuildFile section */
@@ -130,6 +133,9 @@
 		41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaTableViewController.swift; sourceTree = "<group>"; };
 		41D6052E243252A500214D84 /* SignUpRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepoTest.swift; sourceTree = "<group>"; };
 		41D6053324325E3600214D84 /* SignUpViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelTest.swift; sourceTree = "<group>"; };
+		41D6053D24326FB800214D84 /* DashboardHomeRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHomeRepoTest.swift; sourceTree = "<group>"; };
+		41D6054324327DE500214D84 /* DashboardHomeModelViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHomeModelViewTest.swift; sourceTree = "<group>"; };
+		41D60548243287A800214D84 /* LoginScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTests.swift; sourceTree = "<group>"; };
 		5FB522E261FF39F338BA657A /* Pods-realworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realworkTests.release.xcconfig"; path = "Target Support Files/Pods-realworkTests/Pods-realworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		BAD70FFB4BABDA1C94981CC3 /* Pods_realworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91683D7B59AC30C1C0F421C /* Pods-realwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realwork.debug.xcconfig"; path = "Target Support Files/Pods-realwork/Pods-realwork.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 				414E198B241F547C007C774F /* SearchScreenTests.swift */,
 				415A8BA62422AFB800038133 /* OnboardTest.swift */,
 				415A8BB8242387C100038133 /* EntryScreenTests.swift */,
+				41D60548243287A800214D84 /* LoginScreenTests.swift */,
 			);
 			path = ScreenTests;
 			sourceTree = "<group>";
@@ -355,6 +362,7 @@
 		417C627E23E9A9B100CADC7E /* realworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				41D6053824326D0F00214D84 /* DashboardHomeTest */,
 				41D6052D2432528300214D84 /* SignUpTest */,
 				417C627F23E9A9B100CADC7E /* realworkTests.swift */,
 				417C628123E9A9B100CADC7E /* Info.plist */,
@@ -369,6 +377,15 @@
 				41D6053324325E3600214D84 /* SignUpViewModelTest.swift */,
 			);
 			path = SignUpTest;
+			sourceTree = "<group>";
+		};
+		41D6053824326D0F00214D84 /* DashboardHomeTest */ = {
+			isa = PBXGroup;
+			children = (
+				41D6053D24326FB800214D84 /* DashboardHomeRepoTest.swift */,
+				41D6054324327DE500214D84 /* DashboardHomeModelViewTest.swift */,
+			);
+			path = DashboardHomeTest;
 			sourceTree = "<group>";
 		};
 		B5F818FFD5D971ED7DDF8088 /* Frameworks */ = {
@@ -613,6 +630,7 @@
 				414E198C241F547C007C774F /* SearchScreenTests.swift in Sources */,
 				414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */,
 				415A8BB9242387C100038133 /* EntryScreenTests.swift in Sources */,
+				41D60549243287A800214D84 /* LoginScreenTests.swift in Sources */,
 				414E1982241F5316007C774F /* realworkUITests.swift in Sources */,
 				415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */,
 				415A8BA72422AFB800038133 /* OnboardTest.swift in Sources */,
@@ -651,8 +669,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D6053424325E3600214D84 /* SignUpViewModelTest.swift in Sources */,
+				41D6053E24326FB800214D84 /* DashboardHomeRepoTest.swift in Sources */,
 				41D6052F243252A500214D84 /* SignUpRepoTest.swift in Sources */,
 				417C628023E9A9B100CADC7E /* realworkTests.swift in Sources */,
+				41D6054424327DE500214D84 /* DashboardHomeModelViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
