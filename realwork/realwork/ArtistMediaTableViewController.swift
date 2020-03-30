@@ -115,8 +115,8 @@ SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
             if self.player == nil {
                 self.player = AVPlayer(playerItem: playerItem)
             }
-            let playerLayer = AVPlayerLayer(player: self.player!)
-            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
+//            let playerLayer = AVPlayerLayer(player: self.player!)
+//            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             let cell = tableView.cellForRow(at: indexPath) as? TableCell
             let img = UIImage(systemName: "livephoto.play")
             cell?.playBtn.tintColor = UIColor.yellow

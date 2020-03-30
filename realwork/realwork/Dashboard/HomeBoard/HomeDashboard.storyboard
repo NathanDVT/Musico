@@ -63,7 +63,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-er-QMm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Recent Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-er-QMm">
                                         <rect key="frame" x="20" y="47" width="330" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,9 +76,12 @@
                                             <constraint firstAttribute="height" constant="40" id="gKO-md-0wh"/>
                                         </constraints>
                                         <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" backgroundImage="play.circle.fill" catalog="system">
+                                        <state key="normal" backgroundImage="stop.circle.fill" catalog="system">
                                             <color key="titleColor" red="0.42352941176470588" green="0.3529411764705882" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="playPauseUIButton:" destination="luS-JL-aU6" eventType="touchUpInside" id="10k-2Q-tkZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.052469030921400907" green="0.052376377635616582" blue="0.058256662436548257" alpha="0.8008347602739726" colorSpace="custom" customColorSpace="displayP3"/>
@@ -131,6 +134,9 @@
                                         <state key="normal" title="Loading...">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectedRecentSong:" destination="luS-JL-aU6" eventType="touchUpInside" id="ev5-M1-m6G"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently Played:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qry-1H-h6g">
                                         <rect key="frame" x="10" y="10" width="352" height="24"/>
@@ -140,15 +146,21 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC4-L2-oeL">
                                         <rect key="frame" x="20" y="109" width="332" height="30"/>
-                                        <state key="normal" title="Loading...">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectedRecentSong:" destination="luS-JL-aU6" eventType="touchUpInside" id="BlM-XZ-WDL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-aP-ygM">
                                         <rect key="frame" x="20" y="79" width="332" height="30"/>
-                                        <state key="normal" title="Loading...">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectedRecentSong:" destination="luS-JL-aU6" eventType="touchUpInside" id="RGx-1m-Zp3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.052469030921400907" green="0.052376377635616582" blue="0.058256662436548257" alpha="0.8008347602739726" colorSpace="custom" customColorSpace="displayP3"/>
@@ -191,7 +203,15 @@
                     <tabBarItem key="tabBarItem" title="Home" image="person.icloud.fill" catalog="system" id="uNr-9C-hfg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="currentControlUIButton" destination="tIv-xw-7NL" id="dca-uP-ydE"/>
+                        <outlet property="currentSongTitleUILabel" destination="u2R-er-QMm" id="Byx-lN-yFf"/>
+                        <outlet property="homeUIButton" destination="uNr-9C-hfg" id="IP8-MK-jK2"/>
                         <outlet property="homeView" destination="hb5-R9-goR" id="Djl-Cl-Qdc"/>
+                        <outlet property="userNameLabel" destination="tGC-pR-LZv" id="Dge-V6-Jvv"/>
+                        <outletCollection property="arrayRecentButtons" destination="xJ8-BZ-nbH" collectionClass="NSMutableArray" id="UfZ-dN-h9Y"/>
+                        <outletCollection property="buttonCollection" destination="xJ8-BZ-nbH" collectionClass="NSMutableArray" id="xlq-oj-dVy"/>
+                        <outletCollection property="arrayRecentButtons" destination="hHj-aP-ygM" collectionClass="NSMutableArray" id="3L2-dT-LuL"/>
+                        <outletCollection property="arrayRecentButtons" destination="gC4-L2-oeL" collectionClass="NSMutableArray" id="2Yu-iZ-8ub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPM-rv-wy6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -202,7 +222,7 @@
     <resources>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="person.icloud.fill" catalog="system" width="64" height="44"/>
-        <image name="play.circle.fill" catalog="system" width="64" height="60"/>
         <image name="rectangle.split.3x3.fill" catalog="system" width="64" height="46"/>
+        <image name="stop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>
