@@ -33,7 +33,7 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     func setSongTitle(title: String) {
         currentSongTitleUILabel.text = title
     }
-    
+
     @IBOutlet weak var currentControlUIButton: UIButton!
     @IBOutlet weak var currentSongTitleUILabel: UILabel!
     @IBOutlet var arrayRecentButtons: [UIButton]!
