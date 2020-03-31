@@ -94,7 +94,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `feature/file_structure_and_unit_tests`)
+  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `development`)
 
 SPEC REPOS:
   trunk:
@@ -118,12 +118,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   NLibrary:
-    :branch: feature/file_structure_and_unit_tests
+    :branch: development
     :git: https://github.com/NathanDVT/NLibrary.git
 
 CHECKOUT OPTIONS:
   NLibrary:
-    :commit: 6b9e67fb2f8be7b5c68643a8e5b4bdadeda19a5d
+    :commit: 3ebed2a11133c6672416c18f2727eed524719cd7
     :git: https://github.com/NathanDVT/NLibrary.git
 
 SPEC CHECKSUMS:
@@ -146,6 +146,6 @@ SPEC CHECKSUMS:
   NLibrary: 54615be9d1d6d097b6fb82da2532e3d07585560f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: ca3c1a9b1057ea8fa3db4cae133b88c91a063b3d
+PODFILE CHECKSUM: 11f20cf678639c8be19a4cece07f36cc7019db8b
 
 COCOAPODS: 1.8.4
