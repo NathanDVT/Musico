@@ -22,9 +22,11 @@ class LoginScreenTests: XCTestCase {
     func testUserCanEnterEmail() {
         application.textFields["E-mail"].tap()
         application.textFields["E-mail"].typeText("nate@gmail.com")
-        application.textFields["Password"].tap()
-        application.textFields["Password"].typeText("12345678")
-        XCTAssert(application.textFields["user"].exists)
+        let navnTextField = application.secureTextFields["Password"]
+        UIPasteboard.general.string = "12345678"
+        navnTextField.doubleTap()
+        application.menuItems.element(boundBy: 0).tap()
+        XCTAssert(application.textFields["nate@gmail.com"].exists)
     }
 
     func testUserEnterInvalidLoginCredentials() {

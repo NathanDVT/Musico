@@ -12,8 +12,12 @@ import NLibrary
 
 class ArtistMediaTableViewController: UITableViewController,
 SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
+    func successFulRecentSongsReceived(playlistNames: [String]) {
+        pickerData = playlistNames
+    }
+
     func successfulRequest() {
-        self.listOfArtistCollections = self.artistMediaViewModel.getSongs()
+        self.listOfArtistCollections = self.searchSongsViewModel.getSongs()
     }
 
     func unsuccessfulRequest(errorMessage: String) {
@@ -32,7 +36,7 @@ SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
         }
     }
     // TO DO: this should use a protocol
-    lazy var artistMediaViewModel: SearchSongsViewModel = SearchSongsViewModel(view: self, repo: SearchSongRepo())
+    lazy var searchSongsViewModel: SearchSongsViewModel = SearchSongsViewModel(view: self, repo: SearchSongRepo())
 
     lazy var recentViewModel: RecentViewModelProtocol = RecentViewModel(view: self, repo: RecentRepo())
 
@@ -40,6 +44,8 @@ SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
         super.viewDidLoad()
         searchBar.delegate = self
         self.registerTableViewCells()
+        self.searchSongsViewModel.getUserPlaylistNames()
+        pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
     }
     // MARK: - Table view data source
 
@@ -103,7 +109,48 @@ SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt
         indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let important = importantAction(at: indexPath, then: tableView)
-        return UISwipeActionsConfiguration(actions: [important])
+        let action2 = addToPlaylistAction(at: indexPath, then: tableView)
+        return UISwipeActionsConfiguration(actions: [important, action2])
+    }
+
+    func addToPlaylistAction(at indexPath: IndexPath, then tableView: UITableView) -> UIContextualAction {
+                let cell = tableView.cellForRow(at: indexPath) as? TableCell
+                let description: String = "ADD"
+                let action = UIContextualAction(style: .normal, title: description) { [weak self] ( _, _, _) in
+                    let dummyvc = UIViewController()
+                    dummyvc.preferredContentSize = CGSize(width: 250, height: 300)
+                    let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: 250, height: 300))
+                    guard let strongself = self else {
+                        return
+                    }
+                    pickerView.delegate = strongself as UIPickerViewDelegate
+                    pickerView.dataSource = strongself as UIPickerViewDataSource
+                    dummyvc.view.addSubview(pickerView)
+                    let editRadiusAlert = UIAlertController(title: "Choose Playlist",
+                                                            message: "",
+                                                            preferredStyle: UIAlertController.Style.alert)
+                    editRadiusAlert.setValue(dummyvc, forKey: "contentViewController")
+                    let okAction =
+                        UIAlertAction(title: "Select",
+                                      style: UIAlertAction.Style.default) { [weak self] (_: UIAlertAction) -> Void in
+                                        let selectedValue = self?.pickerData[pickerView.selectedRow(inComponent: 0)]
+                                        self?.addSongToPlaylist(playlistName: selectedValue!, songIndex: indexPath.row)
+                            }
+                    editRadiusAlert.addAction(okAction)
+                    editRadiusAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    self?.present(editRadiusAlert, animated: true)
+                }
+                if cell?.isPlaying() ?? true {
+                    action.backgroundColor = .black
+                } else {
+                    action.backgroundColor = .black
+                }
+                action.image = UIImage(systemName: "livephoto.play")
+                return action
+    }
+
+    func addSongToPlaylist(playlistName: String, songIndex: Int) {
+        self.searchSongsViewModel.addSongToPlaylist(playlistName: playlistName, songIndex: songIndex)
     }
 
     func importantAction(at indexPath: IndexPath, then tableView: UITableView) -> UIContextualAction {
@@ -115,8 +162,6 @@ SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
             if self.player == nil {
                 self.player = AVPlayer(playerItem: playerItem)
             }
-//            let playerLayer = AVPlayerLayer(player: self.player!)
-//            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             let cell = tableView.cellForRow(at: indexPath) as? TableCell
             let img = UIImage(systemName: "livephoto.play")
             cell?.playBtn.tintColor = UIColor.yellow
@@ -124,7 +169,7 @@ SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
             cell?.tblcellplayer = self.player
             cell?.musicPlayed()
             if cell?.isPlaying() ?? false {
-                self.artistMediaViewModel.addToRecentSongs(songIndex: indexPath.row)
+                self.searchSongsViewModel.addToRecentSongs(songIndex: indexPath.row)
             }
             completion(true)
         }
@@ -142,58 +187,36 @@ SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
         self.tableView.register(textFieldCell, forCellReuseIdentifier: "ArtistVideoTableViewCell")
     }
 
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
+    var pickerData: [String] = [String]()
 
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle:
-     UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+}
 
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
+extension ArtistMediaTableViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
 
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
+        // Number of columns of data
+        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1
+        }
 
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+        // The number of rows of data
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return pickerData.count
+        }
 
+        // The data to return fopr the row and component (column) that's being passed in
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return pickerData[row]
+        }
 }
 
 extension ArtistMediaTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else {return}
-        self.artistMediaViewModel.getCollections(artistName: searchBarText)
+        self.searchSongsViewModel.getCollections(artistName: searchBarText)
     }
 
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {

@@ -29,9 +29,6 @@ class EntryScreenTests: XCTestCase {
 //        sleep(1)
 //        XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
 //    }
-
-
-
 //    func testUserCanRotateDeviceAndNavigate() {
 //        XCUIDevice.shared.orientation = .landscapeLeft
 //        application.buttons["Sign Up"].tap()
