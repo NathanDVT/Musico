@@ -43,7 +43,7 @@ class LoginScreenTests: XCTestCase {
         application.menuItems.element(boundBy: 0).tap()
         sleep(1)
         application.buttons["Login"].tap()
-        sleep(3)
+        sleep(4)
         XCTAssert(application.staticTexts["Signed in as"].exists)
     }
 }
