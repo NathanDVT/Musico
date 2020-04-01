@@ -94,7 +94,7 @@ PODS:
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
-  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `feature/add_to_recent`)
+  - NLibrary (from `/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary`)
 
 SPEC REPOS:
   trunk:
@@ -118,13 +118,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   NLibrary:
-    :branch: feature/add_to_recent
-    :git: https://github.com/NathanDVT/NLibrary.git
-
-CHECKOUT OPTIONS:
-  NLibrary:
-    :commit: 2d88ebf42b4f602689a454164af621d93a11a713
-    :git: https://github.com/NathanDVT/NLibrary.git
+    :path: "/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary"
 
 SPEC CHECKSUMS:
   Firebase: fe7f74012742ab403451dd283e6909b8f1fb348a
@@ -146,6 +140,6 @@ SPEC CHECKSUMS:
   NLibrary: 54615be9d1d6d097b6fb82da2532e3d07585560f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: 7dce024c7780c2754ef443b1042beb9040a8e0a2
+PODFILE CHECKSUM: 86000eb89bb22c49c297758390dfdb5bfd22db4b
 
 COCOAPODS: 1.8.4

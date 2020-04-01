@@ -9,6 +9,7 @@
 import UIKit
 //import Firebase
 import NLibrary
+import FirebaseAnalytics
 
 class SignUpVC: UIViewController {
 
@@ -31,6 +32,7 @@ class SignUpVC: UIViewController {
         loaderIndicatorView.startAnimating()
         let email: String = emailTextField!.text!
         let password: String = passwordTextField!.text!
+        Analytics.logEvent("register_user", parameters: nil)
         self.userVM.signUp(email: email, password: password)
     }
 
@@ -39,6 +41,7 @@ class SignUpVC: UIViewController {
         let alertController = UIAlertController(title: title, message:
             message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        Analytics.logEvent("failed_to_register", parameters: nil)
         self.present(alertController, animated: true, completion: nil)
     }
 }

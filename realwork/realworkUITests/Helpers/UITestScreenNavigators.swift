@@ -34,3 +34,13 @@ extension XCUIApplication {
         buttons["Search"].tap()
     }
 }
+
+//extension XCUIElement {
+//    // The following is a workaround for inputting text in the
+//    //simulator when the keyboard is hidden
+//    func setText(text: String, application: XCUIApplication) {
+//        UIPasteboard.general.string = text
+//        doubleTap()
+//        application.menuItems["Paste"].tap()
+//    }
+//}
