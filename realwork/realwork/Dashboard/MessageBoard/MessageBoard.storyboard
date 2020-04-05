@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Messages-->
         <scene sceneID="hbH-f6-Skz">
             <objects>
-                <viewController storyboardIdentifier="MessageBoardID" id="cqn-tD-Qwx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageBoardID" id="cqn-tD-Qwx" customClass="MessageViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EA-Q2-uD2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,17 +75,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-i4-c50">
                                 <rect key="frame" x="20" y="349" width="374" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invite from Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34z-oi-QKC">
-                                        <rect key="frame" x="21" y="22" width="208" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Invite from Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34z-oi-QKC">
+                                        <rect key="frame" x="21" y="72" width="208" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOw-z8-USA">
+                                        <rect key="frame" x="0.0" y="100" width="374" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Crash">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="crashAction:" destination="cqn-tD-Qwx" eventType="touchUpInside" id="Wlg-Rw-Rv3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.67625713832487311" green="0.58749857318742593" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="cOw-z8-USA" firstAttribute="leading" secondItem="v4q-i4-c50" secondAttribute="leading" id="1zg-xw-jK7"/>
                                     <constraint firstAttribute="height" constant="130" id="5Ss-Sf-9gT"/>
+                                    <constraint firstAttribute="bottom" secondItem="cOw-z8-USA" secondAttribute="bottom" id="h1A-gR-UR8"/>
+                                    <constraint firstAttribute="trailing" secondItem="cOw-z8-USA" secondAttribute="trailing" id="mj9-IE-Xkb"/>
+                                    <constraint firstItem="cOw-z8-USA" firstAttribute="top" secondItem="34z-oi-QKC" secondAttribute="bottom" id="ohA-dY-IEy"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_g_cleff" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-WS-Mif">
@@ -127,7 +141,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="message.fill" catalog="system" width="64" height="56"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="music_g_cleff" width="940" height="2400"/>
     </resources>
 </document>

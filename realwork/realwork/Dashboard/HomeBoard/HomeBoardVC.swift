@@ -9,6 +9,7 @@
 import UIKit
 import NLibrary
 import FirebaseAnalytics
+import Crashlytics
 
 class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate {
     func successFulSongRequests(songs: [RecentSong]) {
