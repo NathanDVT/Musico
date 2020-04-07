@@ -38,6 +38,7 @@
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"DashboardTab" bundle:nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"DashboardTabID"];
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:vc animated:YES completion:NULL];
 }
 

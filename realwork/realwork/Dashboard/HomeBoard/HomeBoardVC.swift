@@ -9,8 +9,23 @@
 import UIKit
 import NLibrary
 import FirebaseAnalytics
+import Crashlytics
 
 class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate {
+    @IBOutlet var trendingButtons: [UIButton]!
+    func successfulTrendingArtists(trendingArtists: [TrendingArtistModel]) {
+        DispatchQueue.main.async {
+            for iterator in 0..<trendingArtists.count {
+                self.trendingButtons[iterator]
+                    .setTitle("\(trendingArtists[iterator].artistName)- \(trendingArtists[iterator].tally)", for: .normal)
+            }
+        }
+    }
+
+    @IBAction func postTrending(_ sender: UIButton) {
+        viewModel.postTrendingSong(index: trendingButtons.firstIndex(of: sender)!)
+    }
+
     func successFulSongRequests(songs: [RecentSong]) {
         for iterator in 0..<arrayRecentButtons.count {
             arrayRecentButtons[iterator]
@@ -56,6 +71,7 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
         homeView.layer.insertSublayer(layer, at: 0)
 
         loadDashBoardContent()
+        viewModel.getTrending()
         // Do any additional setup after loading the view.
     }
 

@@ -25,7 +25,6 @@ class SignUpVC: UIViewController {
         let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         loaderIndicatorView.transform = transfrom
         loaderIndicatorView.hidesWhenStopped = true
-//        let repo: UserRepoProtocol = UserRepo()
     }
 
     @IBAction func btnSignUp(_ sender: Any) {

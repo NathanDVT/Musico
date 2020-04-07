@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import NLibrary
+import FirebasePerformance
 
 class ArtistMediaTableViewController: UITableViewController,
 SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
@@ -215,8 +216,10 @@ extension ArtistMediaTableViewController: UIPickerViewDelegate, UIPickerViewData
 
 extension ArtistMediaTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let trace = Performance.startTrace(name: "customTraceName")
         guard let searchBarText = searchBar.text else {return}
         self.searchSongsViewModel.getCollections(artistName: searchBarText)
+        trace?.stop()
     }
 
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
