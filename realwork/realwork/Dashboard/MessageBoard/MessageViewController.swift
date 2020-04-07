@@ -8,18 +8,19 @@
 
 import UIKit
 import Crashlytics
+import NLibrary
 
 class MessageViewController: UIViewController {
-
+var nLibrary: NLibrarySerivce?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
-    
 
     @IBAction func crashAction(_ sender: Any) {
-        Crashlytics.sharedInstance().crash()
+//        Crashlytics.sharedInstance().crash()
     }
     /*
     // MARK: - Navigation

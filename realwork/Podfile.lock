@@ -139,7 +139,7 @@ PODS:
 DEPENDENCIES:
   - Crashlytics (~> 3.14.0)
   - Fabric (~> 1.10.2)
-  - NLibrary (from `https://github.com/NathanDVT/NLibrary.git`, branch `feature/add_crashlytics_and_performance`)
+  - NLibrary (from `/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary`)
 
 SPEC REPOS:
   trunk:
@@ -172,13 +172,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   NLibrary:
-    :branch: feature/add_crashlytics_and_performance
-    :git: https://github.com/NathanDVT/NLibrary.git
-
-CHECKOUT OPTIONS:
-  NLibrary:
-    :commit: f553de89422b723a7828a340dbba68f2877ce9bf
-    :git: https://github.com/NathanDVT/NLibrary.git
+    :path: "/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary"
 
 SPEC CHECKSUMS:
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
@@ -209,6 +203,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
 
-PODFILE CHECKSUM: b080061dfcf90269981d9f24d6f16aa48c730447
+PODFILE CHECKSUM: cf2b3a6281993a55989eb5a142040ead72e1f2e4
 
 COCOAPODS: 1.8.4

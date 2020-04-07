@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,19 +61,19 @@
                                 <rect key="frame" x="22" y="294" width="370" height="155"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently Playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJg-le-N4c">
-                                        <rect key="frame" x="10" y="10" width="350" height="27"/>
+                                        <rect key="frame" x="10" y="10" width="350" height="26.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Recent Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-er-QMm">
-                                        <rect key="frame" x="20" y="47" width="330" height="21"/>
+                                        <rect key="frame" x="20" y="46.5" width="330" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIv-xw-7NL">
-                                        <rect key="frame" x="165" y="78.5" width="40" height="39"/>
+                                        <rect key="frame" x="165" y="77.5" width="40" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="QgY-BA-4E3"/>
                                             <constraint firstAttribute="height" constant="40" id="gKO-md-0wh"/>
@@ -103,30 +103,58 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzN-Sv-oIG">
                                 <rect key="frame" x="22" y="471" width="372" height="155"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-IE-WsT">
-                                        <rect key="frame" x="10" y="10" width="352" height="26.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-IE-WsT">
+                                        <rect key="frame" x="10" y="10" width="352" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWp-s3-R0y">
-                                        <rect key="frame" x="74" y="67" width="124" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-dK-p7M">
-                                        <rect key="frame" x="252" y="58.5" width="65" height="55"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-dK-p7M">
+                                        <rect key="frame" x="326.5" y="71.5" width="35.5" height="62"/>
                                         <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="0lc-9Y-gPj"/>
+                                        </constraints>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kFW-NT-fop">
+                                        <rect key="frame" x="0.0" y="50" width="326.5" height="105"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdU-Gq-giN">
+                                                <rect key="frame" x="0.0" y="0.0" width="326.5" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="postTrending:" destination="luS-JL-aU6" eventType="touchUpInside" id="K6U-0r-nTn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sa1-Xh-SZg">
+                                                <rect key="frame" x="0.0" y="35" width="326.5" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="postTrending:" destination="luS-JL-aU6" eventType="touchUpInside" id="iqr-FU-yce"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-tE-zk7">
+                                                <rect key="frame" x="0.0" y="70" width="326.5" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="postTrending:" destination="luS-JL-aU6" eventType="touchUpInside" id="CVv-RK-iOv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.052469030921400907" green="0.052376377635616582" blue="0.058256662436548257" alpha="0.8008347602739726" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="gkD-IE-WsT" firstAttribute="top" secondItem="DzN-Sv-oIG" secondAttribute="top" constant="10" id="5HC-6a-nY0"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Sh-dK-p7M" secondAttribute="bottom" constant="20" id="Fda-JD-dHo"/>
+                                    <constraint firstItem="4Sh-dK-p7M" firstAttribute="top" secondItem="gkD-IE-WsT" secondAttribute="bottom" constant="20" id="OQU-oC-VMt"/>
                                     <constraint firstAttribute="trailing" secondItem="gkD-IE-WsT" secondAttribute="trailing" constant="10" id="QvN-EU-42a"/>
                                     <constraint firstItem="gkD-IE-WsT" firstAttribute="leading" secondItem="DzN-Sv-oIG" secondAttribute="leading" constant="10" id="UHd-ek-AK4"/>
+                                    <constraint firstAttribute="bottom" secondItem="kFW-NT-fop" secondAttribute="bottom" id="Va8-w9-cNz"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Sh-dK-p7M" secondAttribute="trailing" constant="10" id="ZKN-lj-83C"/>
+                                    <constraint firstItem="kFW-NT-fop" firstAttribute="leading" secondItem="DzN-Sv-oIG" secondAttribute="leading" id="brf-EF-TmP"/>
+                                    <constraint firstItem="kFW-NT-fop" firstAttribute="top" secondItem="gkD-IE-WsT" secondAttribute="bottom" id="dm9-wX-WM9"/>
+                                    <constraint firstItem="4Sh-dK-p7M" firstAttribute="leading" secondItem="kFW-NT-fop" secondAttribute="trailing" id="kbc-JG-kng"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtZ-Nr-uuJ">
@@ -215,6 +243,9 @@
                         <outletCollection property="buttonCollection" destination="xJ8-BZ-nbH" collectionClass="NSMutableArray" id="xlq-oj-dVy"/>
                         <outletCollection property="arrayRecentButtons" destination="hHj-aP-ygM" collectionClass="NSMutableArray" id="3L2-dT-LuL"/>
                         <outletCollection property="arrayRecentButtons" destination="gC4-L2-oeL" collectionClass="NSMutableArray" id="2Yu-iZ-8ub"/>
+                        <outletCollection property="trendingButtons" destination="SdU-Gq-giN" collectionClass="NSMutableArray" id="Hku-hB-fyK"/>
+                        <outletCollection property="trendingButtons" destination="sa1-Xh-SZg" collectionClass="NSMutableArray" id="hft-RH-yqF"/>
+                        <outletCollection property="trendingButtons" destination="WSf-tE-zk7" collectionClass="NSMutableArray" id="y7Z-GG-gD3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPM-rv-wy6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -223,9 +254,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.3.fill" catalog="system" width="71" height="34"/>
-        <image name="person.crop.circle.fill.badge.xmark" catalog="system" width="64" height="50"/>
-        <image name="person.icloud.fill" catalog="system" width="64" height="44"/>
-        <image name="stop.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.crop.circle.fill.badge.xmark" catalog="system" width="128" height="101"/>
+        <image name="person.icloud.fill" catalog="system" width="128" height="88"/>
+        <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
