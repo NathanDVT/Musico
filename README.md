@@ -4,6 +4,7 @@ The iOS app Musico, which will be a grand platform to keep you up to date and en
 A world where you have control of music, you get to decide who, when, where and for how long. You are given the power to build a network soley on music as you connect with other people.
 
 Quality assurance tools:
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/99eeb89a40f8430794691e52eedd11b4)](https://app.codacy.com/manual/NathanDVT/Musico?utm_source=github.com&utm_medium=referral&utm_content=NathanDVT/Musico&utm_campaign=Badge_Grade_Settings)
 * [![codecov](https://codecov.io/gh/NathanDVT/Musico/branch/development/graph/badge.svg)](https://codecov.io/gh/NathanDVT/Musico)
 * [![Build Status](https://app.bitrise.io/app/19aa399bb0ad0cba/status.svg?token=uhXx5jaVWCvHg16khFczHQ)](https://app.bitrise.io/app/19aa399bb0ad0cba)
 * [![Codacy Badge](https://api.codacy.com/project/badge/Grade/351c465aadc446439d011077807fcdd7)](https://app.codacy.com/manual/NathanDVT/Musico?utm_source=github.com&utm_medium=referral&utm_content=NathanDVT/Musico&utm_campaign=Badge_Grade_Dashboard)
