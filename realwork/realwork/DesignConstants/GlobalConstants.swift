@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import NLibrary
 
 struct GraphicColors {
     static let primary = UIColor.systemYellow
+    static let secondary = HexToUIColor(hexcode: "#939393ff").color
 }
 
 struct GlobalFont {

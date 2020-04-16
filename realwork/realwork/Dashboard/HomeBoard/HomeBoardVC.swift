@@ -60,19 +60,18 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     @IBOutlet var homeView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let layer = CAGradientLayer()
-        layer.frame = homeView.bounds
-        let objcObj: HexToUIColor = HexToUIColor()
-        let hexGenCol: UIColor = objcObj.color
-        layer.colors = [UIColor.systemYellow.cgColor, UIColor.black.cgColor,
-                        hexGenCol.cgColor]
-        layer.locations = [0.0, 0.095, 0.97]
-        homeView.backgroundColor = .none
-        homeView.layer.insertSublayer(layer, at: 0)
+//        let layer = CAGradientLayer()
+//        layer.frame = homeView.bounds
+//        let objcObj: HexToUIColor = HexToUIColor(hexcode: "#939393ff")
+//        let hexGenCol: UIColor = objcObj.color
+//        layer.colors = [UIColor.systemYellow.cgColor, UIColor.black.cgColor,
+//                        hexGenCol.cgColor]
+//        layer.locations = [0.0, 0.095, 0.97]
+//        homeView.backgroundColor = .none
+//        homeView.layer.insertSublayer(layer, at: 0)
 
         loadDashBoardContent()
         viewModel.getTrending()
-        // Do any additional setup after loading the view.
     }
 
     public func loadDashBoardContent() {

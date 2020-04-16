@@ -11,7 +11,6 @@ import AVKit
 import NLibrary
 import FirebaseAnalytics
 
-
 class ViewController: UIViewController {
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?

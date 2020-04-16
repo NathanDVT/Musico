@@ -3,4 +3,86 @@
    uuid = "916DF8EA-26BC-4A5A-A28E-5B7CE5A31032"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "172ACA81-FBCF-43A2-95B8-A4626C61130B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "realwork/DesignConstants/ViewDesigns.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "ViewPrimaryBackground"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "172ACA81-FBCF-43A2-95B8-A4626C61130B - 718716a1d1bc9572"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "realwork.ViewDesigns.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;realwork.ViewDesigns&gt;"
+                  moduleName = "realwork"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realwork/DesignConstants/ViewDesigns.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "172ACA81-FBCF-43A2-95B8-A4626C61130B - f82cd946bb71d0dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "realwork.ViewDesigns.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;realwork.ViewDesigns&gt;"
+                  moduleName = "realwork"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nngobale/Documents/Training%202020/Musico/realwork/realwork/DesignConstants/ViewDesigns.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "165A4B24-F9CA-455D-9D76-98BA079FEDC6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/HexToUIColor.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-getUIColorObjectFor"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A48CAD69-1701-4E35-AC9C-BD92387D06FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Pod_Folder/NLibrary/NLibrary/NLibrary/Classes/HexToUIColor.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-getUIColorObjectFor"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
