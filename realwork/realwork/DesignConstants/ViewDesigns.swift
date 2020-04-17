@@ -23,9 +23,8 @@ class ViewPrimaryBackground: UIView {
     private func setup() {
         let layer = CAGradientLayer()
         layer.frame = self.bounds
-//        let objcObj: HexToUIColor = HexToUIColor(hexcode: "#939393ff")
-        let hexGenCol1: UIColor = HexToUIColor(hexcode: "#eeeeeeff").color
-        let hexGenCol2: UIColor = HexToUIColor(hexcode: "#939393ff").color
+        let hexGenCol1: UIColor = HexToUIColor(hexcode: "#939393ff").color
+        let hexGenCol2: UIColor = HexToUIColor(hexcode: "#eeeeeeff").color
         layer.colors = [hexGenCol1.cgColor,
                         hexGenCol2.cgColor]
         layer.locations = [0.0, 1.0]
@@ -34,13 +33,45 @@ class ViewPrimaryBackground: UIView {
     }
 }
 
-//        super.viewDidLoad()
-//        let layer = CAGradientLayer()
-//        layer.frame = homeView.bounds
-//        let objcObj: HexToUIColor = HexToUIColor()
-//        let hexGenCol: UIColor = objcObj.color
-//        layer.colors = [UIColor.systemYellow.cgColor, UIColor.black.cgColor,
-//                        hexGenCol.cgColor]
-//        layer.locations = [0.0, 0.095, 0.97]
-//        homeView.backgroundColor = .none
-//        homeView.layer.insertSublayer(layer, at: 0)
+class TrendingGradientBackgroudn: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        let layer = CAGradientLayer()
+        layer.frame = self.bounds
+        let hexGenCol1: UIColor = HexToUIColor(hexcode: "#C3A22500").color
+        let hexGenCol2: UIColor = HexToUIColor(hexcode: "#C3A225ff").color
+        layer.colors = [hexGenCol1.cgColor,
+                        hexGenCol2.cgColor]
+        layer.locations = [0.0, 0.4]
+        self.backgroundColor = .none
+        self.layer.insertSublayer(layer, at: 0)
+    }
+}
+
+class ViewShadow: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.6
+    }
+}

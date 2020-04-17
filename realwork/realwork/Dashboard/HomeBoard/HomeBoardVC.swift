@@ -13,17 +13,26 @@ import Crashlytics
 
 class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate {
     @IBOutlet var trendingButtons: [UIButton]!
+    @IBOutlet var trendingTiles: [ReusableTrendingTile]!
+    let gesture = UITapGestureRecognizer(target: self, action: Selector(("postTrending:")))
     func successfulTrendingArtists(trendingArtists: [TrendingArtistModel]) {
         DispatchQueue.main.async {
             for iterator in 0..<trendingArtists.count {
                 self.trendingButtons[iterator]
-                    .setTitle("\(trendingArtists[iterator].artistName)- \(trendingArtists[iterator].tally)", for: .normal)
+                    .setTitle("\(trendingArtists[iterator].artistName)- \(trendingArtists[iterator].tally)",
+                        for: .normal)
             }
         }
     }
 
     @IBAction func postTrending(_ sender: UIButton) {
         viewModel.postTrendingSong(index: trendingButtons.firstIndex(of: sender)!)
+    }
+
+    @objc func postTrending2(_ sender: UITapGestureRecognizer) {
+//        let selected: ReusableTrendingTile = sender as! ReusableTrendingTile
+        let selected: ReusableTrendingTile = trendingTiles[sender.view!.tag]
+        viewModel.postTrendingSong(index: trendingTiles.firstIndex(of: selected)!)
     }
 
     func successFulSongRequests(songs: [RecentSong]) {
@@ -34,9 +43,6 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     }
 
     @IBOutlet weak var homeUIButton: UITabBarItem!
-    func successFulNameRequest(name: String) {
-        userNameLabel.text = name
-    }
 
     @IBAction func playPauseUIButton(_ sender: Any) {
         viewModel.pauseOrPlayCurrentSong()
@@ -54,24 +60,20 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     @IBOutlet weak var currentSongTitleUILabel: UILabel!
     @IBOutlet var arrayRecentButtons: [UIButton]!
     @IBOutlet var buttonCollection: [UIButton]!
-    @IBOutlet weak var userNameLabel: UILabel!
 
     lazy var viewModel: DashboardViewModelProtocol = DashboardViewModel(viewController: self, repo: DashboardRepo())
     @IBOutlet var homeView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let layer = CAGradientLayer()
-//        layer.frame = homeView.bounds
-//        let objcObj: HexToUIColor = HexToUIColor(hexcode: "#939393ff")
-//        let hexGenCol: UIColor = objcObj.color
-//        layer.colors = [UIColor.systemYellow.cgColor, UIColor.black.cgColor,
-//                        hexGenCol.cgColor]
-//        layer.locations = [0.0, 0.095, 0.97]
-//        homeView.backgroundColor = .none
-//        homeView.layer.insertSublayer(layer, at: 0)
-
         loadDashBoardContent()
         viewModel.getTrending()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.postTrending2(_:)))
+        for index in trendingTiles.indices {
+            trendingTiles[index].isUserInteractionEnabled = true
+            trendingTiles[index].addGestureRecognizer(tap)
+            trendingTiles[index].tag = index
+        }
     }
 
     public func loadDashBoardContent() {
@@ -93,7 +95,6 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
         dialogMessage.addAction(okAction)
         dialogMessage.addAction(cancel)
         self.present(dialogMessage, animated: true, completion: nil)
-        viewModel.logoutRequest()
     }
 
     @IBAction func selectedRecentSong(_ sender: UIButton) {
