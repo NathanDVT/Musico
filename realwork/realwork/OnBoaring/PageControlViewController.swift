@@ -17,7 +17,7 @@ class PageControlViewController: UIPageViewController, UIPageViewControllerDeleg
         ]
     }()
 
-    var pageControl = UIPageControl()
+//    var pageControl = UIPageControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,30 +66,12 @@ class PageControlViewController: UIPageViewController, UIPageViewControllerDeleg
         return orderedViewControllers[nextIndex]
     }
 
-//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-//        return 3
-//    }
-//
-//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-//        return 0
-//    }
-
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return 3
     }
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-//        pageViewController.tintColor
         return 0
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

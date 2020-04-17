@@ -34,13 +34,13 @@ class DashboardHomeRepoTest: XCTestCase {
         XCTAssert(mockService.calledGetDashboardItems == expected)
     }
 
-    func testGivenDictionaryWithKeyNameSuccessfullyExtractAndDelegateName() {
-        let expected: String = "testName"
-        let dictParams: NSDictionary = ["name": expected]
-        XCTAssertFalse(mockViewModel.userName == expected)
-        systemUnderTest.successFulNameRequest(dictionary: dictParams)
-        XCTAssert(mockViewModel.userName == expected)
-    }
+//    func testGivenDictionaryWithKeyNameSuccessfullyExtractAndDelegateName() {
+//        let expected: String = "testName"
+//        let dictParams: NSDictionary = ["name": expected]
+//        XCTAssertFalse(mockViewModel.userName == expected)
+//        systemUnderTest.successFulNameRequest(dictionary: dictParams)
+//        XCTAssert(mockViewModel.userName == expected)
+//    }
 
 //    func testGivenDictionaryWithPlaylistRequestSuccessfulExtractAndDelegate() {
 //        let expected1 = "A name",

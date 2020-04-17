@@ -23,3 +23,31 @@ class ButtonPrimaryDesign: UIButton {
         self.backgroundColor = GraphicColors.primary
     }
 }
+
+class ButtonPrimaryShadow: ButtonPrimaryDesign {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.6
+    }
+}
+
+class ButtonShadow: UIButton {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.6
+    }
+}

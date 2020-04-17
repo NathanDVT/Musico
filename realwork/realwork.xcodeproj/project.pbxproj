@@ -49,6 +49,9 @@
 		417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */; };
 		41901A5323FE6CE200938CD4 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41901A5223FE6CE200938CD4 /* TableCell.swift */; };
 		41B49C96241D52D300A3E1F3 /* repoResponse1.json in Resources */ = {isa = PBXBuildFile; fileRef = 41B49C95241D52D300A3E1F3 /* repoResponse1.json */; };
+		41C9DA0124489334004AC7F9 /* ViewDesigns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA0024489334004AC7F9 /* ViewDesigns.swift */; };
+		41C9DA0324499C0F004AC7F9 /* ReusableTrendingTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA0224499C0F004AC7F9 /* ReusableTrendingTile.swift */; };
+		41C9DA0524499C24004AC7F9 /* ReusableTrendingTile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C9DA0424499C24004AC7F9 /* ReusableTrendingTile.xib */; };
 		41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */; };
 		41D6052F243252A500214D84 /* SignUpRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6052E243252A500214D84 /* SignUpRepoTest.swift */; };
 		41D6053424325E3600214D84 /* SignUpViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6053324325E3600214D84 /* SignUpViewModelTest.swift */; };
@@ -134,6 +137,9 @@
 		417C628E23F1434A00CADC7E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		41901A5223FE6CE200938CD4 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		41B49C95241D52D300A3E1F3 /* repoResponse1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = repoResponse1.json; sourceTree = "<group>"; };
+		41C9DA0024489334004AC7F9 /* ViewDesigns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDesigns.swift; sourceTree = "<group>"; };
+		41C9DA0224499C0F004AC7F9 /* ReusableTrendingTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTrendingTile.swift; sourceTree = "<group>"; };
+		41C9DA0424499C24004AC7F9 /* ReusableTrendingTile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableTrendingTile.xib; sourceTree = "<group>"; };
 		41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaTableViewController.swift; sourceTree = "<group>"; };
 		41D6052E243252A500214D84 /* SignUpRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepoTest.swift; sourceTree = "<group>"; };
 		41D6053324325E3600214D84 /* SignUpViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelTest.swift; sourceTree = "<group>"; };
@@ -246,6 +252,7 @@
 				415A8BA02422A7BF00038133 /* ButtonDesign.swift */,
 				415A8BA22422A99800038133 /* GlobalConstants.swift */,
 				415A8BA42422AC4500038133 /* LabelDesign.swift */,
+				41C9DA0024489334004AC7F9 /* ViewDesigns.swift */,
 			);
 			path = DesignConstants;
 			sourceTree = "<group>";
@@ -304,6 +311,8 @@
 			children = (
 				415A8BAF24237BC800038133 /* HomeDashboard.storyboard */,
 				4165D2CF24269DBF00132D0A /* HomeBoardVC.swift */,
+				41C9DA0224499C0F004AC7F9 /* ReusableTrendingTile.swift */,
+				41C9DA0424499C24004AC7F9 /* ReusableTrendingTile.xib */,
 			);
 			path = HomeBoard;
 			sourceTree = "<group>";
@@ -532,6 +541,7 @@
 				417C627523E9A9B100CADC7E /* LaunchScreen.storyboard in Resources */,
 				417C627223E9A9B100CADC7E /* Assets.xcassets in Resources */,
 				417C627023E9A9B100CADC7E /* Main.storyboard in Resources */,
+				41C9DA0524499C24004AC7F9 /* ReusableTrendingTile.xib in Resources */,
 				415A8BC62423FAEB00038133 /* SignUpBoard.storyboard in Resources */,
 				414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */,
 				415A8BBB2423EEC900038133 /* GoogleService-Info.plist in Resources */,
@@ -681,6 +691,7 @@
 				415A8B962420DCBD00038133 /* Onboard1ViewController.swift in Sources */,
 				41D6054B2432AB4A00214D84 /* PlaylistBoardVC.swift in Sources */,
 				415A8BA32422A99800038133 /* GlobalConstants.swift in Sources */,
+				41C9DA0124489334004AC7F9 /* ViewDesigns.swift in Sources */,
 				415A8BC42423FA9700038133 /* SignUpVC.swift in Sources */,
 				41D6055724332B5000214D84 /* PlaylistTableViewCell.swift in Sources */,
 				414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */,
@@ -692,6 +703,7 @@
 				417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */,
 				417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */,
 				415A8B982420DCCB00038133 /* Onboard2ViewController.swift in Sources */,
+				41C9DA0324499C0F004AC7F9 /* ReusableTrendingTile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
