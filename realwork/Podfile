@@ -9,7 +9,7 @@ target 'realwork' do
 #  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'development'
 #  pod 'Firebase/Auth'
 #  pod 'Firebase/Firestore'
-  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'feature/refactor_onboard_home_to_prototype'
+  pod 'NLibrary', :git => 'https://github.com/NathanDVT/NLibrary.git', :branch => 'feature/add_profile_functionality'
 #  pod 'NLibrary', :path => '/Users/nngobale/Documents/Training 2020/Pod_Folder/NLibrary/NLibrary'
 #     Add the Firebase pod for Google Analytics
 #    pod 'Firebase/Analytics'

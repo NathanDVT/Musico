@@ -81,20 +81,7 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     }
 
     @IBAction func userLogout(_ sender: Any) {
-        let dialogMessage = UIAlertController(title: "Logging Out",
-                                              message: "Are you sure you want log out?",
-                                              preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK",
-                               style: .default,
-                               handler: { (_) -> Void in
-             print("Ok button tapped")
-            self.viewModel.logoutRequest()
-        })
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (_) -> Void in
-        }
-        dialogMessage.addAction(okAction)
-        dialogMessage.addAction(cancel)
-        self.present(dialogMessage, animated: true, completion: nil)
+
     }
 
     @IBAction func selectedRecentSong(_ sender: UIButton) {
@@ -103,12 +90,6 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     }
 
     public func successfulLogout() {
-        Analytics.logEvent("user_logged_out", parameters: nil)
-        let storyboard = UIStoryboard(name: "EntryBoard", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier:
-            "EntryBoardLoginID") as UIViewController
-            destinationVC.modalPresentationStyle = .fullScreen
-            destinationVC.modalTransitionStyle = .crossDissolve
-            present(destinationVC, animated: true, completion: nil)
+
     }
 }
