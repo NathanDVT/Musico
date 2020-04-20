@@ -39,6 +39,7 @@ extension XCUIApplication {
         self.buttons["Dashboard"].tap()
         sleep(1)
         self.buttons["dashboardToProfile"].tap()
+        sleep(1)
     }
 }
 
