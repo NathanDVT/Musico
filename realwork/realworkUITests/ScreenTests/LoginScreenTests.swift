@@ -33,17 +33,4 @@ class LoginScreenTests: XCTestCase {
         sleep(1)
         XCTAssertEqual(application.alerts.element.label, "Opps Unsuccessful Login")
     }
-
-//    func testUserCanLogin() {
-//        application.textFields["E-mail"].tap()
-//        application.textFields["E-mail"].typeText("nate@gmail.com")
-//        let navnTextField = application.secureTextFields["Password"]
-//        UIPasteboard.general.string = "12345678"
-//        navnTextField.doubleTap()
-//        application.menuItems.element(boundBy: 0).tap()
-//        sleep(1)
-//        application.buttons["Login"].tap()
-//        sleep(4)
-//        XCTAssert(application.staticTexts["Signed in as"].exists)
-//    }
 }

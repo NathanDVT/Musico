@@ -51,7 +51,6 @@ class ProfileVC: UIViewController {
 }
 
 extension ProfileVC: ProfileViewControllerProtocol {
-
     func fetchProfileData() {
         self.profileViewModel.getUserProfile()
     }
@@ -71,5 +70,11 @@ extension ProfileVC: ProfileViewControllerProtocol {
             destinationVC.modalPresentationStyle = .fullScreen
             destinationVC.modalTransitionStyle = .crossDissolve
             present(destinationVC, animated: true, completion: nil)
+    }
+
+    func failedProfileRequest(errorMessage: String) {
+    }
+
+    func failedLogoutRequest(errorMessage: String) {
     }
 }

@@ -33,6 +33,14 @@ extension XCUIApplication {
         navigateToDashboard()
         buttons["Search"].tap()
     }
+
+    func navigateToProfile() {
+        XCUIDevice.shared.orientation = .portrait
+        self.buttons["Dashboard"].tap()
+        sleep(1)
+        self.buttons["dashboardToProfile"].tap()
+        sleep(1)
+    }
 }
 
 //extension XCUIElement {
