@@ -20,9 +20,7 @@ class ProfileScreenTests: XCTestCase {
         application.navigateToProfile()
     }
 
-    func testCrowdsPlaylistsFansTextVisible() {
+    func testCrowdsTextVisible() {
         XCTAssert(application.staticTexts["Crowds"].exists)
-        XCTAssert(application.staticTexts["Playlists"].exists)
-        XCTAssert(application.staticTexts["Fans"].exists)
     }
 }
