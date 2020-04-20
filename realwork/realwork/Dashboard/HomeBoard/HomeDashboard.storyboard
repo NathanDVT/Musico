@@ -20,6 +20,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiR-hH-pxX" customClass="ButtonShadow" customModule="realwork" customModuleProvider="target">
                                         <rect key="frame" x="344" y="11.5" width="45" height="37"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="dashboardToProfile"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="A6Y-QU-1kO"/>
                                             <constraint firstAttribute="width" constant="45" id="dIB-v3-Tdb"/>
