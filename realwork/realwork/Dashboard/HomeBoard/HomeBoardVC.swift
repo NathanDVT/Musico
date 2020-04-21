@@ -11,9 +11,22 @@ import NLibrary
 import FirebaseAnalytics
 import Crashlytics
 
-class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate {
+protocol MusicControllable {
+    var musicBarViewController: MusicBarViewController? { get set }
+    var musicControllerViewModel: MusicControllerViewModel? { get set }
+}
+
+class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate, MusicControllable {
+    func successfulLogout() {
+
+    }
+
     @IBOutlet var trendingButtons: [UIButton]!
     @IBOutlet var trendingTiles: [ReusableTrendingTile]!
+    var musicControllerViewModel: MusicControllerViewModel?
+    var songs: [RecentSong]?
+    @IBOutlet weak var testing: UILabel!
+    @IBOutlet weak var homeUIButton: UITabBarItem!
     let gesture = UITapGestureRecognizer(target: self, action: Selector(("postTrending:")))
     func successfulTrendingArtists(trendingArtists: [TrendingArtistModel]) {
         DispatchQueue.main.async {
@@ -40,9 +53,8 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
             arrayRecentButtons[iterator]
                 .setTitle("\(songs[iterator].artistName)- \(songs[iterator].titleName)", for: .normal)
         }
+        self.songs = songs
     }
-
-    @IBOutlet weak var homeUIButton: UITabBarItem!
 
     @IBAction func playPauseUIButton(_ sender: Any) {
         viewModel.pauseOrPlayCurrentSong()
@@ -63,11 +75,11 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
 
     lazy var viewModel: DashboardViewModelProtocol = DashboardViewModel(viewController: self, repo: DashboardRepo())
     @IBOutlet var homeView: UIView!
+    var musicBarViewController: MusicBarViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDashBoardContent()
         viewModel.getTrending()
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.postTrending2(_:)))
         for index in trendingTiles.indices {
             trendingTiles[index].isUserInteractionEnabled = true
@@ -80,16 +92,25 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
         viewModel.loadContent()
     }
 
-    @IBAction func userLogout(_ sender: Any) {
-
-    }
-
     @IBAction func selectedRecentSong(_ sender: UIButton) {
         Analytics.logEvent("played_recent_song", parameters: nil)
-        viewModel.playRecentSongAt(index: arrayRecentButtons.firstIndex(of: sender)!)
+        guard let index = arrayRecentButtons.firstIndex(of: sender) else {
+            return
+        }
+        if let song: RecentSong = songs?[index] {
+            self.musicControllerViewModel?.playFromUrl(urlString: song.previewUrl,
+                                                       title: "\(song.artistName) - \(song.titleName)")
+            self.musicBarViewController?.updateBarContent()
+        }
     }
 
-    public func successfulLogout() {
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToFirstChild" {
+            guard let destVC = segue.destination as? MusicBarViewController else {
+                return
+            }
+            self.musicBarViewController = destVC
+            self.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+        }
     }
 }

@@ -57,6 +57,11 @@
 		41C9DA29244CA9A6004AC7F9 /* ProfileViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA28244CA9A6004AC7F9 /* ProfileViewModelTest.swift */; };
 		41C9DA34244E19E7004AC7F9 /* ProfileRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA33244E19E7004AC7F9 /* ProfileRepoTest.swift */; };
 		41C9DA36244E1A53004AC7F9 /* ProfileScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA35244E1A53004AC7F9 /* ProfileScreenTests.swift */; };
+		41C9DA38244F2178004AC7F9 /* DashboardMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA37244F2177004AC7F9 /* DashboardMusicController.swift */; };
+		41C9DA3A244F2362004AC7F9 /* ReusableMusicController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C9DA39244F2362004AC7F9 /* ReusableMusicController.xib */; };
+		41C9DA3C244F2596004AC7F9 /* ReusableMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA3B244F2596004AC7F9 /* ReusableMusicController.swift */; };
+		41C9DA3E244F3534004AC7F9 /* MusicBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA3D244F3534004AC7F9 /* MusicBarViewController.swift */; };
+		41C9DA40244F61DB004AC7F9 /* DashboardTabBarControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C9DA3F244F61DB004AC7F9 /* DashboardTabBarControllerNew.swift */; };
 		41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */; };
 		41D6052F243252A500214D84 /* SignUpRepoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6052E243252A500214D84 /* SignUpRepoTest.swift */; };
 		41D6053424325E3600214D84 /* SignUpViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D6053324325E3600214D84 /* SignUpViewModelTest.swift */; };
@@ -150,6 +155,11 @@
 		41C9DA28244CA9A6004AC7F9 /* ProfileViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTest.swift; sourceTree = "<group>"; };
 		41C9DA33244E19E7004AC7F9 /* ProfileRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepoTest.swift; sourceTree = "<group>"; };
 		41C9DA35244E1A53004AC7F9 /* ProfileScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenTests.swift; sourceTree = "<group>"; };
+		41C9DA37244F2177004AC7F9 /* DashboardMusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardMusicController.swift; sourceTree = "<group>"; };
+		41C9DA39244F2362004AC7F9 /* ReusableMusicController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReusableMusicController.xib; sourceTree = "<group>"; };
+		41C9DA3B244F2596004AC7F9 /* ReusableMusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableMusicController.swift; sourceTree = "<group>"; };
+		41C9DA3D244F3534004AC7F9 /* MusicBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBarViewController.swift; sourceTree = "<group>"; };
+		41C9DA3F244F61DB004AC7F9 /* DashboardTabBarControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarControllerNew.swift; sourceTree = "<group>"; };
 		41CC20E023FD184100FDC65A /* ArtistMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistMediaTableViewController.swift; sourceTree = "<group>"; };
 		41D6052E243252A500214D84 /* SignUpRepoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepoTest.swift; sourceTree = "<group>"; };
 		41D6053324325E3600214D84 /* SignUpViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModelTest.swift; sourceTree = "<group>"; };
@@ -274,7 +284,11 @@
 				415A8BB22423807900038133 /* PlaylistBoard */,
 				415A8BB32423809400038133 /* MessageBoard */,
 				4165D2CE24269D9900132D0A /* HomeBoard */,
+				41C9DA37244F2177004AC7F9 /* DashboardMusicController.swift */,
 				415A8BAA2423734500038133 /* DashboardTab.storyboard */,
+				41C9DA39244F2362004AC7F9 /* ReusableMusicController.xib */,
+				41C9DA3B244F2596004AC7F9 /* ReusableMusicController.swift */,
+				41C9DA3F244F61DB004AC7F9 /* DashboardTabBarControllerNew.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -324,6 +338,7 @@
 				4165D2CF24269DBF00132D0A /* HomeBoardVC.swift */,
 				41C9DA0224499C0F004AC7F9 /* ReusableTrendingTile.swift */,
 				41C9DA0424499C24004AC7F9 /* ReusableTrendingTile.xib */,
+				41C9DA3D244F3534004AC7F9 /* MusicBarViewController.swift */,
 			);
 			path = HomeBoard;
 			sourceTree = "<group>";
@@ -573,6 +588,7 @@
 				41C9DA09244A2267004AC7F9 /* ProfileBoard.storyboard in Resources */,
 				417C627223E9A9B100CADC7E /* Assets.xcassets in Resources */,
 				417C627023E9A9B100CADC7E /* Main.storyboard in Resources */,
+				41C9DA3A244F2362004AC7F9 /* ReusableMusicController.xib in Resources */,
 				41C9DA0524499C24004AC7F9 /* ReusableTrendingTile.xib in Resources */,
 				415A8BC62423FAEB00038133 /* SignUpBoard.storyboard in Resources */,
 				414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */,
@@ -720,16 +736,20 @@
 				417C628B23EC10BF00CADC7E /* DesignableView.swift in Sources */,
 				4165D2D024269DBF00132D0A /* HomeBoardVC.swift in Sources */,
 				415A8B9C2420DFC500038133 /* PageControlViewController.swift in Sources */,
+				41C9DA3C244F2596004AC7F9 /* ReusableMusicController.swift in Sources */,
 				41C9DA0B244A228E004AC7F9 /* ProfileVC.swift in Sources */,
+				41C9DA3E244F3534004AC7F9 /* MusicBarViewController.swift in Sources */,
 				415A8BA52422AC4500038133 /* LabelDesign.swift in Sources */,
 				415A8B962420DCBD00038133 /* Onboard1ViewController.swift in Sources */,
 				41D6054B2432AB4A00214D84 /* PlaylistBoardVC.swift in Sources */,
 				415A8BA32422A99800038133 /* GlobalConstants.swift in Sources */,
 				41C9DA0124489334004AC7F9 /* ViewDesigns.swift in Sources */,
 				415A8BC42423FA9700038133 /* SignUpVC.swift in Sources */,
+				41C9DA40244F61DB004AC7F9 /* DashboardTabBarControllerNew.swift in Sources */,
 				41D6055724332B5000214D84 /* PlaylistTableViewCell.swift in Sources */,
 				414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */,
 				417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */,
+				41C9DA38244F2178004AC7F9 /* DashboardMusicController.swift in Sources */,
 				4157D02C243A4992007CAD26 /* MessageViewController.swift in Sources */,
 				417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */,
 				4165D2DB2428957B00132D0A /* UserClass.m in Sources */,

@@ -74,6 +74,14 @@
             </objects>
             <point key="canvasLocation" x="-1213" y="37"/>
         </scene>
+        <!--MusicBarViewControllerID-->
+        <scene sceneID="6OW-Ga-VJc">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MusicBarViewControllerID" storyboardName="HomeDashboard" referencedIdentifier="MusicBarViewControllerID" id="rLP-Qn-rd5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqy-UY-WGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-878" y="-475"/>
+        </scene>
         <!--My Playlists-->
         <scene sceneID="gQi-V8-FFF">
             <objects>
@@ -83,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kq2-bC-qvC">
-                                <rect key="frame" x="0.0" y="98" width="414" height="645"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="575"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,8 +167,17 @@
                                     <outlet property="delegate" destination="Exe-kn-Uce" id="DAM-tI-vxG"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcy-YM-gOA">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HB6-6j-pnj">
                                 <rect key="frame" x="0.0" y="743" width="414" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ZO4-PK-8FI"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="rLP-Qn-rd5" kind="embed" identifier="PlaylistsToMusicBar" id="Bn8-La-Fd0"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcy-YM-gOA">
+                                <rect key="frame" x="0.0" y="673" width="414" height="70"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="1Cp-en-BWy"/>
@@ -176,12 +193,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vqy-Mr-ddV" firstAttribute="bottom" secondItem="rcy-YM-gOA" secondAttribute="bottom" id="0ez-dg-ptZ"/>
                             <constraint firstItem="rcy-YM-gOA" firstAttribute="leading" secondItem="vqy-Mr-ddV" secondAttribute="leading" id="0r2-dU-r95"/>
+                            <constraint firstItem="vqy-Mr-ddV" firstAttribute="bottom" secondItem="HB6-6j-pnj" secondAttribute="bottom" id="B6L-5x-5UD"/>
                             <constraint firstItem="Kq2-bC-qvC" firstAttribute="leading" secondItem="vqy-Mr-ddV" secondAttribute="leading" id="R5a-Jl-OyC"/>
+                            <constraint firstItem="HB6-6j-pnj" firstAttribute="top" secondItem="rcy-YM-gOA" secondAttribute="bottom" id="dzm-3m-rK1"/>
                             <constraint firstItem="Kq2-bC-qvC" firstAttribute="top" secondItem="vqy-Mr-ddV" secondAttribute="top" constant="10" id="kDR-L9-cZu"/>
                             <constraint firstItem="vqy-Mr-ddV" firstAttribute="trailing" secondItem="rcy-YM-gOA" secondAttribute="trailing" id="vbY-Tf-0p4"/>
+                            <constraint firstItem="vqy-Mr-ddV" firstAttribute="trailing" secondItem="HB6-6j-pnj" secondAttribute="trailing" id="x6X-ph-KGM"/>
                             <constraint firstItem="rcy-YM-gOA" firstAttribute="top" secondItem="Kq2-bC-qvC" secondAttribute="bottom" id="xIq-nI-Wdv"/>
+                            <constraint firstItem="HB6-6j-pnj" firstAttribute="leading" secondItem="vqy-Mr-ddV" secondAttribute="leading" id="yGK-kN-uA7"/>
                             <constraint firstItem="Kq2-bC-qvC" firstAttribute="trailing" secondItem="vqy-Mr-ddV" secondAttribute="trailing" id="zQK-7c-Qtt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vqy-Mr-ddV"/>

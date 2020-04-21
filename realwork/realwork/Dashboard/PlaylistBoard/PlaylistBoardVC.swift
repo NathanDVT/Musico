@@ -9,7 +9,8 @@
 import UIKit
 import NLibrary
 
-class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
+class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicControllable {
+    var musicControllerViewModel: MusicControllerViewModel?
     func successfulRequest(songs: [PlaylistDetailModel]) {
         playlistDetails = songs
     }
@@ -28,6 +29,7 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
         super.viewDidLoad()
         viewModel.requestUserPlaylistDetails()
         self.playlistTableView.reloadData()
+        self.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
     }
 
     @IBAction func createPlaylist(_ sender: Any) {
@@ -56,6 +58,17 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
 
     func createPlaylist(playListName: String) {
         viewModel.createPlaylist(playlistName: playListName)
+    }
+
+    var musicBarViewController: MusicBarViewController?
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PlaylistsToMusicBar" {
+            guard let destVC = segue.destination as? MusicBarViewController else {
+                return
+            }
+            self.musicBarViewController = destVC
+            self.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+        }
     }
 }
 

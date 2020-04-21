@@ -108,6 +108,15 @@
                                     <constraint firstAttribute="height" constant="112" id="WGd-MW-1UH"/>
                                 </constraints>
                             </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMI-dg-Byj">
+                                <rect key="frame" x="0.0" y="743" width="414" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="PJ0-mR-JhI"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="U0X-M1-yxA" kind="embed" id="h5O-5Z-gt6"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -119,8 +128,11 @@
                             <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="gf8-Uf-ZxF" secondAttribute="trailing" id="E7L-o5-RjP"/>
                             <constraint firstItem="QDZ-F8-rvt" firstAttribute="top" secondItem="HWa-Yg-vuQ" secondAttribute="bottom" constant="20" id="JRu-m0-0lZ"/>
                             <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="v4q-i4-c50" secondAttribute="trailing" constant="20" id="NyE-bR-7pb"/>
+                            <constraint firstItem="iMI-dg-Byj" firstAttribute="bottom" secondItem="Bvk-8a-Q0Q" secondAttribute="bottom" id="OLw-Lo-jm9"/>
                             <constraint firstItem="jQN-FE-e2E" firstAttribute="top" secondItem="gf8-Uf-ZxF" secondAttribute="bottom" constant="20" id="QcW-14-eFJ"/>
                             <constraint firstItem="HWa-Yg-vuQ" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="20" id="cEp-T9-zaI"/>
+                            <constraint firstItem="iMI-dg-Byj" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" id="dTO-T0-4vD"/>
+                            <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="iMI-dg-Byj" secondAttribute="trailing" id="g45-II-hKi"/>
                             <constraint firstItem="gf8-Uf-ZxF" firstAttribute="top" secondItem="Bvk-8a-Q0Q" secondAttribute="top" constant="20" id="gP4-R3-Ue1"/>
                             <constraint firstItem="v4q-i4-c50" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="20" id="gdJ-Gq-38D"/>
                             <constraint firstItem="zdP-WS-Mif" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="123" id="hMc-mP-jDb"/>
@@ -138,6 +150,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsz-u2-0BZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="-143.30357142857142"/>
+        </scene>
+        <!--MusicBarViewControllerID-->
+        <scene sceneID="RNM-SM-FA0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeDashboard" referencedIdentifier="MusicBarViewControllerID" id="U0X-M1-yxA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBp-h6-RWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="282"/>
         </scene>
     </scenes>
     <resources>

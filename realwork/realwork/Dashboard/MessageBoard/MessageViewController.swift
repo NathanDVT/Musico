@@ -10,13 +10,15 @@ import UIKit
 import Crashlytics
 import NLibrary
 
-class MessageViewController: UIViewController {
+class MessageViewController: UIViewController, MusicControllable {
+    var musicBarViewController: MusicBarViewController?
+    var musicControllerViewModel: MusicControllerViewModel?
+
 var nLibrary: NLibrarySerivce?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
     }
 
     @IBAction func crashAction(_ sender: Any) {
