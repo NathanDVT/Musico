@@ -30,12 +30,12 @@ class DashboardHomeModelViewTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testGivenInvalidIndexNoSongShouldBePlayed() {
-        let expected: Int = -1
-        XCTAssert(systemUnderTest.currentPlayingIndex == expected)
-        systemUnderTest.playRecentSongAt(index: 0)
-        XCTAssert(systemUnderTest.currentPlayingIndex == expected)
-    }
+//    func testGivenInvalidIndexNoSongShouldBePlayed() {
+//        let expected: Int = -1
+//        XCTAssert(systemUnderTest.currentPlayingIndex == expected)
+//        systemUnderTest.playRecentSongAt(index: 0)
+//        XCTAssert(systemUnderTest.currentPlayingIndex == expected)
+//    }
 
     // TO DO: string length too long, read from JSON file
 //    func testGivenValidIndexSongShouldBePlayed() {

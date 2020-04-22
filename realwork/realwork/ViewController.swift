@@ -37,6 +37,15 @@ class ViewController: UIViewController {
             destinationVC.modalTransitionStyle = .crossDissolve
             present(destinationVC, animated: true, completion: nil)
         }
+// TO DO: enquire either tab bar in container or container in tab bar
+//        let storyboard = UIStoryboard(name: "DashboardTab", bundle: nil)
+//        let destinationVC = storyboard.instantiateViewController(withIdentifier:
+//            "MusicControllerID") as? UIViewController
+//        if let destinationVC = destinationVC {
+//            destinationVC.modalPresentationStyle = .fullScreen
+//            destinationVC.modalTransitionStyle = .crossDissolve
+//            present(destinationVC, animated: true, completion: nil)
+//        }
     }
 }
 

@@ -9,14 +9,11 @@
 import UIKit
 import NLibrary
 
-class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
-    func successfulRequest(songs: [PlaylistDetailModel]) {
-        playlistDetails = songs
-    }
-
+class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicControllable {
+    var musicControllerViewModel: MusicControllerViewModel?
+    var musicBarViewController: MusicBarViewController?
     @IBOutlet weak var playlistTableView: UITableView!
     lazy var viewModel: PlaylistViewModel = PlaylistViewModel(view: self, repo: PlaylistRepo())
-
     var playlistDetails = [PlaylistDetailModel]() {
         didSet {
             DispatchQueue.main.async {
@@ -24,6 +21,11 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
             }
         }
     }
+
+    func successfulRequest(songs: [PlaylistDetailModel]) {
+        playlistDetails = songs
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.requestUserPlaylistDetails()
@@ -39,7 +41,6 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
                 }
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: UIAlertAction.Style.cancel) { (_: UIAlertAction) -> Void in
-            //Do nothing if cancel clicked
         }
 
         let okAction = UIAlertAction(title: "OK",
@@ -56,6 +57,16 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
 
     func createPlaylist(playListName: String) {
         viewModel.createPlaylist(playlistName: playListName)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PlaylistsToMusicBar" {
+            guard let destVC = segue.destination as? MusicBarViewController else {
+                return
+            }
+            self.musicBarViewController = destVC
+            self.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+        }
     }
 }
 
