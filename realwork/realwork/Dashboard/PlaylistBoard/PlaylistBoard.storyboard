@@ -72,7 +72,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIP-kA-F2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1213" y="37"/>
+            <point key="canvasLocation" x="-1342" y="-170"/>
         </scene>
         <!--MusicBarViewControllerID-->
         <scene sceneID="6OW-Ga-VJc">

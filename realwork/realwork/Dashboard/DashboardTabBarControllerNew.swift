@@ -9,10 +9,6 @@
 import UIKit
 import NLibrary
 
-class MusicPlayer {
-
-}
-
 class DashboardTabBarControllerNew: UITabBarController {
     var musicControllerViewModel: MusicControllerViewModel = MusicControllerViewModel()
     override func viewDidLoad() {
@@ -20,20 +16,18 @@ class DashboardTabBarControllerNew: UITabBarController {
 
         // Do any additional setup after loading the view.
         for iterator in 0..<self.viewControllers!.count {
-            if let navController = self.viewControllers![iterator] as? UINavigationController {
-                if var testController = navController.children.first as? MusicControllable {
-                    testController.musicControllerViewModel = musicControllerViewModel
-                }
+            let viewController = self.viewControllers![iterator]
+            if var testController = viewController.children.first as? MusicControllable {
+                testController.musicControllerViewModel = musicControllerViewModel
             }
         }
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         let tabIndex: Int = (tabBar.items?.firstIndex(of: item))!
-        if let navController = self.viewControllers![tabIndex] as? UINavigationController {
-            if let testController = navController.children.first as? MusicControllable {
-                testController.musicBarViewController?.updateBarContent()
-            }
+        let viewController = self.viewControllers![tabIndex]
+        if let testController = viewController.children.first as? MusicControllable {
+            testController.musicBarViewController?.updateBarContent()
         }
     }
 }

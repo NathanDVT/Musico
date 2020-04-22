@@ -7,22 +7,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Uew-ux-sJc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6y-VS-aKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="MessageBoardID" id="8Te-RM-7rx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mCC-HK-qDj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cqn-tD-Qwx" kind="relationship" relationship="rootViewController" id="Nqg-6T-xov"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-833" y="-143"/>
+        </scene>
         <!--Messages-->
         <scene sceneID="hbH-f6-Skz">
             <objects>
-                <viewController storyboardIdentifier="MessageBoardID" id="cqn-tD-Qwx" customClass="MessageViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cqn-tD-Qwx" customClass="MessageViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EA-Q2-uD2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-Uf-ZxF">
-                                <rect key="frame" x="0.0" y="64" width="414" height="53"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can view messages on your playlists, messgaes from members and invites from friends or fans." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQN-FE-e2E">
-                                <rect key="frame" x="20" y="137" width="374" height="70"/>
+                                <rect key="frame" x="20" y="181" width="374" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="e9e-fb-93V"/>
                                 </constraints>
@@ -31,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-Yg-vuQ">
-                                <rect key="frame" x="20" y="499" width="374" height="130"/>
+                                <rect key="frame" x="20" y="543" width="374" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Message on your playlist Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6w-aB-DKt">
                                         <rect key="frame" x="10" y="10" width="354" height="100"/>
@@ -52,7 +68,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDZ-F8-rvt">
-                                <rect key="frame" x="20" y="649" width="374" height="130"/>
+                                <rect key="frame" x="20" y="693" width="374" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 new songs added Playlist Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cW-i8-gwv">
                                         <rect key="frame" x="10" y="20" width="354" height="70"/>
@@ -73,7 +89,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-i4-c50">
-                                <rect key="frame" x="20" y="349" width="374" height="130"/>
+                                <rect key="frame" x="20" y="393" width="374" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Invite from Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34z-oi-QKC">
                                         <rect key="frame" x="21" y="72" width="208" height="28"/>
@@ -103,7 +119,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_g_cleff" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-WS-Mif">
-                                <rect key="frame" x="123" y="217" width="168" height="112"/>
+                                <rect key="frame" x="123" y="261" width="168" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="WGd-MW-1UH"/>
                                 </constraints>
@@ -114,7 +130,7 @@
                                     <constraint firstAttribute="height" constant="70" id="PJ0-mR-JhI"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="U0X-M1-yxA" kind="embed" id="h5O-5Z-gt6"/>
+                                    <segue destination="U0X-M1-yxA" kind="embed" identifier="InboxToMusicBar" id="h5O-5Z-gt6"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -145,6 +161,7 @@
                         <viewLayoutGuide key="safeArea" id="Bvk-8a-Q0Q"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" image="message.fill" catalog="system" id="4im-i7-zwS"/>
+                    <navigationItem key="navigationItem" id="FDc-v2-GFy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsz-u2-0BZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

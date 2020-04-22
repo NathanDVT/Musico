@@ -56,20 +56,6 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
         self.songs = songs
     }
 
-    @IBAction func playPauseUIButton(_ sender: Any) {
-        viewModel.pauseOrPlayCurrentSong()
-    }
-
-    func setCurrentControlIcon(img: UIImage) {
-        currentControlUIButton.setBackgroundImage(img, for: .normal)
-    }
-
-    func setSongTitle(title: String) {
-        currentSongTitleUILabel.text = title
-    }
-
-    @IBOutlet weak var currentControlUIButton: UIButton!
-    @IBOutlet weak var currentSongTitleUILabel: UILabel!
     @IBOutlet var arrayRecentButtons: [UIButton]!
     @IBOutlet var buttonCollection: [UIButton]!
 
@@ -98,7 +84,7 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
             return
         }
         if let song: RecentSong = songs?[index] {
-            self.musicControllerViewModel?.playFromUrl(urlString: song.previewUrl,
+            self.musicControllerViewModel?.playFromUrlWithTitle(urlString: song.previewUrl,
                                                        title: "\(song.artistName) - \(song.titleName)")
             self.musicBarViewController?.updateBarContent()
         }
