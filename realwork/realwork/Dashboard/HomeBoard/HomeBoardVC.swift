@@ -17,10 +17,9 @@ protocol MusicControllable {
 }
 
 class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate, MusicControllable {
-    func successfulLogout() {
-
-    }
-
+    var musicBarViewController: MusicBarViewController?
+    @IBOutlet var arrayRecentButtons: [UIButton]!
+    @IBOutlet var buttonCollection: [UIButton]!
     @IBOutlet var trendingButtons: [UIButton]!
     @IBOutlet var trendingTiles: [ReusableTrendingTile]!
     var musicControllerViewModel: MusicControllerViewModel?
@@ -56,12 +55,9 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
         self.songs = songs
     }
 
-    @IBOutlet var arrayRecentButtons: [UIButton]!
-    @IBOutlet var buttonCollection: [UIButton]!
-
     lazy var viewModel: DashboardViewModelProtocol = DashboardViewModel(viewController: self, repo: DashboardRepo())
     @IBOutlet var homeView: UIView!
-    var musicBarViewController: MusicBarViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDashBoardContent()
