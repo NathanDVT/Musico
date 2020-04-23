@@ -51,3 +51,16 @@ class ButtonShadow: UIButton {
         self.layer.shadowOpacity = 0.6
     }
 }
+
+class ButtonPrimaryShadowCurved: ButtonPrimaryShadow {
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        self.layer.cornerRadius = 25
+        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner,
+                                    .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    }
+}

@@ -10,11 +10,14 @@ import UIKit
 import NLibrary
 
 class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicControllable {
-    var musicControllerViewModel: MusicControllerViewModel?
+    var musicControllerViewModel: MusicBarViewModel?
     var musicBarViewController: MusicBarViewController?
     @IBOutlet weak var playlistTableView: UITableView!
+    var selectedPlaylist: PlaylistItemBasicModel?
+    var userPlaylists: PlaylistBasicModel?
+    var destination: PlaylistDetailViewController?
     lazy var viewModel: PlaylistViewModel = PlaylistViewModel(view: self, repo: PlaylistRepo())
-    var playlistDetails = [PlaylistDetailModel]() {
+    var playlistDetails = [PlaylistItemBasicModel]() {
         didSet {
             DispatchQueue.main.async {
                 self.playlistTableView.reloadData()
@@ -22,8 +25,9 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicCo
         }
     }
 
-    func successfulRequest(songs: [PlaylistDetailModel]) {
-        playlistDetails = songs
+    func successfulRequest(playlistsviewModel: PlaylistBasicModel) {
+        playlistDetails = playlistsviewModel.playlistItems
+        userPlaylists = playlistsviewModel
     }
 
     override func viewDidLoad() {
@@ -67,6 +71,12 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicCo
             self.musicBarViewController = destVC
             self.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
         }
+        if segue.identifier == "PlaylistsToPlaylistViewer" {
+            guard let destVC = segue.destination as? PlaylistDetailViewController else {
+                return
+            }
+            self.destination = destVC
+        }
     }
 }
 
@@ -87,5 +97,9 @@ extension PlaylistBoardVC: UITableViewDataSource, UITableViewDelegate {
         cell.nameUILabel.text = "\(playlistDetails[indexPath.row].name)"
         cell.numSongsUILabel.text = "Number of songs: \(playlistDetails[indexPath.row].numSongs)"
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        destination?.selectedPlaylist = self.userPlaylists?.playlistItems[indexPath.row]
     }
 }

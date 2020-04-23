@@ -10,7 +10,7 @@ import UIKit
 import NLibrary
 
 class DashboardTabBarControllerNew: UITabBarController {
-    var musicControllerViewModel: MusicControllerViewModel = MusicControllerViewModel()
+    var musicControllerViewModel: MusicBarViewModel = MusicBarViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
