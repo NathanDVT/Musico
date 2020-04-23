@@ -14,14 +14,14 @@ class MusicBarViewController: UIViewController {
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet var curvedView: UIView!
     @IBOutlet weak var playPauseButton: UIButton!
-    var musicControllerViewModel: MusicControllerViewModel?
+    var musicControllerViewModel: MusicBarViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         curvedView.clipsToBounds = true
         curvedView.layer.cornerRadius = 40
         curvedView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        songTitle.text = musicControllerViewModel?.getArtistName()
+        songTitle.text = musicControllerViewModel?.name
         // Do any additional setup after loading the view.
     }
     @IBAction func playOrPause(_ sender: Any) {
@@ -30,7 +30,7 @@ class MusicBarViewController: UIViewController {
     }
 
     func updateBarContent() {
-        songTitle.text = musicControllerViewModel?.getArtistName()
+        songTitle.text = musicControllerViewModel?.name
         guard let isplaying: Bool = musicControllerViewModel?.isPlaying() else {
             return
         }

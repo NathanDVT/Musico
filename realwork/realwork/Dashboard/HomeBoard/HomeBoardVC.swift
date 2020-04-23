@@ -13,7 +13,7 @@ import Crashlytics
 
 protocol MusicControllable {
     var musicBarViewController: MusicBarViewController? { get set }
-    var musicControllerViewModel: MusicControllerViewModel? { get set }
+    var musicControllerViewModel: MusicBarViewModel? { get set }
 }
 
 class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate, MusicControllable {
@@ -22,7 +22,7 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     @IBOutlet var buttonCollection: [UIButton]!
     @IBOutlet var trendingButtons: [UIButton]!
     @IBOutlet var trendingTiles: [ReusableTrendingTile]!
-    var musicControllerViewModel: MusicControllerViewModel?
+    var musicControllerViewModel: MusicBarViewModel?
     var songs: [RecentSong]?
     @IBOutlet weak var testing: UILabel!
     @IBOutlet weak var homeUIButton: UITabBarItem!

@@ -12,7 +12,7 @@ import NLibrary
 
 class MessageViewController: UIViewController, MusicControllable {
     var musicBarViewController: MusicBarViewController?
-    var musicControllerViewModel: MusicControllerViewModel?
+    var musicControllerViewModel: MusicBarViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()

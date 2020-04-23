@@ -118,3 +118,21 @@ class InversedPrimaryShadowView: ViewInversePrimaryGradient {
         self.layer.shadowOpacity = 0.9
     }
 }
+
+class Radius10View: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        self.layer.cornerRadius = 10
+        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner,
+                                    .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    }
+}
