@@ -11,7 +11,10 @@ import NLibrary
 
 class PlaylistDetailViewController: UIViewController {
     @IBOutlet weak var songTableView: UITableView!
-    var selectedPlaylist: PlaylistItemBasicModel?
+    @IBOutlet weak var producerNameUILabel: UILabel!
+    @IBOutlet weak var playlistNameUILabel: UILabel!
+    @IBOutlet weak var playlistPicUIImage: RoundedWhiteBorderImageView!
+    var selectedPlaylist: PlaylistModel?
     var songs = [BasicSongItem]() {
         didSet {
             DispatchQueue.main.async {
@@ -19,27 +22,31 @@ class PlaylistDetailViewController: UIViewController {
             }
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.songTableView.dataSource = self
         self.songTableView.delegate = self
+        self.displayContent()
         self.songTableView.reloadData()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func testy(_ sender: Any) {
-        self.songTableView.reloadData()
-        self.songs = self.selectedPlaylist!.basicSongItems
+    func displayContent() {
+        producerNameUILabel.text = self.selectedPlaylist?.producerEmail
+        playlistNameUILabel.text = self.selectedPlaylist?.playlistName
+        guard let imagePathway = self.selectedPlaylist?.basicSongItems[0].artworkUrl60,
+            let imageURL = URL(string: imagePathway) else {
+            return
+        }
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                self.playlistPicUIImage.image = image
+            }
+        }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 extension PlaylistDetailViewController: UITableViewDataSource, UITableViewDelegate {
@@ -58,9 +65,21 @@ extension PlaylistDetailViewController: UITableViewDataSource, UITableViewDelega
         }
         cell.nameUILabel.text = "\(selectedPlaylist!.basicSongItems[indexPath.row].songTitle)"
         cell.numSongsUILabel.text = "Number of songs: \(selectedPlaylist!.basicSongItems[indexPath.row].songTitle)"
+        guard let imageURL = URL(string: selectedPlaylist!.basicSongItems[indexPath.row].artworkUrl60) else {
+            return cell
+        }
+        // just not to cause a deadlock in UI!
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                cell.artWorkImage.image = image
+            }
+        }
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TO DO: Music play action
     }
 }

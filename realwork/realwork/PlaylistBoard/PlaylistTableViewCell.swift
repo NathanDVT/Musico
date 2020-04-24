@@ -12,6 +12,7 @@ class PlaylistTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameUILabel: UILabel!
     @IBOutlet weak var numSongsUILabel: UILabel!
+    @IBOutlet weak var artWorkImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

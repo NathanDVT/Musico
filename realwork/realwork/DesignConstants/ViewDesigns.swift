@@ -119,6 +119,34 @@ class InversedPrimaryShadowView: ViewInversePrimaryGradient {
     }
 }
 
+class PrimaryGradientShadowView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        let layer = CAGradientLayer()
+        layer.frame = self.bounds
+        let hexGenCol1: UIColor = HexToUIColor(hexcode: "#222222ff").color
+        let hexGenCol2: UIColor = HexToUIColor(hexcode: "#e8d902ff").color
+        layer.colors = [hexGenCol1.cgColor,
+                        hexGenCol2.cgColor]
+        layer.locations = [0.0, 1.0]
+        self.backgroundColor = .none
+        self.layer.insertSublayer(layer, at: 0)
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.9
+    }
+}
+
 class Radius10View: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
