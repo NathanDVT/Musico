@@ -9,8 +9,8 @@
 import UIKit
 import NLibrary
 
-struct GraphicColors {
-    static let primary = HexToUIColor(hexcode: "#e8d902ff").color
+public struct GraphicColors {
+    static var primary = HexToUIColor(hexcode: "#e8d902ff").color
     static let secondary = HexToUIColor(hexcode: "#939393ff").color
 }
 

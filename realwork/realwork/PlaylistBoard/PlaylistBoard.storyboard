@@ -193,7 +193,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbl-an-EsK" customClass="InversedPrimaryShadowView" customModule="realwork" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbl-an-EsK" customClass="PrimaryGradientShadowView" customModule="realwork" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUS-Up-nml">
@@ -378,6 +378,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="artWorkImage" destination="4Qh-IU-CzY" id="T1F-Ca-X3X"/>
                                             <outlet property="nameUILabel" destination="HYM-P4-lcg" id="zqL-bM-pTT"/>
                                             <outlet property="numSongsUILabel" destination="Pw5-As-qFd" id="Jbg-sI-UEM"/>
                                         </connections>
@@ -417,6 +418,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Aac-as-qt4"/>
                     <connections>
+                        <outlet property="playlistNameUILabel" destination="GUS-Up-nml" id="7nE-ZM-2j3"/>
+                        <outlet property="playlistPicUIImage" destination="cZt-GD-Fea" id="xUv-sl-igm"/>
+                        <outlet property="producerNameUILabel" destination="His-PK-THy" id="QKO-SM-e7k"/>
                         <outlet property="songTableView" destination="bPr-na-TYu" id="vXM-zs-WWv"/>
                     </connections>
                 </viewController>

@@ -48,9 +48,8 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     }
 
     func successFulSongRequests(songs: [RecentSong]) {
-        for iterator in 0..<arrayRecentButtons.count {
-            arrayRecentButtons[iterator]
-                .setTitle("\(songs[iterator].artistName)- \(songs[iterator].titleName)", for: .normal)
+        for (song, button) in zip(songs, arrayRecentButtons) {
+            button.setTitle("\(song.artistName)- \(song.titleName)", for: .normal)
         }
         self.songs = songs
     }
