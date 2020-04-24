@@ -35,6 +35,17 @@ class PlaylistDetailViewController: UIViewController {
     func displayContent() {
         producerNameUILabel.text = self.selectedPlaylist?.producerEmail
         playlistNameUILabel.text = self.selectedPlaylist?.playlistName
+        guard let imagePathway = self.selectedPlaylist?.basicSongItems[0].artworkUrl60,
+            let imageURL = URL(string: imagePathway) else {
+            return
+        }
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                self.playlistPicUIImage.image = image
+            }
+        }
     }
 }
 
