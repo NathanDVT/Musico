@@ -19,6 +19,7 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicCo
     var playlistModels = [PlaylistModel]() {
         didSet {
             DispatchQueue.main.async {
+                self.playlistTableView.separatorColor = GraphicColors.secondary
                 self.playlistTableView.reloadData()
             }
         }
@@ -30,6 +31,7 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicCo
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        playlistTableView.separatorColor = GraphicColors.secondary
         viewModel.requestUserPlaylistDetails()
         self.playlistTableView.reloadData()
     }

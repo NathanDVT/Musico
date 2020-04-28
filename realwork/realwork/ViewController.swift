@@ -10,13 +10,66 @@ import UIKit
 import AVKit
 import NLibrary
 import FirebaseAnalytics
+import CoreData
 
 class ViewController: UIViewController {
+    weak var appDelegate: AppDelegate?
+    var context: NSManagedObjectContext?
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+//            return
+//        }
+//        self.appDelegate = appDelegate
+//        context = self.appDelegate?.persistentContainer.viewContext
+//        let entity = NSEntityDescription.entity(forEntityName: "UserPreferences", in: context!)
+//        let newUserPref = NSManagedObject(entity: entity!, insertInto: context!)
+//        newUserPref.setValue("#eee902ff", forKey: "color")
+//        appDelegate.saveContext()
+    }
+
+    override func loadView() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        self.appDelegate = appDelegate
+        context = self.appDelegate?.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserPreferences")
+        request.returnsObjectsAsFaults = false
+        do {
+            guard let result = try context!.fetch(request) as? [NSManagedObject] else {
+                return
+            }
+            if result.isEmpty {
+                createUserPreferenceObject()
+            }
+            for data in result {
+                if let hexCode1 = data.value(forKey: "color1") as? String,
+                    let hexCode2 = data.value(forKey: "color2") as? String {
+                    GraphicColors.primary = HexToUIColor(hexcode: hexCode1).color
+                    GraphicColors.secondary = HexToUIColor(hexcode: hexCode2).color
+                }
+            }
+        } catch {
+            fatalError("Error could not print out value")
+        }
+        super.loadView()
+    }
+
+    func createUserPreferenceObject() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        self.appDelegate = appDelegate
+        context = self.appDelegate?.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "UserPreferences", in: context!)
+        let newUserPref = NSManagedObject(entity: entity!, insertInto: context!)
+        newUserPref.setValue("#eee902ff", forKey: "color1")
+        newUserPref.setValue("#939393ff", forKey: "color2")
+        appDelegate.saveContext()
     }
 
     @IBAction func btnOnboard(_ sender: Any) {

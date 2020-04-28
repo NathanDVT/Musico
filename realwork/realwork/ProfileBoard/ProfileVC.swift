@@ -10,14 +10,18 @@ import UIKit
 import NLibrary
 import FirebaseAnalytics
 import Crashlytics
+import CoreData
 
 class ProfileVC: UIViewController {
 
+    @IBOutlet var colorPickerButtons: [UIButton]!
     @IBOutlet weak var noplaylistsUILabel: UILabel!
     @IBOutlet weak var emailUILabel: UILabel!
     @IBOutlet weak var genderUILabel: UILabel!
     @IBOutlet weak var usernameUILabel: UILabel!
-     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
+//    var context: NSManagedObjectContext?
+//    weak var appDelegate: AppDelegate?
     lazy var profileViewModel: ProfileViewModelProtocol = ProfileViewModel(viewController: self, repo: ProfileRepo())
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +29,43 @@ class ProfileVC: UIViewController {
         fetchProfileData()
     }
 
+    @IBAction func selectedColor(_ sender: UIButton) {
+        for (button) in (colorPickerButtons) {
+                button.setImage(nil, for: .normal)
+        }
+        sender.setImage(UIImage(systemName: "hexagon.fill"), for: .normal)
+        guard let index: Int = colorPickerButtons.firstIndex(of: sender),
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserPreferences")
+        request.returnsObjectsAsFaults = false
+        do {
+            guard let result = try context.fetch(request) as? [NSManagedObject] else {
+                return
+            }
+            for data in result {
+                data.setValue(GraphicColors.primaryCodes[index], forKey: "color1")
+                data.setValue(GraphicColors.secondaryCodes[index], forKey: "color2")
+            }
+            appDelegate.saveContext()
+        } catch {
+            fatalError("Error could not print out value")
+        }
+    }
+
     func setUpUIComponents() {
         profileImage.layer.cornerRadius = profileImage.frame.size.width/2
         profileImage.layer.borderColor = UIColor.white.cgColor
         profileImage.layer.borderWidth = 2.0
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: nil)
+        for (button, colorCode) in zip(colorPickerButtons, GraphicColors.primaryCodes) {
+            button.backgroundColor = HexToUIColor(hexcode: colorCode).color
+            if compareColors(co1: button.backgroundColor!, co2: GraphicColors.primary) {
+                button.setImage(UIImage(systemName: "hexagon.fill"), for: .normal)
+            }
+        }
     }
 
     @IBAction func logout(_ sender: Any) {

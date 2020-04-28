@@ -11,14 +11,14 @@
         <scene sceneID="cqQ-rN-gDx">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="luS-JL-aU6" customClass="HomeBoardVC" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hb5-R9-goR" customClass="ViewPrimaryBackground" customModule="realwork" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="hb5-R9-goR" customClass="ViewPrimaryBackgroundGradient" customModule="realwork" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EG6-VN-7CF">
                                 <rect key="frame" x="0.0" y="98" width="414" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiR-hH-pxX" customClass="ButtonShadow" customModule="realwork" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiR-hH-pxX" customClass="ButtonPrimaryTintShadonw" customModule="realwork" customModuleProvider="target">
                                         <rect key="frame" x="344" y="11.5" width="45" height="37"/>
                                         <accessibility key="accessibilityConfiguration" identifier="dashboardToProfile"/>
                                         <constraints>
@@ -27,7 +27,7 @@
                                         </constraints>
                                         <color key="tintColor" red="0.90980392156862744" green="0.85098039215686272" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" backgroundImage="person.fill" catalog="system">
-                                            <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="lc9-65-U6i" kind="show" id="pTn-nf-V6C"/>
@@ -251,7 +251,6 @@
         <!--Navigation Controller-->
         <scene sceneID="4gJ-af-3TN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mvK-RX-NHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="HomeSB" id="Vy6-rf-3bd" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ycI-kj-NmG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -262,23 +261,23 @@
                         <segue destination="luS-JL-aU6" kind="relationship" relationship="rootViewController" id="AZq-89-t0D"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvK-RX-NHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-991" y="78"/>
         </scene>
         <!--ProfileBoardID-->
         <scene sceneID="5ro-KX-LP8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xLI-dU-uEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ProfileBoard" referencedIdentifier="ProfileBoardID" id="lc9-65-U6i" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="7yJ-Nz-Acy"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLI-dU-uEW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="702" y="-82"/>
         </scene>
         <!--Title-->
         <scene sceneID="dc7-Xw-opY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KM9-Pi-uaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="2OC-UI-o0x" customClass="ProfileVC" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" tag="1" contentMode="scaleToFill" id="7cT-pO-Tyi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -288,6 +287,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="BxN-O9-m1n"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KM9-Pi-uaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584" y="88"/>
         </scene>
@@ -308,7 +308,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-hO-Q2O">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-hO-Q2O" customClass="ButtonPrimaryTint" customModule="realwork" customModuleProvider="target">
                                 <rect key="frame" x="324" y="15.5" width="40" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Ij6-Ts-jSw"/>

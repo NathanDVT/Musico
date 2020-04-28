@@ -9,7 +9,7 @@
 import UIKit
 import NLibrary
 
-class ViewPrimaryBackground: UIView {
+class ViewPrimaryBackgroundGradient: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -71,8 +71,8 @@ class TrendingGradientBackgroudn: UIView {
     private func setup() {
         let layer = CAGradientLayer()
         layer.frame = self.bounds
-        let hexGenCol1: UIColor = HexToUIColor(hexcode: "#C3A22500").color
-        let hexGenCol2: UIColor = HexToUIColor(hexcode: "#C3A225ff").color
+        let hexGenCol1: UIColor = HexToUIColor(hexcode: "#00000000").color
+        let hexGenCol2: UIColor = GraphicColors.secondary
         layer.colors = [hexGenCol1.cgColor,
                         hexGenCol2.cgColor]
         layer.locations = [0.0, 0.4]
@@ -134,7 +134,7 @@ class PrimaryGradientShadowView: UIView {
         let layer = CAGradientLayer()
         layer.frame = self.bounds
         let hexGenCol1: UIColor = HexToUIColor(hexcode: "#222222ff").color
-        let hexGenCol2: UIColor = HexToUIColor(hexcode: "#e8d902ff").color
+        let hexGenCol2: UIColor = GraphicColors.primary
         layer.colors = [hexGenCol1.cgColor,
                         hexGenCol2.cgColor]
         layer.locations = [0.0, 1.0]
