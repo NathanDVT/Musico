@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4130799D2458390200B20F66 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4130799B2458390200B20F66 /* TestModel.xcdatamodeld */; };
 		414E1982241F5316007C774F /* realworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1981241F5316007C774F /* realworkUITests.swift */; };
 		414E198C241F547C007C774F /* SearchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198B241F547C007C774F /* SearchScreenTests.swift */; };
 		414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */; };
@@ -94,6 +95,7 @@
 		10DEAAED1761336FA99BEFDA /* Pods_realwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27344F07586A4202F50B1942 /* Pods-realworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realworkTests.debug.xcconfig"; path = "Target Support Files/Pods-realworkTests/Pods-realworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		281FB59C4F793BB3C0CF08C3 /* Pods-realwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realwork.release.xcconfig"; path = "Target Support Files/Pods-realwork/Pods-realwork.release.xcconfig"; sourceTree = "<group>"; };
+		4130799C2458390200B20F66 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
 		414E197F241F5316007C774F /* realworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = realworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		414E1981241F5316007C774F /* realworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realworkUITests.swift; sourceTree = "<group>"; };
 		414E1983241F5316007C774F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -209,6 +211,14 @@
 				5FB522E261FF39F338BA657A /* Pods-realworkTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4130799A245838F100B20F66 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4130799B2458390200B20F66 /* TestModel.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		414E1980241F5316007C774F /* realworkUITests */ = {
@@ -376,6 +386,7 @@
 		417C626723E9A9B100CADC7E /* realwork */ = {
 			isa = PBXGroup;
 			children = (
+				4130799A245838F100B20F66 /* Data */,
 				41C9DA07244A2147004AC7F9 /* ProfileBoard */,
 				4165D2D12427D86B00132D0A /* Objective */,
 				415A8BC22423F81700038133 /* SignUpBoard */,
@@ -753,6 +764,7 @@
 				417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */,
 				417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */,
 				415A8B982420DCCB00038133 /* Onboard2ViewController.swift in Sources */,
+				4130799D2458390200B20F66 /* TestModel.xcdatamodeld in Sources */,
 				41C9DA0324499C0F004AC7F9 /* ReusableTrendingTile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1090,6 +1102,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4130799B2458390200B20F66 /* TestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4130799C2458390200B20F66 /* TestModel.xcdatamodel */,
+			);
+			currentVersion = 4130799C2458390200B20F66 /* TestModel.xcdatamodel */;
+			path = TestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 417C625D23E9A9B100CADC7E /* Project object */;
 }

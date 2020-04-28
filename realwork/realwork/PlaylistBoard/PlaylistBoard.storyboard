@@ -189,7 +189,7 @@
         <scene sceneID="Mfh-eU-sQz">
             <objects>
                 <viewController storyboardIdentifier="SelectedPlaylistID" modalPresentationStyle="fullScreen" id="k2c-Dy-iOb" customClass="PlaylistDetailViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0a4-7C-CUU" customClass="ViewPrimaryBackground" customModule="realwork" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="0a4-7C-CUU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -310,8 +310,9 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bPr-na-TYu">
                                 <rect key="frame" x="0.0" y="348" width="414" height="465"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaylistCell" rowHeight="105" id="icI-K2-fJ1" customClass="PlaylistTableViewCell" customModule="realwork" customModuleProvider="target">
                                         <rect key="frame" x="20" y="55.5" width="374" height="105"/>
@@ -359,7 +360,7 @@
                                                             </constraints>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="1" green="0.88923918058966156" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstItem="4Qh-IU-CzY" firstAttribute="leading" secondItem="gEH-O6-wJp" secondAttribute="leading" constant="20" id="0Cn-fz-H7z"/>
                                                         <constraint firstItem="6Rk-qP-OEP" firstAttribute="centerY" secondItem="gEH-O6-wJp" secondAttribute="centerY" id="Bht-gP-UAx"/>
@@ -370,6 +371,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="gEH-O6-wJp" firstAttribute="top" secondItem="cuN-4N-55I" secondAttribute="top" id="D6J-L8-CE6"/>
                                                 <constraint firstAttribute="bottom" secondItem="gEH-O6-wJp" secondAttribute="bottom" id="L0y-gi-vjt"/>
@@ -377,6 +379,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="gEH-O6-wJp" secondAttribute="trailing" id="g5M-Sa-dYG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="artWorkImage" destination="4Qh-IU-CzY" id="T1F-Ca-X3X"/>
                                             <outlet property="nameUILabel" destination="HYM-P4-lcg" id="zqL-bM-pTT"/>
@@ -401,7 +404,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.20069028253424659" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bPr-na-TYu" firstAttribute="leading" secondItem="KVO-tP-ctT" secondAttribute="leading" id="2Dq-Xj-psm"/>
                             <constraint firstItem="r35-pf-XAi" firstAttribute="top" secondItem="Wbl-an-EsK" secondAttribute="bottom" constant="20" id="FAw-tR-MHn"/>

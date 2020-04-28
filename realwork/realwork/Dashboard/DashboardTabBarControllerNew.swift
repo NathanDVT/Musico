@@ -21,6 +21,7 @@ class DashboardTabBarControllerNew: UITabBarController {
                 testController.musicControllerViewModel = musicControllerViewModel
             }
         }
+        self.tabBar.tintColor = GraphicColors.primary
     }
 
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

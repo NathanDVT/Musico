@@ -25,6 +25,7 @@ class PlaylistDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        songTableView.separatorColor = GraphicColors.secondary
         self.songTableView.dataSource = self
         self.songTableView.delegate = self
         self.displayContent()

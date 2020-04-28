@@ -10,8 +10,10 @@ import UIKit
 import NLibrary
 
 public struct GraphicColors {
+    static let primaryCodes: [String] = ["#e8d902ff", "#00E6FEff", "#F53899ff", "#A80B00ff"]
+    static let secondaryCodes: [String] = ["#939393ff", "#267780ff", "#C22D7Aff", "#750800ff"]
     static var primary = HexToUIColor(hexcode: "#e8d902ff").color
-    static let secondary = HexToUIColor(hexcode: "#939393ff").color
+    static var secondary = HexToUIColor(hexcode: "#939393ff").color
 }
 
 struct GlobalFont {
