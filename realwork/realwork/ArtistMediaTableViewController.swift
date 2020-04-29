@@ -12,7 +12,7 @@ import NLibrary
 import FirebasePerformance
 
 class ArtistMediaTableViewController: UITableViewController,
-SeearchMusicTableViewControllerProtocol, RecentViewControllerProtocol {
+SearchViewControllerProtocol, RecentViewControllerProtocol {
     func successFulRecentSongsReceived(playlistNames: [String]) {
         pickerData = playlistNames
     }

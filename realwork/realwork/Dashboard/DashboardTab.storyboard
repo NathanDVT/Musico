@@ -19,7 +19,7 @@
         <!--SearchID-->
         <scene sceneID="ANg-ak-8fE">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="SearchID" id="NDR-Im-wrG" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SearchBoard" referencedIdentifier="SearchID" id="NDR-Im-wrG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="CVI-BN-yZ2"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LI-eb-zv5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

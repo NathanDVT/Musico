@@ -59,6 +59,7 @@ class ProfileVC: UIViewController {
         profileImage.layer.cornerRadius = profileImage.frame.size.width/2
         profileImage.layer.borderColor = UIColor.white.cgColor
         profileImage.layer.borderWidth = 2.0
+        profileImage.backgroundColor = GraphicColors.secondary
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: nil)
         for (button, colorCode) in zip(colorPickerButtons, GraphicColors.primaryCodes) {
             button.backgroundColor = HexToUIColor(hexcode: colorCode).color

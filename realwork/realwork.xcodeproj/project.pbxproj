@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4130799D2458390200B20F66 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4130799B2458390200B20F66 /* TestModel.xcdatamodeld */; };
+		413079AA245963C300B20F66 /* SearchBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413079A9245963C300B20F66 /* SearchBoard.storyboard */; };
+		413079AC2459670900B20F66 /* SearchSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413079AB2459670900B20F66 /* SearchSongCell.swift */; };
+		413079AE2459755F00B20F66 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413079AD2459755F00B20F66 /* SearchVC.swift */; };
 		414E1982241F5316007C774F /* realworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1981241F5316007C774F /* realworkUITests.swift */; };
 		414E198C241F547C007C774F /* SearchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198B241F547C007C774F /* SearchScreenTests.swift */; };
 		414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */; };
@@ -37,7 +40,6 @@
 		4165D2D024269DBF00132D0A /* HomeBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4165D2CF24269DBF00132D0A /* HomeBoardVC.swift */; };
 		4165D2D72428925400132D0A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165D2D62428925400132D0A /* WebKit.framework */; };
 		4165D2D9242893EF00132D0A /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165D2D8242893EF00132D0A /* ReplayKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		4165D2DB2428957B00132D0A /* UserClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165D2DA2428957B00132D0A /* UserClass.m */; };
 		4165D33E242D490B00132D0A /* EntryBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4165D33D242D490B00132D0A /* EntryBoardViewController.m */; };
 		417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626823E9A9B100CADC7E /* AppDelegate.swift */; };
 		417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417C626A23E9A9B100CADC7E /* SceneDelegate.swift */; };
@@ -96,6 +98,9 @@
 		27344F07586A4202F50B1942 /* Pods-realworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realworkTests.debug.xcconfig"; path = "Target Support Files/Pods-realworkTests/Pods-realworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		281FB59C4F793BB3C0CF08C3 /* Pods-realwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realwork.release.xcconfig"; path = "Target Support Files/Pods-realwork/Pods-realwork.release.xcconfig"; sourceTree = "<group>"; };
 		4130799C2458390200B20F66 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
+		413079A9245963C300B20F66 /* SearchBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchBoard.storyboard; sourceTree = "<group>"; };
+		413079AB2459670900B20F66 /* SearchSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSongCell.swift; sourceTree = "<group>"; };
+		413079AD2459755F00B20F66 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		414E197F241F5316007C774F /* realworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = realworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		414E1981241F5316007C774F /* realworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realworkUITests.swift; sourceTree = "<group>"; };
 		414E1983241F5316007C774F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,12 +130,8 @@
 		415A8BC32423FA9700038133 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		415A8BC52423FAEB00038133 /* SignUpBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpBoard.storyboard; sourceTree = "<group>"; };
 		4165D2CF24269DBF00132D0A /* HomeBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBoardVC.swift; sourceTree = "<group>"; };
-		4165D2D22427D88F00132D0A /* realwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "realwork-Bridging-Header.h"; sourceTree = "<group>"; };
-		4165D2D32427D89000132D0A /* UserClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserClass.h; sourceTree = "<group>"; };
 		4165D2D62428925400132D0A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4165D2D8242893EF00132D0A /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
-		4165D2DA2428957B00132D0A /* UserClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserClass.m; sourceTree = "<group>"; };
-		4165D2DC2428AECB00132D0A /* UserProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProtocol.h; sourceTree = "<group>"; };
 		4165D33C242D490B00132D0A /* EntryBoardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryBoardViewController.h; sourceTree = "<group>"; };
 		4165D33D242D490B00132D0A /* EntryBoardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryBoardViewController.m; sourceTree = "<group>"; };
 		417C626523E9A9B100CADC7E /* realwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +220,16 @@
 				4130799B2458390200B20F66 /* TestModel.xcdatamodeld */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		413079A62459637A00B20F66 /* SearchBoard */ = {
+			isa = PBXGroup;
+			children = (
+				413079A9245963C300B20F66 /* SearchBoard.storyboard */,
+				413079AB2459670900B20F66 /* SearchSongCell.swift */,
+				413079AD2459755F00B20F66 /* SearchVC.swift */,
+			);
+			path = SearchBoard;
 			sourceTree = "<group>";
 		};
 		414E1980241F5316007C774F /* realworkUITests */ = {
@@ -349,17 +360,6 @@
 			path = HomeBoard;
 			sourceTree = "<group>";
 		};
-		4165D2D12427D86B00132D0A /* Objective */ = {
-			isa = PBXGroup;
-			children = (
-				4165D2DC2428AECB00132D0A /* UserProtocol.h */,
-				4165D2D32427D89000132D0A /* UserClass.h */,
-				4165D2D22427D88F00132D0A /* realwork-Bridging-Header.h */,
-				4165D2DA2428957B00132D0A /* UserClass.m */,
-			);
-			path = Objective;
-			sourceTree = "<group>";
-		};
 		417C625C23E9A9B100CADC7E = {
 			isa = PBXGroup;
 			children = (
@@ -386,9 +386,9 @@
 		417C626723E9A9B100CADC7E /* realwork */ = {
 			isa = PBXGroup;
 			children = (
+				413079A62459637A00B20F66 /* SearchBoard */,
 				4130799A245838F100B20F66 /* Data */,
 				41C9DA07244A2147004AC7F9 /* ProfileBoard */,
-				4165D2D12427D86B00132D0A /* Objective */,
 				415A8BC22423F81700038133 /* SignUpBoard */,
 				415A8BBC2423F55500038133 /* EntryBoards */,
 				415A8BBA2423EEC900038133 /* GoogleService-Info.plist */,
@@ -599,6 +599,7 @@
 				41C9DA0524499C24004AC7F9 /* ReusableTrendingTile.xib in Resources */,
 				415A8BC62423FAEB00038133 /* SignUpBoard.storyboard in Resources */,
 				414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */,
+				413079AA245963C300B20F66 /* SearchBoard.storyboard in Resources */,
 				415A8BBB2423EEC900038133 /* GoogleService-Info.plist in Resources */,
 				415A8BB5242380D600038133 /* MessageBoard.storyboard in Resources */,
 				415A8BBE2423F5BE00038133 /* EntryBoard.storyboard in Resources */,
@@ -752,14 +753,15 @@
 				41D6054B2432AB4A00214D84 /* PlaylistBoardVC.swift in Sources */,
 				415A8BA32422A99800038133 /* GlobalConstants.swift in Sources */,
 				41C9DA0124489334004AC7F9 /* ViewDesigns.swift in Sources */,
+				413079AC2459670900B20F66 /* SearchSongCell.swift in Sources */,
 				415A8BC42423FA9700038133 /* SignUpVC.swift in Sources */,
 				41C9DA40244F61DB004AC7F9 /* DashboardTabBarControllerNew.swift in Sources */,
 				41D6055724332B5000214D84 /* PlaylistTableViewCell.swift in Sources */,
 				414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */,
 				417C626D23E9A9B100CADC7E /* ViewController.swift in Sources */,
 				4157D02C243A4992007CAD26 /* MessageViewController.swift in Sources */,
+				413079AE2459755F00B20F66 /* SearchVC.swift in Sources */,
 				417C628F23F1434A00CADC7E /* UIViewController+Extensions.swift in Sources */,
-				4165D2DB2428957B00132D0A /* UserClass.m in Sources */,
 				41CC20E123FD184100FDC65A /* ArtistMediaTableViewController.swift in Sources */,
 				417C626923E9A9B100CADC7E /* AppDelegate.swift in Sources */,
 				417C626B23E9A9B100CADC7E /* SceneDelegate.swift in Sources */,
