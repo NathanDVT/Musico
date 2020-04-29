@@ -23,7 +23,7 @@ class ViewPrimaryBackgroundGradient: UIView {
     private func setup() {
         let layer = CAGradientLayer()
         layer.frame = self.bounds
-        let hexGenCol1: UIColor = HexToUIColor(hexcode: "#939393ff").color
+        let hexGenCol1: UIColor = HexToUIColor(hexcode: "#919191ff").color
         let hexGenCol2: UIColor = HexToUIColor(hexcode: "#eeeeeeff").color
         layer.colors = [hexGenCol1.cgColor,
                         hexGenCol2.cgColor]

@@ -29,9 +29,9 @@ class ReusableTrendingTile: UIView {
 
     func commonInit() {
         Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
-        addSubview(customView)
         customView.frame = self.bounds
-        customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        addSubview(customView)
+//        customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
     public func populateFields(trendingArtist: TrendingArtistModel) {

@@ -65,7 +65,7 @@ extension PlaylistDetailViewController: UITableViewDataSource, UITableViewDelega
             return UITableViewCell()
         }
         cell.nameUILabel.text = "\(selectedPlaylist!.basicSongItems[indexPath.row].songTitle)"
-        cell.numSongsUILabel.text = "Number of songs: \(selectedPlaylist!.basicSongItems[indexPath.row].songTitle)"
+        cell.numSongsUILabel.text = "Artist: \(selectedPlaylist!.basicSongItems[indexPath.row].artistName)"
         guard let imageURL = URL(string: selectedPlaylist!.basicSongItems[indexPath.row].artworkUrl60) else {
             return cell
         }
