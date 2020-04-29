@@ -57,7 +57,7 @@ class SearchVC: UIViewController, MusicControllable, SearchViewControllerProtoco
         self.listOfSongs = self.searchSongsViewModel.getSongs()
     }
 }
-
+// MARK: - TableView
 extension SearchVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -93,7 +93,6 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func addToPlaylistAction(at indexPath: IndexPath, then tableView: UITableView) -> UIContextualAction {
-                let cell = tableView.cellForRow(at: indexPath) as? TableCell
                 let description: String = "ADD"
                 let action = UIContextualAction(style: .normal, title: description) { [weak self] ( _, _, _) in
                     let dummyvc = UIViewController()
@@ -119,11 +118,7 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate {
                     editRadiusAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                     self?.present(editRadiusAlert, animated: true)
                 }
-//                if cell?.isPlaying() ?? true {
-//                    action.backgroundColor = .black
-//                } else {
                 action.backgroundColor = GraphicColors.secondary
-//                }
                 action.image = UIImage(systemName: "plus.circle.fill")
                 return action
     }
@@ -132,7 +127,7 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate {
         self.searchSongsViewModel.addSongToPlaylist(playlistName: playlistName, songIndex: songIndex)
     }
 }
-
+// MARK: - PickerView
 extension SearchVC: UIPickerViewDelegate, UIPickerViewDataSource {
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
@@ -157,10 +152,8 @@ extension SearchVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
 extension SearchVC: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        let trace = Performance.startTrace(name: "customTraceName")
         guard let searchBarText = searchBar.text else {return}
         self.searchSongsViewModel.getCollections(artistName: searchBarText)
-//        trace?.stop()
     }
 
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
