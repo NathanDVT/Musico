@@ -76,6 +76,10 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicCo
                 return
             }
             self.destination = destVC
+            self.destination?.musicBarViewController = self.musicBarViewController
+            self.destination?.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+            self.destination?.musicControllerViewModel = self.musicControllerViewModel
+            self.destination!.musicBarViewController!.updateBarContent()
         }
     }
 }
@@ -101,5 +105,9 @@ extension PlaylistBoardVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         destination?.selectedPlaylist = self.playlistModels[indexPath.row]
+        self.destination?.musicBarViewController = self.musicBarViewController
+        self.destination?.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+        self.destination?.musicControllerViewModel = self.musicControllerViewModel
+        self.destination!.musicBarViewController!.updateBarContent()
     }
 }

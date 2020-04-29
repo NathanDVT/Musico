@@ -23,4 +23,19 @@ class ProfileScreenTests: XCTestCase {
     func testCrowdsTextVisible() {
         XCTAssert(application.staticTexts["Crowds"].exists)
     }
+
+    func testUserCanLogout() {
+        application.buttons["Log Out"].tap()
+        XCTAssert(application.buttons["OK"].exists)
+        application.buttons["OK"].tap()
+        sleep(2)
+        XCTAssert(application.staticTexts["Welcome to Musico"].exists)
+    }
+
+    func testUserCanCancelLogout() {
+        application.buttons["Log Out"].tap()
+        XCTAssert(application.buttons["Cancel"].exists)
+        application.buttons["Cancel"].tap()
+        XCTAssert(application.staticTexts["Crowds"].exists)
+    }
 }

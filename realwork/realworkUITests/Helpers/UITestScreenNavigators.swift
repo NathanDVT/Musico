@@ -11,7 +11,12 @@ import XCTest
 extension XCUIApplication {
     func navigateStartToOnBoarding() {
         XCUIDevice.shared.orientation = .portrait
-        self.buttons["Onboarding"].tap()
+        if self.buttons["dashboardToProfile"].exists {
+            self.buttons["dashboardToProfile"].tap()
+            sleep(1)
+            self.buttons["Log Out"].tap()
+            self.buttons["OK"].tap()
+        }
         sleep(1)
     }
 
@@ -25,7 +30,7 @@ extension XCUIApplication {
 
     func navigateToDashboard() {
         navigateStartToLogin()
-        buttons["Login"].tap()
+        login()
         sleep(1)
     }
 
@@ -36,10 +41,22 @@ extension XCUIApplication {
 
     func navigateToProfile() {
         XCUIDevice.shared.orientation = .portrait
-        self.buttons["Dashboard"].tap()
-        sleep(1)
+        navigateToDashboard()
         self.buttons["dashboardToProfile"].tap()
         sleep(1)
+    }
+
+    func login() {
+        textFields["E-mail"].tap()
+        textFields["E-mail"].typeText("nate@gmail.com")
+        keyboards.buttons["return"].tap()
+        UIPasteboard.general.string = "12345678"
+        secureTextFields["Password"].doubleTap()
+        sleep(2)
+        menuItems["Paste"].tap()
+        sleep(1)
+        buttons["Login"].tap()
+        sleep(2)
     }
 }
 

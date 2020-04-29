@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 import NLibrary
 import FirebaseAnalytics
+import FirebaseAuth
 import CoreData
 
 class ViewController: UIViewController {
@@ -54,9 +55,17 @@ class ViewController: UIViewController {
                 }
             }
         } catch {
-            fatalError("Error could not print out value")
+//            fatalError("Error could not print out value")
         }
         super.loadView()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            toDashboard()
+        } else {
+            toOnboarding()
+        }
     }
 
     func createUserPreferenceObject() {
@@ -99,6 +108,28 @@ class ViewController: UIViewController {
 //            destinationVC.modalTransitionStyle = .crossDissolve
 //            present(destinationVC, animated: true, completion: nil)
 //        }
+    }
+
+    func toDashboard() {
+        let storyboard = UIStoryboard(name: "DashboardTab", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier:
+            "DashboardTabID") as? UITabBarController
+        if let destinationVC = destinationVC {
+            destinationVC.modalPresentationStyle = .fullScreen
+            destinationVC.modalTransitionStyle = .crossDissolve
+            present(destinationVC, animated: true, completion: nil)
+        }
+    }
+
+    func toOnboarding() {
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier:
+            "OnBoardingID") as? UIPageViewController
+        if let destinationVC = destinationVC {
+            destinationVC.modalPresentationStyle = .fullScreen
+            destinationVC.modalTransitionStyle = .crossDissolve
+            present(destinationVC, animated: true, completion: nil)
+        }
     }
 }
 
