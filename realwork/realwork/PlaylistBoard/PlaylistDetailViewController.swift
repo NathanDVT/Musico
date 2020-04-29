@@ -9,7 +9,9 @@
 import UIKit
 import NLibrary
 
-class PlaylistDetailViewController: UIViewController {
+class PlaylistDetailViewController: UIViewController, MusicControllable {
+    var musicBarViewController: MusicBarViewController?
+    var musicControllerViewModel: MusicBarViewModel?
     @IBOutlet weak var songTableView: UITableView!
     @IBOutlet weak var producerNameUILabel: UILabel!
     @IBOutlet weak var playlistNameUILabel: UILabel!
@@ -30,6 +32,7 @@ class PlaylistDetailViewController: UIViewController {
         self.songTableView.delegate = self
         self.displayContent()
         self.songTableView.reloadData()
+        self.musicBarViewController!.updateBarContent()
         // Do any additional setup after loading the view.
     }
 
@@ -46,6 +49,15 @@ class PlaylistDetailViewController: UIViewController {
             DispatchQueue.main.async {
                 self.playlistPicUIImage.image = image
             }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailToMusicBar" {
+            guard let destVC = segue.destination as? MusicBarViewController else {
+                return
+            }
+            self.musicBarViewController = destVC
+            self.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
         }
     }
 }
@@ -81,6 +93,8 @@ extension PlaylistDetailViewController: UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TO DO: Music play action
+        let song: BasicSongItem = self.selectedPlaylist!.basicSongItems[indexPath.row]
+        self.musicControllerViewModel?.playFromUrlWithTitle(urlString: song.previewUrl,
+                                                            title: "\(song.artistName) - \(song.songTitle)")
     }
 }

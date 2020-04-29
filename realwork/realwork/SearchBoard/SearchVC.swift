@@ -28,7 +28,6 @@ class SearchVC: UIViewController, MusicControllable, SearchViewControllerProtoco
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.searchSongsViewModel.getCollections(artistName: "Drake")
         self.songsTableView.dataSource = self
         self.songsTableView.delegate = self
         self.songsTableView.reloadData()

@@ -34,6 +34,10 @@ class ReusableTrendingTile: UIView {
 //        customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
+    override func layoutSubviews() {
+        customView.frame = self.bounds
+    }
+
     public func populateFields(trendingArtist: TrendingArtistModel) {
         artistLabel.text = trendingArtist.artistName
         guard let imageURL = URL(string: trendingArtist.picurl) else {

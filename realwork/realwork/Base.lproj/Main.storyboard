@@ -11,34 +11,32 @@
         <scene sceneID="YBt-4I-d7f">
             <objects>
                 <viewController id="Uuc-7w-Obc" customClass="ViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hB3-lY-WZY">
+                    <view key="view" contentMode="scaleToFill" id="BHF-FO-Egu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNg-Na-6da" customClass="ButtonPrimaryShadowCurved" customModule="realwork" customModuleProvider="target">
-                                <rect key="frame" x="150" y="228" width="108" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Onboarding"/>
-                                <connections>
-                                    <action selector="btnOnboard:" destination="Uuc-7w-Obc" eventType="touchUpInside" id="N8O-cy-rXj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2E-0p-V6d" customClass="ButtonPrimaryShadowCurved" customModule="realwork" customModuleProvider="target">
-                                <rect key="frame" x="139" y="413" width="130" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Dashboard">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnToDashboard:" destination="Uuc-7w-Obc" eventType="touchUpInside" id="g8h-Hy-5wc"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="music_ring" translatesAutoresizingMaskIntoConstraints="NO" id="Oss-Mg-siX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_g_cleff" translatesAutoresizingMaskIntoConstraints="NO" id="3bF-mK-8Uq">
+                                <rect key="frame" x="25" y="326" width="364" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="364" id="RtU-BL-dA0"/>
+                                    <constraint firstAttribute="height" constant="244" id="xHZ-gt-ZJe"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ng7-Xd-sf6"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="454" id="3AO-dY-xU3"/>
+                            <constraint firstAttribute="bottom" secondItem="Oss-Mg-siX" secondAttribute="bottom" id="L00-fl-S5f"/>
+                            <constraint firstItem="Oss-Mg-siX" firstAttribute="top" secondItem="BHF-FO-Egu" secondAttribute="top" id="ekV-hN-qD8"/>
+                            <constraint firstItem="Oss-Mg-siX" firstAttribute="leading" secondItem="BHF-FO-Egu" secondAttribute="leading" id="hHM-Q4-K6U"/>
+                            <constraint firstItem="3bF-mK-8Uq" firstAttribute="centerX" secondItem="BHF-FO-Egu" secondAttribute="centerX" id="jhe-Pl-jmz"/>
+                            <constraint firstAttribute="trailing" secondItem="Oss-Mg-siX" secondAttribute="trailing" id="ko9-dl-hrE"/>
+                            <constraint firstItem="3bF-mK-8Uq" firstAttribute="centerY" secondItem="BHF-FO-Egu" secondAttribute="centerY" id="mcN-H6-zsd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AFV-gJ-tFp"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGl-tW-igf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -491,6 +489,8 @@
     <resources>
         <image name="gold_gleff" width="800" height="800"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="music_g_cleff" width="940" height="2400"/>
+        <image name="music_ring" width="720" height="720"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
