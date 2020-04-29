@@ -101,12 +101,14 @@ extension ProfileVC: ProfileViewControllerProtocol {
 
     func successfulLogout() {
         Analytics.logEvent("user_logged_out", parameters: nil)
-        let storyboard = UIStoryboard(name: "EntryBoard", bundle: nil)
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier:
-            "EntryBoardLoginID") as UIViewController
+            "OnBoardingID") as? UIPageViewController
+        if let destinationVC = destinationVC {
             destinationVC.modalPresentationStyle = .fullScreen
             destinationVC.modalTransitionStyle = .crossDissolve
             present(destinationVC, animated: true, completion: nil)
+        }
     }
 
     func failedProfileRequest(errorMessage: String) {
