@@ -30,7 +30,7 @@ class LoginScreenTests: XCTestCase {
         application.textFields["E-mail"].typeText("nate@gmail.com")
         application.keyboards.buttons["return"].tap()
         application.buttons["Login"].tap()
-        sleep(1)
+        sleep(2)
         XCTAssertEqual(application.alerts.element.label, "Opps Unsuccessful Login")
     }
 
@@ -44,7 +44,7 @@ class LoginScreenTests: XCTestCase {
         application.menuItems["Paste"].tap()
         sleep(1)
         application.buttons["Login"].tap()
-        sleep(2)
+        sleep(5)
         XCTAssert(application.buttons["dashboardToProfile"].exists)
     }
 }

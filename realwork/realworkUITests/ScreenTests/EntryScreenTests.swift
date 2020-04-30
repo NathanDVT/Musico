@@ -21,20 +21,4 @@ class EntryScreenTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-//    func testUserCanNavigateToArtistSearchPage() {
-//        application.buttons["Sign Up"].tap()
-//        usleep(useconds_t(50))
-//        application.buttons["Register"].tap()
-//        sleep(1)
-//        XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
-//    }
-//    func testUserCanRotateDeviceAndNavigate() {
-//        XCUIDevice.shared.orientation = .landscapeLeft
-//        application.buttons["Sign Up"].tap()
-//        usleep(useconds_t(5000))
-//        application.buttons["Register"].tap()
-//        sleep(1)
-//        XCTAssert(application.tables.searchFields["Enter Artist To Search"].exists)
-//    }
 }

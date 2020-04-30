@@ -29,14 +29,21 @@ extension XCUIApplication {
     }
 
     func navigateToDashboard() {
-        navigateStartToLogin()
-        login()
-        sleep(1)
+        if !self.buttons["dashboardToProfile"].exists {
+            navigateStartToLogin()
+            login()
+            sleep(1)
+        }
     }
 
     func navigateToSearchScreen() {
         navigateToDashboard()
         buttons["Search"].tap()
+    }
+
+    func navigateToPlaylists() {
+        navigateToDashboard()
+        buttons["Playlists"].tap()
     }
 
     func navigateToProfile() {
@@ -56,7 +63,7 @@ extension XCUIApplication {
         menuItems["Paste"].tap()
         sleep(1)
         buttons["Login"].tap()
-        sleep(2)
+        sleep(5)
     }
 }
 

@@ -10,14 +10,12 @@ import UIKit
 import NLibrary
 
 class SearchSongCell: UITableViewCell {
-
     @IBOutlet weak var artistName: UILabel!
     @IBOutlet weak var clipArtImage: UIImageView!
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet weak var albumname: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,10 +23,6 @@ class SearchSongCell: UITableViewCell {
     }
 
     func setCellContent(song: SearchSongDetail) {
-// TO DO: Add color to selected later
-//        let bgColorView = UIView()
-//        bgColorView.backgroundColor = UIColor.red
-//        selectedBackgroundView = bgColorView
         artistName.text = song.artistName
         songTitle.text = song.titleName
         albumname.text = song.collectionName

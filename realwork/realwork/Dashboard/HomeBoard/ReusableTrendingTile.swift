@@ -13,6 +13,7 @@ class ReusableTrendingTile: UIView {
 
     let nibName = "ReusableTrendingTile"
 
+    @IBOutlet weak var loaderIndicator: UIActivityIndicatorView!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var artistBackgroundGradient: UIView!
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -39,7 +40,7 @@ class ReusableTrendingTile: UIView {
     }
 
     public func populateFields(trendingArtist: TrendingArtistModel) {
-        artistLabel.text = trendingArtist.artistName
+        artistLabel.text = "\(trendingArtist.artistName) \(trendingArtist.tally)"
         guard let imageURL = URL(string: trendingArtist.picurl) else {
             return
         }
@@ -50,6 +51,7 @@ class ReusableTrendingTile: UIView {
             DispatchQueue.main.async {
                 // TO DO investigate if this should be a weak reference
                 self.backgroundImage.image = image
+                self.loaderIndicator.stopAnimating()
             }
         }
     }

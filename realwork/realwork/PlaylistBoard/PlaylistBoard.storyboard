@@ -120,6 +120,14 @@
                                     <outlet property="delegate" destination="Exe-kn-Uce" id="DAM-tI-vxG"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="uMY-5j-EK9">
+                                <rect key="frame" x="192" y="404.66666666666669" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HQf-6M-Fwo"/>
+                                    <constraint firstAttribute="width" constant="30" id="Tyf-sV-rTa"/>
+                                </constraints>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HB6-6j-pnj">
                                 <rect key="frame" x="0.0" y="743" width="414" height="70"/>
                                 <constraints>
@@ -171,9 +179,11 @@
                             <constraint firstItem="vqy-Mr-ddV" firstAttribute="trailing" secondItem="rcy-YM-gOA" secondAttribute="trailing" constant="30" id="Qdo-Pq-7Cw">
                                 <variation key="heightClass=compact-widthClass=regular" constant="30"/>
                             </constraint>
+                            <constraint firstItem="uMY-5j-EK9" firstAttribute="centerY" secondItem="Kq2-bC-qvC" secondAttribute="centerY" id="S3w-9F-NuA"/>
                             <constraint firstItem="HB6-6j-pnj" firstAttribute="top" secondItem="rcy-YM-gOA" secondAttribute="bottom" constant="20" id="Tty-zS-jSK">
                                 <variation key="heightClass=compact-widthClass=regular" constant="20"/>
                             </constraint>
+                            <constraint firstItem="uMY-5j-EK9" firstAttribute="centerX" secondItem="Kq2-bC-qvC" secondAttribute="centerX" id="Y2k-tG-I4b"/>
                             <constraint firstItem="cER-bf-lz4" firstAttribute="leading" secondItem="vqy-Mr-ddV" secondAttribute="leading" id="ZMc-xx-CIr">
                                 <variation key="heightClass=compact-widthClass=regular" constant="400"/>
                             </constraint>
@@ -196,6 +206,7 @@
                     <navigationItem key="navigationItem" title="My Playlists" id="iRb-HT-u8M"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="uMY-5j-EK9" id="cve-3u-7Ok"/>
                         <outlet property="playlistTableView" destination="Kq2-bC-qvC" id="9D1-UY-Qit"/>
                     </connections>
                 </viewController>

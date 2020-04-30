@@ -13,7 +13,6 @@ class Onboard3ViewController: UIViewController {
     @IBOutlet var onboardView3: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         addGradient()
     }
@@ -30,21 +29,9 @@ class Onboard3ViewController: UIViewController {
     @IBAction func btnNavToSignUp(_ sender: Any) {
         let storyboard = UIStoryboard(name: "EntryBoard", bundle: nil)
         let destinationVC = storyboard.instantiateViewController(withIdentifier:
-            "EntryBoardLoginID") as? UIViewController
-        if let destinationVC = destinationVC {
+            "EntryBoardLoginID")
             destinationVC.modalPresentationStyle = .fullScreen
             destinationVC.modalTransitionStyle = .crossDissolve
             present(destinationVC, animated: true, completion: nil)
-        }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
