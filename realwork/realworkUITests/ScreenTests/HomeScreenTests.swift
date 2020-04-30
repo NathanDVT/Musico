@@ -22,7 +22,7 @@ class HomeScreenTests: XCTestCase {
     }
 
     func testCanClickOnEminemTrending() {
-        sleep(1)
+        sleep(3)
         XCTAssert(application.otherElements["FirstTrendingTile"].exists)
         application.otherElements["FirstTrendingTile"].tap()
         XCTAssert(application.otherElements["FirstTrendingTile"].exists)

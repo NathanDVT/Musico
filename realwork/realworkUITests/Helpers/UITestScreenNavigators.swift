@@ -63,7 +63,7 @@ extension XCUIApplication {
         menuItems["Paste"].tap()
         sleep(1)
         buttons["Login"].tap()
-        sleep(2)
+        sleep(5)
     }
 }
 
