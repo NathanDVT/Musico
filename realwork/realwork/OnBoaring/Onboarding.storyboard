@@ -32,12 +32,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rND-c3-RoI">
                                         <rect key="frame" x="0.0" y="66" width="374" height="381"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="music_g_cleff" translatesAutoresizingMaskIntoConstraints="NO" id="HoS-vG-Gq7">
-                                                <rect key="frame" x="147" y="41" width="86" height="258"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="music_g_cleff" translatesAutoresizingMaskIntoConstraints="NO" id="HoS-vG-Gq7">
+                                                <rect key="frame" x="144" y="61.5" width="86" height="258"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="258" id="6hd-ft-ogp"/>
+                                                    <constraint firstAttribute="width" constant="86" id="Oec-Qo-XK4"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="HoS-vG-Gq7" firstAttribute="centerX" secondItem="rND-c3-RoI" secondAttribute="centerX" id="NJL-f4-qAR"/>
+                                            <constraint firstItem="HoS-vG-Gq7" firstAttribute="centerY" secondItem="rND-c3-RoI" secondAttribute="centerY" id="beQ-Ue-wF5"/>
                                             <constraint firstAttribute="height" constant="381" id="iVg-dl-46l"/>
                                         </constraints>
                                     </view>
@@ -183,15 +188,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FZ-fs-Bnp">
                                 <rect key="frame" x="20" y="0.0" width="374" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kve-y3-8l6">
-                                        <rect key="frame" x="0.0" y="66" width="374" height="381"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kve-y3-8l6">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="381"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Music_playlists" translatesAutoresizingMaskIntoConstraints="NO" id="REf-7P-U0C">
-                                                <rect key="frame" x="100" y="67" width="214" height="246"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Music_playlists" translatesAutoresizingMaskIntoConstraints="NO" id="REf-7P-U0C">
+                                                <rect key="frame" x="80" y="67.5" width="214" height="246"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="214" id="JDB-Ei-yOL"/>
+                                                    <constraint firstAttribute="height" constant="246" id="tPm-Ve-Bdc"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="REf-7P-U0C" firstAttribute="centerY" secondItem="kve-y3-8l6" secondAttribute="centerY" id="21z-6O-faY"/>
+                                            <constraint firstItem="REf-7P-U0C" firstAttribute="centerX" secondItem="kve-y3-8l6" secondAttribute="centerX" id="8im-2Q-IMi"/>
                                             <constraint firstAttribute="height" constant="381" id="uZc-Ty-BKH"/>
                                         </constraints>
                                     </view>
@@ -226,6 +236,7 @@
                                 <constraints>
                                     <constraint firstItem="Rev-8b-f12" firstAttribute="leading" secondItem="4FZ-fs-Bnp" secondAttribute="leading" constant="20" id="3sY-gi-bMF"/>
                                     <constraint firstAttribute="trailing" secondItem="kve-y3-8l6" secondAttribute="trailing" id="AOg-Jc-qSZ"/>
+                                    <constraint firstItem="kve-y3-8l6" firstAttribute="top" secondItem="4FZ-fs-Bnp" secondAttribute="top" constant="60" id="BJg-r8-Vnn"/>
                                     <constraint firstItem="Swk-X8-XL3" firstAttribute="top" secondItem="Rh1-ug-oHZ" secondAttribute="bottom" constant="50" id="FXY-fe-9oO"/>
                                     <constraint firstAttribute="bottom" secondItem="Swk-X8-XL3" secondAttribute="bottom" constant="80" id="JhC-Ai-XyY"/>
                                     <constraint firstAttribute="trailing" secondItem="Rh1-ug-oHZ" secondAttribute="trailing" constant="20" id="N0Z-MV-uBS"/>

@@ -93,7 +93,6 @@ extension MusicBarViewController: WCSessionDelegate {
             if message["watch"] != nil {
                 self.musicControllerViewModel?.pauseOrPlayCurrentSong()
                 self.updateBarContent()
-                self.sendToWatch()
             }
         }
     }
