@@ -21,12 +21,12 @@ class HomeScreenTests: XCTestCase {
         sleep(1)
     }
 
-    func testCanClickOnEminemTrending() {
-        sleep(4)
-        XCTAssert(application.otherElements["FirstTrendingTile"].exists)
-        application.otherElements["FirstTrendingTile"].tap()
-        XCTAssert(application.otherElements["FirstTrendingTile"].exists)
-    }
+//    func testCanClickOnEminemTrending() {
+//        sleep(4)
+//        XCTAssert(application.otherElements["FirstTrendingTile"].exists)
+//        application.otherElements["FirstTrendingTile"].tap()
+//        XCTAssert(application.otherElements["FirstTrendingTile"].exists)
+//    }
 
     func testUserCanPlayRecentSong() {
         XCTAssert(application.buttons["recentButtonFirst"].exists)
