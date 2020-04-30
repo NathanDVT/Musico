@@ -30,20 +30,21 @@ class LoginScreenTests: XCTestCase {
         application.textFields["E-mail"].typeText("nate@gmail.com")
         application.keyboards.buttons["return"].tap()
         application.buttons["Login"].tap()
-        sleep(1)
+        sleep(2)
         XCTAssertEqual(application.alerts.element.label, "Opps Unsuccessful Login")
     }
 
-//    func testUserCanLogin() {
-//        application.textFields["E-mail"].tap()
-//        application.textFields["E-mail"].typeText("nate@gmail.com")
-//        let navnTextField = application.secureTextFields["Password"]
-//        UIPasteboard.general.string = "12345678"
-//        navnTextField.doubleTap()
-//        application.menuItems.element(boundBy: 0).tap()
-//        sleep(1)
-//        application.buttons["Login"].tap()
-//        sleep(4)
-//        XCTAssert(application.staticTexts["Signed in as"].exists)
-//    }
+    func testUserCanLogin() {
+        application.textFields["E-mail"].tap()
+        application.textFields["E-mail"].typeText("nate@gmail.com")
+        application.keyboards.buttons["return"].tap()
+        UIPasteboard.general.string = "12345678"
+        application.secureTextFields["Password"].doubleTap()
+        sleep(1)
+        application.menuItems["Paste"].tap()
+        sleep(1)
+        application.buttons["Login"].tap()
+        sleep(5)
+        XCTAssert(application.buttons["dashboardToProfile"].exists)
+    }
 }

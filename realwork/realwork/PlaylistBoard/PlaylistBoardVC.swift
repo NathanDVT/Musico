@@ -9,23 +9,31 @@
 import UIKit
 import NLibrary
 
-class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
-    func successfulRequest(songs: [PlaylistDetailModel]) {
-        playlistDetails = songs
-    }
-
+class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicControllable {
+    var musicControllerViewModel: MusicBarViewModel?
+    var musicBarViewController: MusicBarViewController?
     @IBOutlet weak var playlistTableView: UITableView!
+    var selectedPlaylist: PlaylistModel?
+    var destination: PlaylistDetailViewController?
     lazy var viewModel: PlaylistViewModel = PlaylistViewModel(view: self, repo: PlaylistRepo())
-
-    var playlistDetails = [PlaylistDetailModel]() {
+    var playlistModels = [PlaylistModel]() {
         didSet {
             DispatchQueue.main.async {
+                self.playlistTableView.separatorColor = GraphicColors.secondary
                 self.playlistTableView.reloadData()
             }
         }
     }
+
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    func successfulRequest(playlistModels: [PlaylistModel]) {
+        self.playlistModels = playlistModels
+        activityIndicator.stopAnimating()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        playlistTableView.separatorColor = GraphicColors.secondary
         viewModel.requestUserPlaylistDetails()
         self.playlistTableView.reloadData()
     }
@@ -39,7 +47,6 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
                 }
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: UIAlertAction.Style.cancel) { (_: UIAlertAction) -> Void in
-            //Do nothing if cancel clicked
         }
 
         let okAction = UIAlertAction(title: "OK",
@@ -57,6 +64,26 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol {
     func createPlaylist(playListName: String) {
         viewModel.createPlaylist(playlistName: playListName)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PlaylistsToMusicBar" {
+            guard let destVC = segue.destination as? MusicBarViewController else {
+                return
+            }
+            self.musicBarViewController = destVC
+            self.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+        }
+        if segue.identifier == "PlaylistsToPlaylistViewer" {
+            guard let destVC = segue.destination as? PlaylistDetailViewController else {
+                return
+            }
+            self.destination = destVC
+            self.destination?.musicBarViewController = self.musicBarViewController
+            self.destination?.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+            self.destination?.musicControllerViewModel = self.musicControllerViewModel
+            self.destination!.musicBarViewController!.updateBarContent()
+        }
+    }
 }
 
 extension PlaylistBoardVC: UITableViewDataSource, UITableViewDelegate {
@@ -65,7 +92,7 @@ extension PlaylistBoardVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playlistDetails.count
+        return playlistModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,8 +100,16 @@ extension PlaylistBoardVC: UITableViewDataSource, UITableViewDelegate {
                                                        for: indexPath) as? PlaylistTableViewCell else {
             return UITableViewCell()
         }
-        cell.nameUILabel.text = "\(playlistDetails[indexPath.row].name)"
-        cell.numSongsUILabel.text = "Number of songs: \(playlistDetails[indexPath.row].numSongs)"
+        cell.nameUILabel.text = "\(playlistModels[indexPath.row].playlistName)"
+        cell.numSongsUILabel.text = "Number of songs: \(playlistModels[indexPath.row].numSongs)"
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        destination?.selectedPlaylist = self.playlistModels[indexPath.row]
+        self.destination?.musicBarViewController = self.musicBarViewController
+        self.destination?.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+        self.destination?.musicControllerViewModel = self.musicControllerViewModel
+        self.destination!.musicBarViewController!.updateBarContent()
     }
 }

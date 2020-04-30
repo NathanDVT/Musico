@@ -1,28 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Uew-ux-sJc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6y-VS-aKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="MessageBoardID" id="8Te-RM-7rx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mCC-HK-qDj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cqn-tD-Qwx" kind="relationship" relationship="rootViewController" id="Nqg-6T-xov"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-833" y="-143"/>
+        </scene>
         <!--Messages-->
         <scene sceneID="hbH-f6-Skz">
             <objects>
-                <viewController storyboardIdentifier="MessageBoardID" id="cqn-tD-Qwx" sceneMemberID="viewController">
+                <viewController id="cqn-tD-Qwx" customClass="MessageViewController" customModule="realwork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EA-Q2-uD2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-Uf-ZxF">
-                                <rect key="frame" x="0.0" y="64" width="414" height="53"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can view messages on your playlists, messgaes from members and invites from friends or fans." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQN-FE-e2E">
-                                <rect key="frame" x="20" y="137" width="374" height="70"/>
+                                <rect key="frame" x="20" y="181" width="374" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="e9e-fb-93V"/>
                                 </constraints>
@@ -31,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-Yg-vuQ">
-                                <rect key="frame" x="20" y="499" width="374" height="130"/>
+                                <rect key="frame" x="20" y="543" width="374" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Message on your playlist Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6w-aB-DKt">
                                         <rect key="frame" x="10" y="10" width="354" height="100"/>
@@ -52,7 +68,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDZ-F8-rvt">
-                                <rect key="frame" x="20" y="649" width="374" height="130"/>
+                                <rect key="frame" x="20" y="693" width="374" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 new songs added Playlist Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cW-i8-gwv">
                                         <rect key="frame" x="10" y="20" width="354" height="70"/>
@@ -73,27 +89,50 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-i4-c50">
-                                <rect key="frame" x="20" y="349" width="374" height="130"/>
+                                <rect key="frame" x="20" y="393" width="374" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invite from Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34z-oi-QKC">
-                                        <rect key="frame" x="21" y="22" width="208" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Invite from Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34z-oi-QKC">
+                                        <rect key="frame" x="21" y="72" width="208" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOw-z8-USA">
+                                        <rect key="frame" x="0.0" y="100" width="374" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Crash">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="crashAction:" destination="cqn-tD-Qwx" eventType="touchUpInside" id="Wlg-Rw-Rv3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.67625713832487311" green="0.58749857318742593" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="cOw-z8-USA" firstAttribute="leading" secondItem="v4q-i4-c50" secondAttribute="leading" id="1zg-xw-jK7"/>
                                     <constraint firstAttribute="height" constant="130" id="5Ss-Sf-9gT"/>
+                                    <constraint firstAttribute="bottom" secondItem="cOw-z8-USA" secondAttribute="bottom" id="h1A-gR-UR8"/>
+                                    <constraint firstAttribute="trailing" secondItem="cOw-z8-USA" secondAttribute="trailing" id="mj9-IE-Xkb"/>
+                                    <constraint firstItem="cOw-z8-USA" firstAttribute="top" secondItem="34z-oi-QKC" secondAttribute="bottom" id="ohA-dY-IEy"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_g_cleff" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-WS-Mif">
-                                <rect key="frame" x="123" y="217" width="168" height="112"/>
+                                <rect key="frame" x="123" y="261" width="168" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="WGd-MW-1UH"/>
                                 </constraints>
                             </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMI-dg-Byj">
+                                <rect key="frame" x="0.0" y="743" width="414" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="PJ0-mR-JhI"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="U0X-M1-yxA" kind="embed" identifier="InboxToMusicBar" id="h5O-5Z-gt6"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -105,8 +144,11 @@
                             <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="gf8-Uf-ZxF" secondAttribute="trailing" id="E7L-o5-RjP"/>
                             <constraint firstItem="QDZ-F8-rvt" firstAttribute="top" secondItem="HWa-Yg-vuQ" secondAttribute="bottom" constant="20" id="JRu-m0-0lZ"/>
                             <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="v4q-i4-c50" secondAttribute="trailing" constant="20" id="NyE-bR-7pb"/>
+                            <constraint firstItem="iMI-dg-Byj" firstAttribute="bottom" secondItem="Bvk-8a-Q0Q" secondAttribute="bottom" id="OLw-Lo-jm9"/>
                             <constraint firstItem="jQN-FE-e2E" firstAttribute="top" secondItem="gf8-Uf-ZxF" secondAttribute="bottom" constant="20" id="QcW-14-eFJ"/>
                             <constraint firstItem="HWa-Yg-vuQ" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="20" id="cEp-T9-zaI"/>
+                            <constraint firstItem="iMI-dg-Byj" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" id="dTO-T0-4vD"/>
+                            <constraint firstItem="Bvk-8a-Q0Q" firstAttribute="trailing" secondItem="iMI-dg-Byj" secondAttribute="trailing" id="g45-II-hKi"/>
                             <constraint firstItem="gf8-Uf-ZxF" firstAttribute="top" secondItem="Bvk-8a-Q0Q" secondAttribute="top" constant="20" id="gP4-R3-Ue1"/>
                             <constraint firstItem="v4q-i4-c50" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="20" id="gdJ-Gq-38D"/>
                             <constraint firstItem="zdP-WS-Mif" firstAttribute="leading" secondItem="Bvk-8a-Q0Q" secondAttribute="leading" constant="123" id="hMc-mP-jDb"/>
@@ -119,15 +161,24 @@
                         <viewLayoutGuide key="safeArea" id="Bvk-8a-Q0Q"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Messages" image="message.fill" catalog="system" id="4im-i7-zwS"/>
+                    <navigationItem key="navigationItem" id="FDc-v2-GFy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsz-u2-0BZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="263.768115942029" y="-143.30357142857142"/>
         </scene>
+        <!--MusicBarViewControllerID-->
+        <scene sceneID="RNM-SM-FA0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeDashboard" referencedIdentifier="MusicBarViewControllerID" id="U0X-M1-yxA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBp-h6-RWL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="282"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="message.fill" catalog="system" width="64" height="56"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="music_g_cleff" width="940" height="2400"/>
     </resources>
 </document>

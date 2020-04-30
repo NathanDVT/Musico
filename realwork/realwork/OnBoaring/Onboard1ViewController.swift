@@ -21,9 +21,9 @@ class Onboard1ViewController: UIViewController {
     func addGradient() {
         let layer = CAGradientLayer()
         layer.frame = onboardView1.bounds
-        layer.colors = [UIColor.black.cgColor, UIColor.systemYellow.cgColor,
-                        UIColor.systemYellow.cgColor, UIColor.black.cgColor]
-        layer.locations = [0.60, 0.7, 0.8, 0.9]
+        layer.colors = [UIColor.black.cgColor, UIColor.white.cgColor,
+                        UIColor.white.cgColor, UIColor.black.cgColor]
+        layer.locations = [0.55, 0.63, 0.75, 0.83]
         onboardView1.backgroundColor = .none
         onboardView1.layer.insertSublayer(layer, at: 0)
     }

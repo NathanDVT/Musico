@@ -9,90 +9,83 @@
 import UIKit
 import NLibrary
 import FirebaseAnalytics
+import Crashlytics
 
-class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate {
-    func successFulSongRequests(songs: [RecentSong]) {
-        for iterator in 0..<arrayRecentButtons.count {
-            arrayRecentButtons[iterator]
-                .setTitle("\(songs[iterator].artistName)- \(songs[iterator].titleName)", for: .normal)
+protocol MusicControllable {
+    var musicBarViewController: MusicBarViewController? { get set }
+    var musicControllerViewModel: MusicBarViewModel? { get set }
+}
+
+class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarControllerDelegate, MusicControllable {
+    var musicBarViewController: MusicBarViewController?
+    @IBOutlet var arrayRecentButtons: [UIButton]!
+    @IBOutlet var buttonCollection: [UIButton]!
+    @IBOutlet var trendingButtons: [UIButton]!
+    @IBOutlet var trendingTiles: [ReusableTrendingTile]!
+    var trendingArtists: [TrendingArtistModel] = []
+    var musicControllerViewModel: MusicBarViewModel?
+    var songs: [RecentSong]?
+    @IBOutlet weak var testing: UILabel!
+    @IBOutlet weak var homeUIButton: UITabBarItem!
+    let gesture = UITapGestureRecognizer(target: self, action: Selector(("postTrending:")))
+    lazy var viewModel: DashboardViewModelProtocol = DashboardViewModel(viewController: self, repo: DashboardRepo())
+    @IBOutlet var homeView: UIView!
+
+    func successfulTrendingArtists(trendingArtists: [TrendingArtistModel]) {
+        self.trendingArtists = trendingArtists
+        DispatchQueue.main.async {
+            for (artist, button) in zip(trendingArtists, self.trendingTiles) {
+                button.populateFields(trendingArtist: artist)
+            }
         }
     }
 
-    @IBOutlet weak var homeUIButton: UITabBarItem!
-    func successFulNameRequest(name: String) {
-        userNameLabel.text = name
+    @objc func postTrending2(_ sender: UITapGestureRecognizer) {
+        viewModel.postTrendingSong(index: sender.view!.tag)
     }
 
-    @IBAction func playPauseUIButton(_ sender: Any) {
-        viewModel.pauseOrPlayCurrentSong()
+    func successFulSongRequests(songs: [RecentSong]) {
+        for (song, button) in zip(songs, arrayRecentButtons) {
+            button.setTitle("\(song.artistName)- \(song.titleName)", for: .normal)
+        }
+        self.songs = songs
     }
 
-    func setCurrentControlIcon(img: UIImage) {
-        currentControlUIButton.setBackgroundImage(img, for: .normal)
-    }
-
-    func setSongTitle(title: String) {
-        currentSongTitleUILabel.text = title
-    }
-
-    @IBOutlet weak var currentControlUIButton: UIButton!
-    @IBOutlet weak var currentSongTitleUILabel: UILabel!
-    @IBOutlet var arrayRecentButtons: [UIButton]!
-    @IBOutlet var buttonCollection: [UIButton]!
-    @IBOutlet weak var userNameLabel: UILabel!
-
-    lazy var viewModel: DashboardViewModelProtocol = DashboardViewModel(viewController: self, repo: DashboardRepo())
-    @IBOutlet var homeView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let layer = CAGradientLayer()
-        layer.frame = homeView.bounds
-        let objcObj: HexToUIColor = HexToUIColor()
-        let hexGenCol: UIColor = objcObj.color
-        layer.colors = [UIColor.systemYellow.cgColor, UIColor.black.cgColor,
-                        hexGenCol.cgColor]
-        layer.locations = [0.0, 0.095, 0.97]
-        homeView.backgroundColor = .none
-        homeView.layer.insertSublayer(layer, at: 0)
-
         loadDashBoardContent()
-        // Do any additional setup after loading the view.
+        viewModel.getTrending()
+        for index in trendingTiles.indices {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.postTrending2(_:)))
+            trendingTiles[index].isUserInteractionEnabled = true
+            trendingTiles[index].tag = index
+            trendingTiles[index].addGestureRecognizer(tap)
+        }
     }
 
     public func loadDashBoardContent() {
         viewModel.loadContent()
     }
 
-    @IBAction func userLogout(_ sender: Any) {
-        let dialogMessage = UIAlertController(title: "Logging Out",
-                                              message: "Are you sure you want log out?",
-                                              preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK",
-                               style: .default,
-                               handler: { (_) -> Void in
-             print("Ok button tapped")
-            self.viewModel.logoutRequest()
-        })
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (_) -> Void in
-        }
-        dialogMessage.addAction(okAction)
-        dialogMessage.addAction(cancel)
-        self.present(dialogMessage, animated: true, completion: nil)
-        viewModel.logoutRequest()
-    }
-
     @IBAction func selectedRecentSong(_ sender: UIButton) {
         Analytics.logEvent("played_recent_song", parameters: nil)
-        viewModel.playRecentSongAt(index: arrayRecentButtons.firstIndex(of: sender)!)
+        guard let index = arrayRecentButtons.firstIndex(of: sender) else {
+            return
+        }
+        if let song: RecentSong = songs?[index] {
+            self.musicControllerViewModel?.playFromUrlWithTitle(urlString: song.previewUrl,
+                                                       title: "\(song.artistName) - \(song.titleName)")
+            self.musicBarViewController?.updateBarContent()
+        }
     }
 
-    public func successfulLogout() {
-        Analytics.logEvent("user_logged_out", parameters: nil)
-        let storyboard = UIStoryboard(name: "EntryBoard", bundle: nil)
-        let destinationVC = storyboard.instantiateViewController(withIdentifier:
-            "EntryBoardLoginID") as UIViewController
-            destinationVC.modalPresentationStyle = .fullScreen
-            destinationVC.modalTransitionStyle = .crossDissolve
-            present(destinationVC, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToFirstChild" {
+            guard let destVC = segue.destination as? MusicBarViewController else {
+                return
+            }
+            self.musicBarViewController = destVC
+            self.musicBarViewController?.musicControllerViewModel = self.musicControllerViewModel
+        }
     }
 }
