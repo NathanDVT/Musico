@@ -15,9 +15,8 @@ class InterfaceController: WKInterfaceController {
     let session = WCSession.default//**3
     let colorThemes: [UIColor] = [.yellow, .blue,
                                 .magenta, .red,
-                                .purple, .green
-                                
-    ]
+                                .purple, .green]
+
     @IBAction func tapSendToiPhone() {
         let data: [String: Any] = ["watch": "data from watch" as Any] //Create your dictionary as per uses
         session.sendMessage(data, replyHandler: nil, errorHandler: nil) //**6.1
