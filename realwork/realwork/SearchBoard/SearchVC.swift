@@ -12,6 +12,7 @@ import NLibrary
 class SearchVC: UIViewController, MusicControllable, SearchViewControllerProtocol {
     var musicBarViewController: MusicBarViewController?
     var musicControllerViewModel: MusicBarViewModel?
+    var artistToSearch: String?
     @IBOutlet weak var searchBar: UISearchBar!
     var pickerData: [String] = [String]()
     lazy var searchSongsViewModel: SearchSongsViewModel = SearchSongsViewModel(view: self, repo: SearchSongRepo())
@@ -33,6 +34,10 @@ class SearchVC: UIViewController, MusicControllable, SearchViewControllerProtoco
         self.songsTableView.reloadData()
         self.searchBar.delegate = self
         self.searchSongsViewModel.getUserPlaylistNames()
+        if artistToSearch != nil {
+            self.searchBar.text = artistToSearch
+            self.searchSongsViewModel.getCollections(artistName: artistToSearch!)
+        }
     }
 
     func unsuccessfulRequest(errorMessage: String) {

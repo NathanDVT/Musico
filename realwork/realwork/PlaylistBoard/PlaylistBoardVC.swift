@@ -25,8 +25,10 @@ class PlaylistBoardVC: UIViewController, PlaylistViewControllerProtocol, MusicCo
         }
     }
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     func successfulRequest(playlistModels: [PlaylistModel]) {
         self.playlistModels = playlistModels
+        activityIndicator.stopAnimating()
     }
 
     override func viewDidLoad() {

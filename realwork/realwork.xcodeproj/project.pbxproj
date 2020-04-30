@@ -19,8 +19,11 @@
 		413079C7245A151E00B20F66 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413079C6245A151E00B20F66 /* NotificationController.swift */; };
 		413079C9245A151F00B20F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413079C8245A151F00B20F66 /* Assets.xcassets */; };
 		413079CE245A151F00B20F66 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 413079B1245A151B00B20F66 /* WatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		413079D8245A425700B20F66 /* HomeScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413079D7245A425700B20F66 /* HomeScreenTests.swift */; };
+		413079DA245A464100B20F66 /* SearchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413079D9245A464100B20F66 /* SearchScreenTests.swift */; };
+		413079DC245A4AAA00B20F66 /* PlaylistScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413079DB245A4AAA00B20F66 /* PlaylistScreenTests.swift */; };
+		413079DF245A512C00B20F66 /* ObjectiveCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413079DE245A512C00B20F66 /* ObjectiveCTest.swift */; };
 		414E1982241F5316007C774F /* realworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1981241F5316007C774F /* realworkUITests.swift */; };
-		414E198C241F547C007C774F /* SearchScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198B241F547C007C774F /* SearchScreenTests.swift */; };
 		414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */; };
 		414E1992241F83E4007C774F /* ArtistVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */; };
 		414E1993241F83E4007C774F /* ArtistVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */; };
@@ -156,10 +159,13 @@
 		413079C8245A151F00B20F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413079CA245A151F00B20F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		413079CB245A151F00B20F66 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		413079D7245A425700B20F66 /* HomeScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTests.swift; sourceTree = "<group>"; };
+		413079D9245A464100B20F66 /* SearchScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTests.swift; sourceTree = "<group>"; };
+		413079DB245A4AAA00B20F66 /* PlaylistScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistScreenTests.swift; sourceTree = "<group>"; };
+		413079DE245A512C00B20F66 /* ObjectiveCTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveCTest.swift; sourceTree = "<group>"; };
 		414E197F241F5316007C774F /* realworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = realworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		414E1981241F5316007C774F /* realworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = realworkUITests.swift; sourceTree = "<group>"; };
 		414E1983241F5316007C774F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		414E198B241F547C007C774F /* SearchScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenTests.swift; sourceTree = "<group>"; };
 		414E198D241F54C0007C774F /* XCUIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplicationExtension.swift; sourceTree = "<group>"; };
 		414E1990241F83E4007C774F /* ArtistVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistVideoTableViewCell.swift; sourceTree = "<group>"; };
 		414E1991241F83E4007C774F /* ArtistVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistVideoTableViewCell.xib; sourceTree = "<group>"; };
@@ -314,6 +320,14 @@
 			path = "WatchApp Extension";
 			sourceTree = "<group>";
 		};
+		413079DD245A511200B20F66 /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				413079DE245A512C00B20F66 /* ObjectiveCTest.swift */,
+			);
+			path = ObjectiveC;
+			sourceTree = "<group>";
+		};
 		414E1980241F5316007C774F /* realworkUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,11 +342,13 @@
 		414E1989241F544A007C774F /* ScreenTests */ = {
 			isa = PBXGroup;
 			children = (
-				414E198B241F547C007C774F /* SearchScreenTests.swift */,
 				415A8BA62422AFB800038133 /* OnboardTest.swift */,
 				415A8BB8242387C100038133 /* EntryScreenTests.swift */,
 				41D60548243287A800214D84 /* LoginScreenTests.swift */,
 				41C9DA35244E1A53004AC7F9 /* ProfileScreenTests.swift */,
+				413079D7245A425700B20F66 /* HomeScreenTests.swift */,
+				413079D9245A464100B20F66 /* SearchScreenTests.swift */,
+				413079DB245A4AAA00B20F66 /* PlaylistScreenTests.swift */,
 			);
 			path = ScreenTests;
 			sourceTree = "<group>";
@@ -449,8 +465,8 @@
 				417C626723E9A9B100CADC7E /* realwork */,
 				417C627E23E9A9B100CADC7E /* realworkTests */,
 				414E1980241F5316007C774F /* realworkUITests */,
-				413079B2245A151B00B20F66 /* WatchApp */,
 				413079C1245A151E00B20F66 /* WatchApp Extension */,
+				413079B2245A151B00B20F66 /* WatchApp */,
 				417C626623E9A9B100CADC7E /* Products */,
 				1BFCC561EFEFC7D0B129DD16 /* Pods */,
 				B5F818FFD5D971ED7DDF8088 /* Frameworks */,
@@ -498,6 +514,7 @@
 		417C627E23E9A9B100CADC7E /* realworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				413079DD245A511200B20F66 /* ObjectiveC */,
 				41C9DA27244CA956004AC7F9 /* ProfileTest */,
 				41D6053824326D0F00214D84 /* DashboardHomeTest */,
 				41D6052D2432528300214D84 /* SignUpTest */,
@@ -875,14 +892,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				414E198C241F547C007C774F /* SearchScreenTests.swift in Sources */,
+				413079D8245A425700B20F66 /* HomeScreenTests.swift in Sources */,
 				414E198E241F54C0007C774F /* XCUIApplicationExtension.swift in Sources */,
 				415A8BB9242387C100038133 /* EntryScreenTests.swift in Sources */,
+				413079DA245A464100B20F66 /* SearchScreenTests.swift in Sources */,
 				41D60549243287A800214D84 /* LoginScreenTests.swift in Sources */,
 				414E1982241F5316007C774F /* realworkUITests.swift in Sources */,
 				415A8B912420AC7A00038133 /* UITestScreenNavigators.swift in Sources */,
 				415A8BA72422AFB800038133 /* OnboardTest.swift in Sources */,
 				41C9DA36244E1A53004AC7F9 /* ProfileScreenTests.swift in Sources */,
+				413079DC245A4AAA00B20F66 /* PlaylistScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,6 +950,7 @@
 				41C9DA29244CA9A6004AC7F9 /* ProfileViewModelTest.swift in Sources */,
 				41C9DA34244E19E7004AC7F9 /* ProfileRepoTest.swift in Sources */,
 				41D6052F243252A500214D84 /* SignUpRepoTest.swift in Sources */,
+				413079DF245A512C00B20F66 /* ObjectiveCTest.swift in Sources */,
 				417C628023E9A9B100CADC7E /* realworkTests.swift in Sources */,
 				41D6054424327DE500214D84 /* DashboardHomeModelViewTest.swift in Sources */,
 			);

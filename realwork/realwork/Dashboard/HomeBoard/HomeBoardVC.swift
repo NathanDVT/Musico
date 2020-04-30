@@ -22,29 +22,26 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
     @IBOutlet var buttonCollection: [UIButton]!
     @IBOutlet var trendingButtons: [UIButton]!
     @IBOutlet var trendingTiles: [ReusableTrendingTile]!
+    var trendingArtists: [TrendingArtistModel] = []
     var musicControllerViewModel: MusicBarViewModel?
     var songs: [RecentSong]?
     @IBOutlet weak var testing: UILabel!
     @IBOutlet weak var homeUIButton: UITabBarItem!
     let gesture = UITapGestureRecognizer(target: self, action: Selector(("postTrending:")))
+    lazy var viewModel: DashboardViewModelProtocol = DashboardViewModel(viewController: self, repo: DashboardRepo())
+    @IBOutlet var homeView: UIView!
+
     func successfulTrendingArtists(trendingArtists: [TrendingArtistModel]) {
+        self.trendingArtists = trendingArtists
         DispatchQueue.main.async {
-            for iterator in 0..<trendingArtists.count {
-                self.trendingButtons[iterator]
-                    .setTitle("\(trendingArtists[iterator].artistName)- \(trendingArtists[iterator].tally)",
-                        for: .normal)
+            for (artist, button) in zip(trendingArtists, self.trendingTiles) {
+                button.populateFields(trendingArtist: artist)
             }
         }
     }
 
-    @IBAction func postTrending(_ sender: UIButton) {
-        viewModel.postTrendingSong(index: trendingButtons.firstIndex(of: sender)!)
-    }
-
     @objc func postTrending2(_ sender: UITapGestureRecognizer) {
-//        let selected: ReusableTrendingTile = sender as! ReusableTrendingTile
-        let selected: ReusableTrendingTile = trendingTiles[sender.view!.tag]
-        viewModel.postTrendingSong(index: trendingTiles.firstIndex(of: selected)!)
+        viewModel.postTrendingSong(index: sender.view!.tag)
     }
 
     func successFulSongRequests(songs: [RecentSong]) {
@@ -54,18 +51,15 @@ class HomeBoardVC: UIViewController, DashboardViewControllerProtocol, UITabBarCo
         self.songs = songs
     }
 
-    lazy var viewModel: DashboardViewModelProtocol = DashboardViewModel(viewController: self, repo: DashboardRepo())
-    @IBOutlet var homeView: UIView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDashBoardContent()
         viewModel.getTrending()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.postTrending2(_:)))
         for index in trendingTiles.indices {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.postTrending2(_:)))
             trendingTiles[index].isUserInteractionEnabled = true
-            trendingTiles[index].addGestureRecognizer(tap)
             trendingTiles[index].tag = index
+            trendingTiles[index].addGestureRecognizer(tap)
         }
     }
 

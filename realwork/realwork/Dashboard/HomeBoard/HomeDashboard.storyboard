@@ -54,6 +54,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJ8-BZ-nbH">
                                                 <rect key="frame" x="138" y="0.0" width="68" height="38.333333333333336"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="recentButtonFirst"/>
                                                 <state key="normal" title="Loading...">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -125,6 +126,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzp-T3-Tkc" customClass="ReusableTrendingTile" customModule="realwork" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="152" height="140"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="FirstTrendingTile"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6p-80-eDm" customClass="ReusableTrendingTile" customModule="realwork" customModuleProvider="target">
                                                         <rect key="frame" x="172" y="0.0" width="152" height="140"/>
@@ -285,6 +287,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-hO-Q2O" customClass="ButtonPrimaryTint" customModule="realwork" customModuleProvider="target">
                                 <rect key="frame" x="324" y="16" width="40" height="38.666666666666671"/>
+                                <accessibility key="accessibilityConfiguration" identifier="playPauseButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Ij6-Ts-jSw"/>
                                     <constraint firstAttribute="height" constant="40" id="fNP-Mn-5hB"/>
