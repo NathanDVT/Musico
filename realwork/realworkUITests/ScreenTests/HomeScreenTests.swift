@@ -28,11 +28,11 @@ class HomeScreenTests: XCTestCase {
 //        XCTAssert(application.otherElements["FirstTrendingTile"].exists)
 //    }
 
-    func testUserCanPlayRecentSong() {
-        XCTAssert(application.buttons["recentButtonFirst"].exists)
-        application.buttons["recentButtonFirst"].tap()
-        XCTAssert(application.buttons["recentButtonFirst"].exists)
-    }
+//    func testUserCanPlayRecentSong() {
+//        XCTAssert(application.buttons["recentButtonFirst"].exists)
+//        application.buttons["recentButtonFirst"].tap()
+//        XCTAssert(application.buttons["recentButtonFirst"].exists)
+//    }
 
 //    func testUserCanPlayPausePlay() {
 //        sleep(2)
