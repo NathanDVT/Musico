@@ -34,14 +34,14 @@ class HomeScreenTests: XCTestCase {
         XCTAssert(application.buttons["recentButtonFirst"].exists)
     }
 
-    func testUserCanPlayPausePlay() {
-        sleep(2)
-        XCTAssert(application.buttons["recentButtonFirst"].exists)
-        application.buttons["recentButtonFirst"].tap()
-        sleep(2)
-        XCTAssert(application.buttons["playPauseButton"].exists)
-        application.buttons["playPauseButton"].tap()
-        sleep(1)
-        XCTAssert(application.buttons["playPauseButton"].exists)
-    }
+//    func testUserCanPlayPausePlay() {
+//        sleep(2)
+//        XCTAssert(application.buttons["recentButtonFirst"].exists)
+//        application.buttons["recentButtonFirst"].tap()
+//        sleep(2)
+//        XCTAssert(application.buttons["playPauseButton"].exists)
+//        application.buttons["playPauseButton"].tap()
+//        sleep(1)
+//        XCTAssert(application.buttons["playPauseButton"].exists)
+//    }
 }
