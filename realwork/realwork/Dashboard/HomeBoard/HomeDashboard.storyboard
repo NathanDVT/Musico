@@ -53,9 +53,9 @@
                                         <rect key="frame" x="10" y="55.333333333333378" width="344" height="114.66666666666669"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJ8-BZ-nbH">
-                                                <rect key="frame" x="138" y="0.0" width="68" height="38.333333333333336"/>
+                                                <rect key="frame" x="157" y="0.0" width="30" height="38.333333333333336"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="recentButtonFirst"/>
-                                                <state key="normal" title="Loading...">
+                                                <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
